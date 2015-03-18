@@ -1,3 +1,3 @@
 Dancing Shrimp's website.
 
-http://soundcloud.com/dancingshrimpmusic
+http://soundcloud.com/dancingshrimp
