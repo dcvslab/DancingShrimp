@@ -1,8 +1,8 @@
-<!DOCTYPE HTML>
 <html>
 <body>
-http://dcvslab.github.io/
 
-http://dcvslab.github.io/todo
+<a href="http://dcvslab.github.io/" target="_blank">Site</a>
+<a href="http://dcvslab.github.io/todo" target="_blank">Todo</a>
+
 </body>
 </html>
