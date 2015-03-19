@@ -1,17 +1,29 @@
 <!DOCTYPE HTML>
 <html>
 <body>
+
+
+
+
+
 <script src="http://connect.soundcloud.com/sdk.js"></script>
 <script>
 SC.initialize({
   client_id: 'f654ff209a2da52492563622ff66dbb5'
 });
 
-var track_url = 'https://soundcloud.com/monstercat/televisor-find-that-someone';
-SC.oEmbed(track_url, { auto_play: true }, function(oEmbed) {
-  console.log('oEmbed response: ' + oEmbed);
+// permalink to a track
+var track_url = 'http://soundcloud.com/forss/voca-nomen-tuum';
+
+SC.get('/resolve', { url: track_url }, function(track) {
+  SC.get('/tracks/' + track.id + '/comments', function(comments) {
+    for (var i = 0; i < comments.length; i++) {
+      console.log('Someone said: ' + comments[i].body);
+    }
+  });
 });
 </script>
+
 
 </body>  
 </html>
