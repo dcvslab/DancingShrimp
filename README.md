@@ -1,3 +1,3 @@
-http://www.dcvslab.github.io
+http://dcvslab.github.io/
 
-http://www.dcvslab.github.io/todo
+http://dcvslab.github.io/todo
