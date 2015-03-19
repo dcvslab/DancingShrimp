@@ -1,10 +1,17 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/195037586&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script>
+SC.initialize({
+  client_id: 'f654ff209a2da52492563622ff66dbb5'
+});
 
-
-
+var track_url = 'https://soundcloud.com/monstercat/televisor-find-that-someone';
+SC.oEmbed(track_url, { auto_play: true }, function(oEmbed) {
+  console.log('oEmbed response: ' + oEmbed);
+});
+</script>
 
 </body>  
 </html>
