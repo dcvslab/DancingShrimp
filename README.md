@@ -1,3 +1,3 @@
-Dancing Shrimp's website.
+dcvslab.github.io
 
-http://soundcloud.com/dancingshrimp
+dcvslab.github.io/todo
