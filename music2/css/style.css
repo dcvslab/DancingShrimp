@@ -1,13 +1,28 @@
 /** ************************* **/
 /** Froont widget base styles **/
 /** ************************* **/
-#loader-wrapper {
+#loader-wrapper .loader-section{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 1001;
+    h1 {
+    color: #EEEEEE;
+}
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+ 
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+#content
+    margin: 0 auto;
+    padding-bottom: 50px;
+    width: 80%;
+    max-width: 978px;
 }
     #loader {
         display: block;
@@ -21,6 +36,37 @@
         border: 3px solid #3498db;
         z-index: 1500;
     }
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+}
+ 
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+    
+     -webkit-transition: all 0.3s 0.6s ease-out; 
+                transition: all 0.3s 0.6s ease-out;
+}
+.loaded #loader {
+    opacity: 0;
+}
+.loaded #loader-wrapper {
+    visibility: hidden;
+}
+.loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out; 
+            transition: all 0.3s ease-out;
+}
+.loaded #loader-wrapper .loader-section.section-right,
+.loaded #loader-wrapper .loader-section.section-left {
+ 
+    -webkit-transition: all 0.3s 0.3s ease-out; 
+            transition: all 0.3s 0.3s ease-out;
+}
 .fr-widget h1,
 .fr-widget h2,
 .fr-widget h3,
