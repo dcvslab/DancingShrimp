@@ -55,8 +55,14 @@
     <meta http-equiv="content-language" content="en">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("load_screen");
+	document.body.removeChild(load_screen);
+});
+</script>
 </head>
-
+<div id="load_screen"><div id="loading"><center><img src=http://i.imgur.com/pF3b7Y3.png></center></div></div>
 <body bgcolor="#242424">
     <div class="b-content">
         <div id="c01_h1" class="fr-widget fr-text fr-wf fr_h1 fr_c01_h1">
