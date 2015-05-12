@@ -15,7 +15,7 @@ div#load_screen > div#loading{
 	width:100%;
 	height:100%;
 	margin:auto;
-#easeOut a.button, #easeOut a.button:hover {
+div#easeOut a.button, #easeOut a.button:hover {
   -webkit-transition-property: background color;
   -webkit-transition-duration: 2.5s;
   -webkit-transition-timing-function: ease-out;
@@ -31,7 +31,6 @@ div#load_screen > div#loading{
   transition-property: background color;
   transition-duration: 2.5s;
   transition-timing-function: ease-out;
-} 
 }
 .fr-widget h1,
 .fr-widget h2,
