@@ -93,8 +93,8 @@ $(function () {
         if (!isSameDocument) {
             return;
         }
-
-        var $element = $(this.hash);
+        var hash = this.hash;
+        var $element = $(hash);
         if (!$element.length) {
             return;
         }
@@ -102,7 +102,7 @@ $(function () {
         $('html,body').animate({
             scrollTop: $element.offset().top
         }, 500, function () {
-            window.location.hash = href;
+            window.location.hash = hash;
         });
         return false;
     });
