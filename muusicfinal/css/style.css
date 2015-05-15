@@ -550,6 +550,7 @@ a {
   overflow: hidden
 }
 .fr_navigation_mobile_2 {
+  position: fixed;
   width: 100%;
   padding-bottom: 7px;
   background-color: #242424;
