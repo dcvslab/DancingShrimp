@@ -7,14 +7,56 @@ window.onload = setSong;
 <body>
 <p>Song Alerts</p>
 <button onclick="tSong()">Yes</button><button onclick="fSong()">No</button>
-<p id="demo"</p>
+<p id="tfsong"</p>
 <script>
 function tSong() {
-    document.getElementById("demo").innerHTML = "true";
+    document.getElementById("tfsong").innerHTML = "true";
 }
 function fSong() {
-    document.getElementById("demo").innerHTML = "false";
+    document.getElementById("tfsong").innerHTML = "false";
 }
 </script>
+var media = API.getMedia();
+var tfSong= <p id="tfsong"</p>;
+
+API.on(API.ADVANCE, function(data) {
+        var media = API.getMedia();
+        setTimeout(function(){ dcvSong(); }, 3000);
+});
+ 
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+});
+
+
+if (var tfSong = true) {
+function dcvSong() {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var media = API.getMedia()
+    var notification = new Notification('Now Playing', {
+      icon: 'http://i.imgur.com/joWEdip.png',
+      body: (media.author+" - "+media.title),
+    });
+} else { console.log("tfSong is false")
+}
+
+   notification.onclick = function(){
+    window.focus();
+    this.cancel();
+};
+
+  }
+
+}
+
 </body>
 </html>
