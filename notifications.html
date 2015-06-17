@@ -16,9 +16,10 @@ function fSong() {
     document.getElementById("tfsong").innerHTML = "false";
 }
 </script>
-<p>
 var media = API.getMedia(); 
-var tfSong= <p id "tfsong">true</p>;
+var tfSong= 
+<p id "tfsong"></p>
+;
 API.on(API.ADVANCE, function(data) {
         var media = API.getMedia();
         setTimeout(function(){ dcvSong(); }, 3000);
@@ -53,7 +54,6 @@ function dcvSong() {
     window.focus();
     this.cancel();
 };
-</p>
 
 </body>
 </html>
