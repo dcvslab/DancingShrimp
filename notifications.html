@@ -1,17 +1,19 @@
 <html>
+<head>
 <script>
 function setSong() { document.getElementById("tfsong").innerHTML = "true" }
 
 window.onload = setSong;
 </script>
+</head>
 <body>
 <p>Song Alerts</p>
 <button onclick="tSong()">Yes</button><button onclick="fSong()">No</button>
 <p id="tfsong"></p>
 
 var media = API.getMedia(); 
-var tfSong= 
-<p id "tfsong"></p>
+var toggleSong = 
+<p id="tfsong"></p>
 ;
 API.on(API.ADVANCE, function(data) {
         var media = API.getMedia();
@@ -25,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-if (var tfSong = true) {
+if (var toggleSong = true) {
 function dcvSong() {
   if (!Notification) {
     alert('Desktop notifications not available in your browser. Try Chromium.'); 
