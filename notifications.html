@@ -8,11 +8,9 @@ window.onload = setSong;
 </head>
 <body>
 <p>Song Alerts</p>
-<button onclick="tSong()">Yes</button><button onclick="fSong()">No</button>
+<button onclick="tSong()">Yes</button><button onclick="fSong()">No</button><br>
 var media = API.getMedia(); 
-var toggleSong = 
-<p id="tfsong"></p>
-;
+var toggleSong = <p id="tfsong"></p>;
 API.on(API.ADVANCE, function(data) {
         var media = API.getMedia();
         setTimeout(function(){ dcvSong(); }, 3000);
