@@ -20,7 +20,7 @@
 <br>
 <hr>
 <sectionhead><p><b>drag this button to your bookmarks bar and click it within plug.dj to activate</b></p></sectionhead>
-<a id="dcv-notifs" class="button" href="javascript:(function(){$.getScript('https://raw.githubusercontent.com/dcvslab/projects/master/notifications.js');}());">dcv's notifs</a>                
+<button id="dcv-notifs" type="button" onclick="dragAlert()" href="javascript:(function(){$.getScript('https://raw.githubusercontent.com/dcvslab/projects/master/notifications.js');}());">dcv's notifs</button>                
 <br>
 <hr>
 <sectionhead><p><b>what are dcv's notifications</b></p></sectionhead>
@@ -37,5 +37,10 @@
 <p>when you are posistion 1 on the waitlist</p>
 </setfont>
 </center>
+<script>
+  function dragAlert() {
+    alert("simply drag this to your bookmarks bar, do not click it.");
+}
+</script>
 </body>
 </html>
