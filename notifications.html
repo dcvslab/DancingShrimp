@@ -1,4 +1,9 @@
 <html>
+<script>
+function setSong() { document.getElementById("demo").innerHTML = "true" }
+
+window.onload = setSong;
+</script>
 <body>
 <p>Song Alerts</p>
 <button onclick="tSong()">Yes</button><button onclick="fSong()">No</button>
@@ -6,6 +11,9 @@
 <script>
 function tSong() {
     document.getElementById("demo").innerHTML = "true";
+}
+function tSong() {
+    document.getElementById("demo").innerHTML = "false";
 }
 </script>
 </body>
