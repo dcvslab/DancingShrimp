@@ -7,7 +7,7 @@ window.onload = setSong;
 <body>
 <p>Song Alerts</p>
 <button onclick="tSong()">Yes</button><button onclick="fSong()">No</button>
-<p id="tfsong"</p>
+<p id="tfsong"></p>
 <script>
 function tSong() {
     document.getElementById("tfsong").innerHTML = "true";
@@ -18,8 +18,7 @@ function fSong() {
 </script>
 <p>
 var media = API.getMedia(); 
-var tfSong= 
-<p id "tfsong"</p>;
+var tfSong= <p id "tfsong">true</p>;
 API.on(API.ADVANCE, function(data) {
         var media = API.getMedia();
         setTimeout(function(){ dcvSong(); }, 3000);
