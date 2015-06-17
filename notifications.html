@@ -2,17 +2,11 @@
 <body>
 <p>Song Alerts</p>
 <button onclick="tSong()">Yes</button><button onclick="fSong()">No</button>
+<p id="demo"</p>
 <script>
-var tfsong = true
-
 function tSong() {
-    var tfsong = true;
-}
-
-function fSong() {
-    var tfsong = false;
+    document.getElementById("demo").innerHTML = "true";
 }
 </script>
-
 </body>
 </html>
