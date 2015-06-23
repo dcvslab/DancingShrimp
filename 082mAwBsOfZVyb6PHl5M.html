@@ -11,16 +11,26 @@ function stafflist() {
 	document.getElementById('showpunish').style.visibility = "hidden";
 }
 function submitpunish() {
-	window.location.assign("http://drive.google.com")
+	document.getElementById('stafflist').style.visibility = "hidden";
+	document.getElementById('submitpunish').style.visibility = "visible";
+	document.getElementById('showpunish').style.visibility = "hidden";
 }
 function showpunish() {
-	window.location.assign("http://docs.google.com")
+	document.getElementById('stafflist').style.visibility = "hidden";
+	document.getElementById('submitpunish').style.visibility = "hidden";
+	document.getElementById('showpunish').style.visibility = "visible";
 }
+function hideall() {
+	document.getElementById('stafflist').style.visibility = "hidden";
+	document.getElementById('submitpunish').style.visibility = "hidden";
+	document.getElementById('showpunish').style.visibility = "hidden";	
+}
+window.onload(hideall())
 </script>
 </head>
 <body>
 <center>
-<p>Click a button!</p>
+<p>MineHeroes Staff Hub | By DCV</p>
 <button onclick="stafflist()">Staff List</button><button onclick="submitpunish()">Submit A Punishment</button><button onclick="showpunish()">Show Punishments</button>
 <div id=stafflist><p>dcv | color | spins </p></div>
 <div id=submitpunish><p><iframe src="https://docs.google.com/forms/d/16EtNcrFRaKIUuKwmIe7mbTur5Hu9WJQZwHBlYy8Gaas/viewform?embedded=true" width="90%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>
