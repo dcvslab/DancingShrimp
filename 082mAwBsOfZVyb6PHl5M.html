@@ -5,10 +5,44 @@
 <script>
 var _0x9eee=["\x6F\x6E\x6C\x6F\x61\x64","\x4C\x6F\x67\x69\x6E","","\x57\x65\x6C\x63\x6F\x6D\x65\x2C\x20\x4D\x48\x20\x70\x6C\x75\x67\x2E\x64\x6A\x20\x53\x74\x61\x66\x66\x20\x4D\x65\x6D\x62\x65\x72","\x70\x61\x73\x73\x77\x6F\x72\x64","\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x64\x63\x76\x73\x6C\x61\x62\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F","\x61\x73\x73\x69\x67\x6E","\x6C\x6F\x63\x61\x74\x69\x6F\x6E"];window[_0x9eee[0]]=login();function login(){var _0x822dx2;var _0x822dx3=prompt(_0x9eee[1],_0x9eee[2]);switch(_0x822dx3){case _0x9eee[4]:alert(_0x9eee[3]);break ;;default:window[_0x9eee[7]][_0x9eee[6]](_0x9eee[5]);;};}
 </script>
+<script>
+window.onload = staffListHide()
+window.onload = submitPunishHide()
+window.onload = showPunishHide()
+	function staffListShow() {
+		    document.getElementById("stafflist").style.visibility = "visible";
+		    document.getElementById("submitpunish").style.visibility = "hidden";
+		    document.getElementById("showpunish").style.visibility = "hidden";
+	}
+	function staffListHide() {
+		    document.getElementById("stafflist").style.visibility = "hidden";
+	}
+	function submitPunishShow() {
+		    document.getElementById("submitpunish").style.visibility = "visible";
+		    document.getElementById("showpunish").style.visibility = "hidden";
+		    document.getElementById("stafflist").style.visibility = "hidden";
+	}
+	function submitPunishHide() {
+		    document.getElementById("submitpunish").style.visibility = "hidden";
+	}
+	function showPunishShow() {
+		    document.getElementById("showpunish").style.visibility = "visible";
+		    document.getElementById("stafflist").style.visibility = "hidden";
+		    document.getElementById("submitpunish").style.visibility = "hidden";
+	}
+	function showPunishHide() {
+		    document.getElementById("showpunish").style.visibility = "hidden";
+	}
+</script>
 </head>
 <body>
 <center>
-<button>Staff List</button><button>Submit Punishment</button><button>Show Punishments</button>
+<button onclick="staffListShow()">Staff List</button><button onclick="submitPunishShow()">Submit Punishment</button><button onclick="showPunishShow()">Show Punishments</button>
+<p id="stafflist"></p>
+stafflist
+<p id="submitpunish"></p>
+
+<p id="showpunish"></p>
 </center>
 </body>
 </html>
