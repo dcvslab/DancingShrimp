@@ -7,23 +7,23 @@ var _0xb828=["\x6F\x6E\x6C\x6F\x61\x64","\x4C\x6F\x67\x69\x6E","","\x57\x65\x6C\
 
 function stafflist() {
 	document.getElementById('stafflist').style.visibility = "visible";
-	document.getElementById('submitpunish').style.visibility = "hidden";
-	document.getElementById('showpunish').style.visibility = "hidden";
+	document.getElementById('submitpunish').style.visibility = "none";
+	document.getElementById('showpunish').style.visibility = "none";
 }
 function submitpunish() {
-	document.getElementById('stafflist').style.visibility = "hidden";
+	document.getElementById('stafflist').style.visibility = "none";
 	document.getElementById('submitpunish').style.visibility = "visible";
-	document.getElementById('showpunish').style.visibility = "hidden";
+	document.getElementById('showpunish').style.visibility = "none";
 }
 function showpunish() {
-	document.getElementById('stafflist').style.visibility = "hidden";
-	document.getElementById('submitpunish').style.visibility = "hidden";
+	document.getElementById('stafflist').style.visibility = "none";
+	document.getElementById('submitpunish').style.visibility = "none";
 	document.getElementById('showpunish').style.visibility = "visible";
 }
 function hideall() {
-	document.getElementById('stafflist').style.visibility = "hidden";
-	document.getElementById('submitpunish').style.visibility = "hidden";
-	document.getElementById('showpunish').style.visibility = "hidden";	
+	document.getElementById('stafflist').style.visibility = "none";
+	document.getElementById('submitpunish').style.visibility = "none";
+	document.getElementById('showpunish').style.visibility = "none";	
 }
 window.onload(hideall())
 </script>
