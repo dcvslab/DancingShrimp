@@ -4,6 +4,10 @@
 	<title>mh staff hub</title>
 <script>
 window.onload = login()
+window.onload = invis()
+function invis() {
+	pagecontent.style.visibility='hidden'
+}
 function login() {
     var text;
     var password = prompt("Login", "");
