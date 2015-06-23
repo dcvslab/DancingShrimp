@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+	<title>mh staff hub</title>
 <script>
 window.onload = login()
 function login() {
@@ -8,12 +9,17 @@ function login() {
     var password = prompt("Login", "");
     switch(password) {
         case "password":
-	    alert("correct passwordn/redirecting");
+	        pagecontent.style.visibility='visible'
 	    break;
          default:
 	    alert("not the passwordn/not redirecting");
     }
 }
 </script>
+</head>
+<body>
+<pagecontent>
+<p>nothin hi there</p>
+</pagecontent>
 </body>
 </html>
