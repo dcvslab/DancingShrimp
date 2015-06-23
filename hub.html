@@ -3,12 +3,8 @@
 <head>
 	<title>mh staff hub</title>
 <script>
-var pagecontent = document.getElementById('pagecontent');
 window.onload = login()
-window.onload = invis()
-function invis() {
-	pagecontent.style.visibility='hidden'
-}
+window.onload = visibility()
 function login() {
     var text;
     var password = prompt("Login", "");
@@ -22,9 +18,11 @@ function login() {
 }
 </script>
 </head>
-<body>
-<pagecontent>
+<body id="content">
 <p>nothin hi there</p>
-</pagecontent>
 </body>
+<script>
+function visibility() {
+    document.getElementById("content").style.visibility = "hidden";
+}</script>
 </html>
