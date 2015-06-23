@@ -1,18 +1,19 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>plug.dj staff hub</title>
-</head>
-<script>
-var password = "password"
-function prompt()
-    if (var login = prompt("Enter Password") == password) {
-        alert('worked')
-    } else {
-        alert('werong pass mang')
-    }
-    
-</script>
 <body>
-    <button type="button" onclick="prompt()">LOGIN</button>
+<script>
+window.onload = login()
+function login() {
+    var text;
+    var password = prompt("Login", "");
+    switch(favDrink) {
+        case "password":
+	    alert("correct passwordn/redirecting");
+	    break;
+         default:
+	    alert("not the passwordn/not redirecting");
+    }
+}
+</script>
 </body>
 </html>
