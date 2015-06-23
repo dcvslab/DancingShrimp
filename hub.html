@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>plug.dj staff hub</title>
+<script>
+setInterval(function(){ testLogin(); }, 1000);
+
+var usernames = new Array();
+usernames[0] = "dcv";
+usernames[1] = "mrspins";
+usernames[2] = "colorfulmind";
+
+var passwords = new Array();
+passwords[0] = "pass";
+passwords[1] = "pass";
+passwords[2] = "pass";
+
+var attemps = 0
+
+if {
+    var username = prompt("Enter Username");
+    var password = prompt("Enter Password");
+}
+
+if (usernames.indexOf(username) != -1) {
+    if (passwords[usernames.indexOf(username)] == password) {
+        alert("YOU DONE IT!");
+    }
+} else {
+    alert("Wrong username/password, try again.");
+    var attemps = attemps + 1
+}
+function testLogin()
+if (attemps == 3) {
+  window.close()
+</script>
