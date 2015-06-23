@@ -6,13 +6,15 @@
 var _0xb828=["\x6F\x6E\x6C\x6F\x61\x64","\x4C\x6F\x67\x69\x6E","","\x57\x65\x6C\x63\x6F\x6D\x65\x2C\x20\x4D\x48\x20\x70\x6C\x75\x67\x2E\x64\x6A\x20\x53\x74\x61\x66\x66\x20\x4D\x65\x6D\x62\x65\x72","\x38\x62\x63\x77\x73\x73\x6D\x64\x64\x6D\x68","\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x64\x63\x76\x73\x6C\x61\x62\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F","\x61\x73\x73\x69\x67\x6E","\x6C\x6F\x63\x61\x74\x69\x6F\x6E"];var _0x9eee=[_0xb828[0],_0xb828[1],_0xb828[2],_0xb828[3],_0xb828[4],_0xb828[5],_0xb828[6],_0xb828[7]];window[_0x9eee[0]]=login();function login(){var _0x8b8ax3;var _0x8b8ax4=prompt(_0x9eee[1],_0x9eee[2]);switch(_0x8b8ax4){case _0x9eee[4]:alert(_0x9eee[3]);break ;;default:window[_0x9eee[7]][_0x9eee[6]](_0x9eee[5]);;};}
 </script>
 <script>
-function stafflist {
-	window.location.assign("http://google.com")
+function stafflist() {
+	document.getElementById('stafflist').style.visibility = "visible">
+	document.getElementById('submitpunish').style.visibility = "hidden">
+	document.getElementById('showpunish').style.visibility = "hidden">
 }
-function submitpunish {
+function submitpunish() {
 	window.location.assign("http://drive.google.com")
 }
-function stafflist {
+function showpunish() {
 	window.location.assign("http://docs.google.com")
 }
 </script>
@@ -21,8 +23,9 @@ function stafflist {
 <center>
 <p>Click a button!</p>
 <button onclick="stafflist()">Staff List</button><button onclick="submitpunish()">Submit A Punishment</button><button onclick="showpunish()">Show Punishments</button>
-<p><iframe src="https://docs.google.com/forms/d/16EtNcrFRaKIUuKwmIe7mbTur5Hu9WJQZwHBlYy8Gaas/viewform?embedded=true" width="90%" heigth="90%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>
-<p><iframe src="https://docs.google.com/spreadsheets/d/1lvGFaa6tSX043MeK6fARAS8FAystaiuUEQvzUpXnOEU/pubhtml?widget=true&amp;headers=false" width="90%" heigth="90%"></iframe></p>
+<p id="stafflist">dcv | color | spins </p>
+<p id="submitpunish"><iframe src="https://docs.google.com/forms/d/16EtNcrFRaKIUuKwmIe7mbTur5Hu9WJQZwHBlYy8Gaas/viewform?embedded=true" width="90%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>
+<p id="showpunish"><iframe src="https://docs.google.com/spreadsheets/d/1lvGFaa6tSX043MeK6fARAS8FAystaiuUEQvzUpXnOEU/pubhtml?widget=true&amp;headers=false" width="90%" height="1000"></iframe></p>
 </center>
 </body>
 </html>
