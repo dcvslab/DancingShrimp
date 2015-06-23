@@ -4,16 +4,22 @@
 	<title>mh staff hub</title>
 <script>
 window.onload = login()
-window.onload = visibility()
+window.onload = visibilityfalse()
+function visibilitytrue() {
+    document.getElementById("content").style.visibility = "visible";
+}
+function visibilityfalse() {
+    document.getElementById("content").style.visibility = "hidden";
+}
 function login() {
     var text;
     var password = prompt("Login", "");
     switch(password) {
         case "password":
-	        pagecontent.style.visibility='visible'
+	        visibilitytrue()
 	    break;
          default:
-	    alert("not the passwordn/not redirecting");
+	    visibilityfalse();
     }
 }
 </script>
@@ -22,7 +28,5 @@ function login() {
 <p>nothin hi there</p>
 </body>
 <script>
-function visibility() {
-    document.getElementById("content").style.visibility = "hidden";
-}</script>
+</script>
 </html>
