@@ -25,7 +25,7 @@ function hideall() {
 	document.getElementById('submitpunish').style.display = "none";
 	document.getElementById('showpunish').style.display = "none";	
 }
-window.onload(hideall())
+window.onload="hideall()"
 </script>
 </head>
 <body>
