@@ -25,10 +25,10 @@ function hideall() {
 	document.getElementById('submitpunish').style.display = "none";
 	document.getElementById('showpunish').style.display = "none";	
 }
-window.onload="hideall()"
+window.onload = hideall()
 </script>
 </head>
-<body>
+<body onload="hideall()">
 <center>
 <p>MineHeroes Staff Hub | By DCV</p>
 <button onclick="stafflist()">Staff List</button><button onclick="submitpunish()">Submit A Punishment</button><button onclick="showpunish()">Show Punishments</button>
