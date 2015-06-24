@@ -10,22 +10,17 @@
   sl {
     outline: 2px solid violet;
     outline-offset: 10px;
-    width: 20%;
-    margin-right: 10px;
+    width: 30%;
   }
    sp {
     outline: 2px solid lime;
     outline-offset: 10px;
-    width: 20%;
-    margin-right: 10px;
-    margin-left: 10px;
+    width: 30%;
   }
    vp {
     outline: 2px solid red;
     outline-offset: 10px;
-    width: 20%;
-    margin-right: 10px;
-    margin-left: 10px;
+    width: 30%;
   }
 </style>
 <title>MHPDJ STAFF</title>
@@ -59,7 +54,7 @@ window.onload = hideall()
 <body onload="hideall()">
 <center>
 <p>MHPDJ Hub | By DCV</p>
-<p><sl>Staff List</sl></p> | <p><sp>Submit Punishments</sp></p> | <p><vp>View Punishments</vp></p>
+<p onclick="stafflist()"><sl>Staff List</sl></p> | <p onclick="submitpunish()"><sp>Submit Punishments</sp></p> | <p onclick="showpunish()"><vp>View Punishments</vp></p>
 <div id=stafflist>
 	<br>
 <p><b><u>Host</u></b></p>
