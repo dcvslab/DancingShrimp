@@ -7,6 +7,26 @@
       setfont {
   font-family: "europa";
   }
+  sl {
+    outline: 2px solid violet;
+    outline-offset: 10px;
+    width: 20%;
+    margin-right: 10px;
+  }
+   sp {
+    outline: 2px solid lime;
+    outline-offset: 10px;
+    width: 20%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+   vp {
+    outline: 2px solid red;
+    outline-offset: 10px;
+    width: 20%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 </style>
 <title>MHPDJ STAFF</title>
 <script>
@@ -39,7 +59,7 @@ window.onload = hideall()
 <body onload="hideall()">
 <center>
 <p>MHPDJ Hub | By DCV</p>
-<button onclick="stafflist()">Staff List</button><button onclick="submitpunish()">Submit A Punishment</button><button onclick="showpunish()">Show Punishments</button>
+<p><sl>Staff List</sl></p> | <p><sp>Submit Punishments</sp></p> | <p><vp>View Punishments</vp></p>
 <div id=stafflist>
 	<br>
 <p><b><u>Host</u></b></p>
