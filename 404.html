@@ -1,6 +1,5 @@
 <html>
 <head>
-<link type="text/css" href="shake.css">
 <script src="//use.typekit.net/kzy7srx.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 <style>
@@ -9,23 +8,30 @@
   }
 </style>
 <script>
-var size=1
-var size2=0
-function textSize(){
-  var size2 = parseInt(size.value) + 1;
-}
-function startSize(){
-  setInterval(function(){ textSize(); }, 1000);
-}
+  //’secret’ specifies the numerical keystrokes that make up the word “mario”
+var secret = "7765827379"; 
+var input = "";
+var timer;
+//The following function sets a timer that checks for user input. You can change the variation in how long the user has to input by changing the number in ‘setTimeout.’ In this case, it’s set for 500 milliseconds or ½ second.
+$(document).keyup(function(e) {
+   input += e.which;    
+   clearTimeout(timer);
+   timer = setTimeout(function() { input = ""; }, 500);
+   check_input();
+});
+//Once the time is up, this function is run to see if the user’s input is the same as the secret code
+function check_input() {
+    if(input == secret) {
+        alert("topkek")           
+    }
+};
 </script>
 <title>404</title>
 </head>
 <body>
 <center>
-<setfont><p>You took a wrong turn, or did you want to come here on purpose? I mean, this page is pretty cool.</p></setfont>
-<div class="shake shake-hard">
-<p>404</p>
-</div>
+<setfont><p>You took a wrong turn, or did you want to come here on purpose? I mean, this page is pretty cool. There is totally a hidden secret here.</p></setfont>
+
 </center>
 </body>
 </html>
