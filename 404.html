@@ -3,17 +3,16 @@
 <script src="//use.typekit.net/kzy7srx.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 <script>
-  $(document).ready(function() {
-
- spectrum();
-
- function spectrum(){
+function spectrum(){
     var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
     $('body').animate( { backgroundColor: hue }, 1000);
     spectrum();
  }
 
 });
+function start(){
+setInterval(function(){ spectrum(); }, 1000);
+}
 </script>
 <style>
   setfont {
@@ -23,6 +22,7 @@
 <title>404</title>
 </head>
 <body>
+<body onload="start()">
 <center>
 <setfont><h1><p>You took a wrong turn, or did you want to come here on purpose? I mean, this page is pretty cool.</p></h1></setfont>
 <iframe width="420" height="315" src="https://www.youtube.com/embed/crPl0ITIkS0?autoplay=1" frameborder="0" autoplay="true" allowfullscreen></iframe>
