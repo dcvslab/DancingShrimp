@@ -7,12 +7,24 @@
     font-family: "europa";
   }
 </style>
+<script>
+var size=1
+var size2=0
+
+function textSize(){
+  var size2 = parseInt(size.value) + 1;
+}
+
+function startSize(){
+  setInterval(function(){ textSize(); }, 1000);
+}
+</script>
 <title>404</title>
 </head>
 <body>
 <center>
-<setfont><h1><p>You took a wrong turn, or did you want to come here on purpose? I mean, this page is pretty cool.</p></h1></setfont>
-<iframe width="420" height="315" src="https://www.youtube.com/embed/crPl0ITIkS0?autoplay=1" frameborder="0" autoplay="true" allowfullscreen></iframe>
+<setfont><p>You took a wrong turn, or did you want to come here on purpose? I mean, this page is pretty cool.</p></setfont>
+<p><font size=size2>404</font></p>
 </center>
 </body>
 </html>
