@@ -1,11 +1,9 @@
 <html>
 <script type="application/javascript">
-    function getip(json){
-      alert(json.ip); // alerts the ip address
-    }
+  function getIP(json) {
+    document.write("My public IP address is: ", json.ip);
+  }
 </script>
 
-<script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip"></script>
-
-<button onclick="getip(json)">basic</button>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 </html>
