@@ -16,31 +16,31 @@ function stafflist() {
 	document.getElementById('stafflist').style.display = "block";
 	document.getElementById('submitpunish').style.display = "none";
 	document.getElementById('showpunish').style.display = "none";
-	document.getElementById('plugdj').style.display = "none";
+	document.getElementById('website').style.display = "none";
 }
 function submitpunish() {
 	document.getElementById('stafflist').style.display = "none";
 	document.getElementById('submitpunish').style.display = "block";
 	document.getElementById('showpunish').style.display = "none";
-	document.getElementById('plugdj').style.display = "none";
+	document.getElementById('website').style.display = "none";
 }
 function showpunish() {
 	document.getElementById('stafflist').style.display = "none";
 	document.getElementById('submitpunish').style.display = "none";
 	document.getElementById('showpunish').style.display = "block";
-	document.getElementById('plugdj').style.display = "none";
+	document.getElementById('website').style.display = "none";
 }
-function plugdj() {
+function website() {
 	document.getElementById('stafflist').style.display = "none";
 	document.getElementById('submitpunish').style.display = "none";
 	document.getElementById('showpunish').style.display = "none";
-	document.getElementById('plugdj').style.display = "block";
+	document.getElementById('website').style.display = "block";
 }
 function hideall() {
 	document.getElementById('stafflist').style.display = "none";
 	document.getElementById('submitpunish').style.display = "none";
 	document.getElementById('showpunish').style.display = "none";
-	document.getElementById('plugdj').style.display = "none";
+	document.getElementById('website').style.display = "none";
 }
 window.onload = hideall()
 </script>
@@ -48,7 +48,7 @@ window.onload = hideall()
 <setfont>
 <body onload="hideall()">
 <center>
-<p><u><b onclick="stafflist()">Staff List</b></u> | <u><b onclick="submitpunish()">Submit Punishments</b></u> | <u><b onclick="showpunish()">View Punishments</b></u> | <u><b onclick="plugdj()">plug.dj</b></u></p>
+<p><u><b onclick="stafflist()">Staff List</b></u> | <u><b onclick="submitpunish()">Submit Punishments</b></u> | <u><b onclick="showpunish()">View Punishments</b></u> | <u><b onclick="website()">Website Homepage</b></u></p>
 <div id=stafflist>
 <p><b><u>Host</u></b></p>
 <p><font color="9F68FF"><img src="http://i.imgur.com/dHwulYX.png"> ColorfulMind | 3639368 </font></p>
@@ -71,7 +71,7 @@ window.onload = hideall()
 </div>
 <div id=showpunish><p><iframe src="https://docs.google.com/spreadsheets/d/1lvGFaa6tSX043MeK6fARAS8FAystaiuUEQvzUpXnOEU/pubhtml?widget=true&amp;headers=false" width="90%" height="750"></iframe></p>
 </div>
-<div id=plugdj><object data=http://www.mineheroes.net width="600" height="400"> <embed src=http://www.mineheroes.net width="600" height="400"> </embed> Error: Embedded data could not be displayed. </object>
+<div id=website><object data=http://www.mineheroes.net width="600" height="400"> <embed src=http://www.mineheroes.net width="600" height="400"> </embed> Error: Embedded data could not be displayed. </object>
 <br>
 <hr>
 <p><font color=#000000>Made by DCV | Copyright 2015</font></p>
