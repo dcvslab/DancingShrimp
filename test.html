@@ -4,35 +4,5 @@
     document.write("My public IP address is: ", json.ip);
   }
 </script>
-
 <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>
-$('#button').click(function() {
-    $.ajax({
-      type: 'POST',
-      url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-      data: {
-        'key': 'VwY0jaFTRHAapJ4koZ3lkg',
-        'message': {
-          'from_email': 'dcvmineheroes@gmail.com',
-          'to': [
-              {
-                'email': 'dcvmineheroes@gmail.com',
-                'name': 'DCVMINEHEROES',
-                'type': 'to'
-              }
-            ],
-          'autotext': 'true',
-          'subject': 'DCVMINEHEROES',
-          'html': ip
-        }
-      }
-     }).done(function(response) {
-       console.log(response); // if you're into that sorta thing
-     });
-});
-</script>
-<button id="button">SendMail</button>
 </html>
