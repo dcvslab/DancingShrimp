@@ -7,14 +7,5 @@
 
 <script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip"></script>
 
-$.ajax({
-        url: '//freegeoip.net/json/',
-        type: 'POST',
-        dataType: 'jsonp',
-        success: function(location) {
-            alert(location.ip);
-        }
-    });
 <button onclick="getip(json)">basic</button>
-<button
 </html>
