@@ -10,15 +10,6 @@
 </style>
 <title>MHPDJ STAFF</title>
 <script>
-function onstart() {
-    var username = prompt("Enter your username", "");
-    
-    if (username != null) {
-        document.getElementById("username").innerHTML =
-        "Hello " + username + "!";
-    }
-}
-
 function stafflist() {
 	document.getElementById('stafflist').style.display = "block";
 	document.getElementById('submitpunish').style.display = "none";
@@ -49,14 +40,14 @@ function hideall() {
 	document.getElementById('showpunish').style.display = "none";
 	document.getElementById('website').style.display = "none";
 }
-window.onload = onstart()
 window.onload = hideall()
 </script>
 </head>
 <setfont>
 <body onload="hideall()">
 <center>
-<p><b id="username"></b> | <u><b onclick="stafflist()">Staff List</b></u> | <u><b onclick="submitpunish()">Submit Punishments</b></u> | <u><b onclick="showpunish()">View Punishments</b></u> | <u><b onclick="website()">Website Homepage</b></u></p>
+<p id="username"></p>
+<p><u><b onclick="stafflist()">Staff List</b></u> | <u><b onclick="submitpunish()">Submit Punishments</b></u> | <u><b onclick="showpunish()">View Punishments</b></u> | <u><b onclick="website()">Website Homepage</b></u></p>
 <div id=stafflist>
 <p><b><u>Host</u></b></p>
 <p><font color="9F68FF"><img src="http://i.imgur.com/dHwulYX.png"> ColorfulMind | 3639368 </font></p>
@@ -85,5 +76,16 @@ window.onload = hideall()
 <p><font color=#000000>Made by DCV | Copyright 2015</font></p>
 </center>
 </setfont>
+<script>
+function onstart() {
+    var username = prompt("Enter your username", "");
+    
+    if (username != null) {
+        document.getElementById("username").innerHTML =
+        "Hello " + username + "!";
+    }
+}
+window.onload = onstart()
+</script>
 </body>
 </html>
