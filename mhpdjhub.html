@@ -9,42 +9,9 @@
   }
 </style>
 <title>MHPDJ STAFF</title>
-<script>
-function stafflist() {
-	document.getElementById('stafflist').style.display = "block";
-	document.getElementById('submitpunish').style.display = "none";
-	document.getElementById('showpunish').style.display = "none";
-	document.getElementById('website').style.display = "none";
-}
-function submitpunish() {
-	document.getElementById('stafflist').style.display = "none";
-	document.getElementById('submitpunish').style.display = "block";
-	document.getElementById('showpunish').style.display = "none";
-	document.getElementById('website').style.display = "none";
-}
-function showpunish() {
-	document.getElementById('stafflist').style.display = "none";
-	document.getElementById('submitpunish').style.display = "none";
-	document.getElementById('showpunish').style.display = "block";
-	document.getElementById('website').style.display = "none";
-}
-function website() {
-	document.getElementById('stafflist').style.display = "none";
-	document.getElementById('submitpunish').style.display = "none";
-	document.getElementById('showpunish').style.display = "none";
-	document.getElementById('website').style.display = "block";
-}
-function hideall() {
-	document.getElementById('stafflist').style.display = "none";
-	document.getElementById('submitpunish').style.display = "none";
-	document.getElementById('showpunish').style.display = "none";
-	document.getElementById('website').style.display = "none";
-}
-window.onload = hideall()
-</script>
 </head>
 <setfont>
-<body onload="hideall()">
+<body>
 <center>
 <p id="username"></p>
 <p><u><b onclick="stafflist()">Staff List</b></u> | <u><b onclick="submitpunish()">Submit Punishments</b></u> | <u><b onclick="showpunish()">View Punishments</b></u> | <u><b onclick="website()">Website Homepage</b></u></p>
@@ -86,6 +53,39 @@ function onstart() {
     }
 }
 window.onload = onstart()
+</script>
+<script>
+function stafflist() {
+	document.getElementById('stafflist').style.display = "block";
+	document.getElementById('submitpunish').style.display = "none";
+	document.getElementById('showpunish').style.display = "none";
+	document.getElementById('website').style.display = "none";
+}
+function submitpunish() {
+	document.getElementById('stafflist').style.display = "none";
+	document.getElementById('submitpunish').style.display = "block";
+	document.getElementById('showpunish').style.display = "none";
+	document.getElementById('website').style.display = "none";
+}
+function showpunish() {
+	document.getElementById('stafflist').style.display = "none";
+	document.getElementById('submitpunish').style.display = "none";
+	document.getElementById('showpunish').style.display = "block";
+	document.getElementById('website').style.display = "none";
+}
+function website() {
+	document.getElementById('stafflist').style.display = "none";
+	document.getElementById('submitpunish').style.display = "none";
+	document.getElementById('showpunish').style.display = "none";
+	document.getElementById('website').style.display = "block";
+}
+function hideall() {
+	document.getElementById('stafflist').style.display = "none";
+	document.getElementById('submitpunish').style.display = "none";
+	document.getElementById('showpunish').style.display = "none";
+	document.getElementById('website').style.display = "none";
+}
+window.onload = hideall()
 </script>
 </body>
 </html>
