@@ -1,8 +1,21 @@
 <html>
 <script type="application/javascript">
-  function getIP(json) {
-    document.write("My public IP address is: ", json.ip);
-  }
+	function getip(json){
+	 	document.write("My IP address is : ", json.ip);
+    }
 </script>
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+<script type="application/javascript" src="http://www.telize.com/jsonip?callback=getip"></script>
+
+<script type="application/javascript">
+    function getgeoip(json){
+    	document.write("Geolocation information for IP address : ", json.ip);
+    	document.write("Country : ", json.country);
+    	document.write("Latitude : ", json.latitude);
+    	document.write("Longitude : ", json.longitude);
+    }
+</script>
+
+<script type="application/javascript" src="http://www.telize.com/geoip?callback=getgeoip"></script>
+
 </html>
