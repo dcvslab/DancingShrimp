@@ -1,14 +1,403 @@
 <html>
-  <title>Loading..</title>
-<head>
-  <script src="//use.typekit.net/kzy7srx.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-  <body bgcolor="#262626">
-<center>
-  <img src="http://i.imgur.com/15aQmAE.gif" align="middle">
-</center>
- <script type="text/JavaScript">
-        setTimeout("location.href = 'http://dcvslab.github.io/hub';", 3000);
-  </script>
-</head>
+<style>
+  @import "compass/css3";
+
+$color: #b63;
+$color-d1: darken($color, 5%);
+$color-d2: darken($color, 10%);
+$color-d3: darken($color, 15%);
+$color-d4: darken($color, 20%);
+$color-d5: darken($color, 25%);
+$color-d6: darken($color, 30%);
+$color-d7: darken($color, 35%);
+$color-d8: darken($color, 40%);
+
+$black: rgba(0,0,0,.2);
+
+$yellow-1: #ffc;
+$yellow-2: darken($yellow-1, 15%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:before, :after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+html, body {
+  min-width: 700px;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.sky {
+  flex: 10;
+  position: relative;
+  background: $color;
+}
+
+.earth {
+  flex: 1;
+  position: relative;
+  background: $color-d8;
+}
+
+.sun {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  width: 300px;
+  height: 300px;
+  margin: 0 0 0 -20px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at top right, $yellow-1 0%, $yellow-2 100%);
+}
+
+.hills {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.hills div:nth-child(1),
+.hills div:nth-child(2),
+.hills div:nth-child(3) {
+  position: absolute;
+  bottom: -350px;
+  left: -800px;
+  width: 500px;
+  height: 500px;
+  border-radius: 25%;
+  background: $color-d2;
+  transform: rotate(45deg);
+}
+
+.hills div:nth-child(2) {
+  left: -250px;
+}
+
+.hills div:nth-child(3) {
+  left: 250px;
+}
+
+.hills div:nth-child(4),
+.hills div:nth-child(5) {
+  position: absolute;
+  bottom: -400px;
+  left: -600px;
+  width: 500px;
+  height: 500px;
+  border-radius: 25%;
+  background: $color-d3;
+  transform: rotate(45deg);
+}
+
+.hills div:nth-child(4) {
+  left: -600px;
+}
+
+.hills div:nth-child(5) {
+  left: 0;
+}
+
+.airplane {
+  position: absolute;
+  bottom: 300px;
+  left: -10%;
+  z-index: 1;
+  width: 30px;
+  height: 5px;
+  border-radius: 5px 5px 5px 5px;
+  background: $color-d8;
+  animation: 35s fly linear infinite;
+}
+
+.airplane:after {
+  bottom: 0;
+  left: 4px;
+  width: 4px;
+  height: 10px;
+  border-radius: 5px 5px 5px 5px;
+  background: $color-d8;
+  transform: rotate(-45deg);
+}
+
+.airplane:before {
+  z-index: 1;
+  top: 2px;
+  left: 5px;
+  width: 1px;
+  height: 1px;
+  background: $yellow-1;
+  box-shadow:
+    22px 0 0 0 $yellow-1,
+    21px 0 0 0 $yellow-1,
+    20px 0 0 0 $yellow-1,
+    16px 0 0 0 $yellow-1,
+    12px 0 0 0 $yellow-1,
+    8px 0 0 0 $yellow-1,
+    4px 0 0 0 $yellow-1;
+}
+
+.tree {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.tree div {
+  position: relative;
+  float: left;
+  display: block;
+  width: 6px;
+  height: 25px;
+  margin: 0 30px 0 0;
+  background: $color-d8;
+}
+
+.tree div:before {
+  top: -9px;
+  left: -9px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: $color-d8;
+}
+
+.tower {
+  position: absolute;
+  z-index: 1;
+  right: 50%;
+  bottom: 0;
+  margin: 0 -350px 0 0;
+  width: 12px;
+  height: 320px;
+  background: $color-d7;
+}
+
+.tower:before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  margin: -10px 0 0 -29px;
+  border-radius: 50%;
+  background: $color-d7;
+}
+
+.tower:after {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 150px;
+  margin: -150px 0 0 4px;
+  background: $color-d7;
+}
+
+.house {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+}
+
+.house div:nth-child(1) {
+  position: relative;
+  float: left;
+  display: block;
+  width: 125px;
+  height: 250px;
+  border-radius: 5px 5px 0 0;
+  background: $color-d5;
+}
+
+.house div:nth-child(1):before {
+  top: 20px;
+  left: 20px;
+  width: 5px;
+  height: 5px;
+  background: $black;
+  animation: .5s light infinite alternate;
+  box-shadow:
+    50px 220px 0 6px $yellow-1,
+    30px 220px 0 6px $yellow-1,
+    80px 180px 0 0 $yellow-1,
+    60px 180px 0 0 $black,
+    40px 180px 0 0 $yellow-1,
+    20px 180px 0 0 $black,
+    0 180px 0 0 $black,
+    80px 160px 0 0 $black,
+    60px 160px 0 0 $black,
+    40px 160px 0 0 $black,
+    20px 160px 0 0 $black,
+    0 160px 0 0 $yellow-1,
+    80px 140px 0 0 $black,
+    60px 140px 0 0 $black,
+    40px 140px 0 0 $yellow-1,
+    20px 140px 0 0 $black,
+    0 140px 0 0 $yellow-1,
+    80px 120px 0 0 $yellow-1,
+    60px 120px 0 0 $yellow-1,
+    40px 120px 0 0 $black,
+    20px 120px 0 0 $yellow-1,
+    0 120px 0 0 $black,
+    80px 100px 0 0 $black,
+    60px 100px 0 0 $yellow-1,
+    40px 100px 0 0 $black,
+    20px 100px 0 0 $yellow-1,
+    0 100px 0 0 $black,
+    80px 80px 0 0 $yellow-1,
+    60px 80px 0 0 $yellow-1,
+    40px 80px 0 0 $black,
+    20px 80px 0 0 $black,
+    0 80px 0 0 $black,
+    80px 60px 0 0 $black,
+    60px 60px 0 0 $black,
+    40px 60px 0 0 $black,
+    20px 60px 0 0 $yellow-1,
+    0 60px 0 0 $yellow-1,
+    80px 40px 0 0 $black,
+    60px 40px 0 0 $black,
+    40px 40px 0 0 $black,
+    20px 40px 0 0 $black,
+    0 40px 0 0 $yellow-1,
+    80px 20px 0 0 $yellow-1,
+    60px 20px 0 0 $black,
+    40px 20px 0 0 $black,
+    20px 20px 0 0 $yellow-1,
+    0 20px 0 0 $yellow-1,
+    80px 0 0 0 $black,
+    60px 0 0 0 $yellow-1,
+    40px 0 0 0 $yellow-1,
+    20px 0 0 0 $black;
+}
+
+.house div:nth-child(1):after {
+  top: -40px;
+  left: 80px;
+  width: 8px;
+  height: 40px;
+  border-radius: 4px 4px 0 0;
+  background: $color-d5;
+  box-shadow: 20px 20px 0 0 $color-d5;
+}
+
+.house div:nth-child(2) {
+  position: relative;
+  top: 85px;
+  float: left;
+  display: block;
+  width: 145px;
+  height: 165px;
+  margin: 0 50px 0 25px;
+  border-radius: 5px 5px 0 0;
+  background: $color-d6;
+}
+
+.house div:nth-child(2):before {
+  top: 20px;
+  left: 20px;
+  width: 5px;
+  height: 5px;
+  background: $yellow-1;
+  box-shadow:
+    60px 135px 0 6px $yellow-1,
+    40px 135px 0 6px $yellow-1,
+    100px 100px 0 0 $black,
+    80px 100px 0 0 $black,
+    60px 100px 0 0 $black,
+    40px 100px 0 0 $black,
+    20px 100px 0 0 $black,
+    0 100px 0 0 $yellow-1,
+    100px 80px 0 0 $yellow-1,
+    80px 80px 0 0 $black,
+    60px 80px 0 0 $yellow-1,
+    40px 80px 0 0 $black,
+    20px 80px 0 0 $black,
+    0 80px 0 0 $black,
+    100px 60px 0 0 $black,
+    80px 60px 0 0 $yellow-1,
+    60px 60px 0 0 $black,
+    40px 60px 0 0 $black,
+    20px 60px 0 0 $yellow-1,
+    0 60px 0 0 $black,
+    100px 40px 0 0 $yellow-1,
+    80px 40px 0 0 $yellow-1,
+    60px 40px 0 0 $black,
+    40px 40px 0 0 $black,
+    20px 40px 0 0 $yellow-1,
+    0 40px 0 0 $yellow-1,
+    100px 20px 0 0 $yellow-1,
+    80px 20px 0 0 $black,
+    60px 20px 0 0 $yellow-1,
+    40px 20px 0 0 $black,
+    20px 20px 0 0 $black,
+    0 20px 0 0 $yellow-1,
+    100px 0 0 0 $black,
+    80px 0 0 0 $yellow-1,
+    60px 0 0 0 $yellow-1,
+    40px 0 0 0 $black,
+    20px 0 0 0 $black;
+}
+
+.house div:nth-child(2):after {
+  top: -8px;
+  left: 30px;
+  width: 80px;
+  height: 25px;
+  border-radius: 50% 50% 0 0;
+  background: $color-d6;
+}
+
+@keyframes fly {
+  0% {
+    left: -5%;
+  }
+  
+  100% {
+    left: 105%;
+  }
+}
+</style>
+<div class="sky">
+  
+  <div class="sun"></div>
+  
+  <div class="hills">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  
+  <div class="airplane"></div>
+  
+  <div class="tree">
+    <div></div><div></div><div></div>
+    <div></div><div></div><div></div>
+    <div></div><div></div><div></div>
+  </div>
+  
+  <div class="tower"></div>
+  
+  <div class="house">
+    <div></div>
+    <div></div>
+  </div>
+  
+</div>
+
+<div class="earth"></div>
 </html>
