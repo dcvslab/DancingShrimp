@@ -1,6 +1,11 @@
 <html>
 <title>dcvslab</title>
 <style>
+body {
+    -moz-transform: scale(0.9, 0.9); /* Moz-browsers */
+    zoom: 0.9; /* Other non-webkit browsers */
+    zoom: 90%; /* Webkit browsers */
+}
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:600");
 @import url("http://fonts.googleapis.com/css?family=Codystar");
 *, *:before, *:after {
@@ -500,6 +505,7 @@ html, body {
   background: #1a1a1a;
   transform: rotate(-45deg); }
 </style>
+<body>
 <div class='landscape'>
   <div class='inner'>
     <div class='moon'></div>
@@ -607,4 +613,5 @@ html, body {
     </div>
   </div>
 </div>
+</body>
 </html>
