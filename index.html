@@ -2,23 +2,6 @@
   <title>dcvslab 1</title>
 <!-- All these were made by http://codepen.io/oknoblich . You can find the gallery of them here: http://codepen.io/collection/tELys/ !-->
 <style>
-@import "compass/css3";
-
-$color: #b63;
-$color-d1: darken($color, 5%);
-$color-d2: darken($color, 10%);
-$color-d3: darken($color, 15%);
-$color-d4: darken($color, 20%);
-$color-d5: darken($color, 25%);
-$color-d6: darken($color, 30%);
-$color-d7: darken($color, 35%);
-$color-d8: darken($color, 40%);
-
-$black: rgba(0,0,0,.2);
-
-$yellow-1: #ffc;
-$yellow-2: darken($yellow-1, 15%);
-
 * {
   margin: 0;
   padding: 0;
@@ -45,13 +28,13 @@ body {
 .sky {
   flex: 10;
   position: relative;
-  background: $color;
+  background: #b63;
 }
 
 .earth {
   flex: 1;
   position: relative;
-  background: $color-d8;
+  background: #1b0f07;
 }
 
 .sun {
@@ -62,7 +45,7 @@ body {
   height: 300px;
   margin: 0 0 0 -20px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at top right, $yellow-1 0%, $yellow-2 100%);
+  background: radial-gradient(ellipse at top right, #ffffcc 0%, #ffff80 100%);
 }
 
 .hills {
@@ -80,7 +63,7 @@ body {
   width: 500px;
   height: 500px;
   border-radius: 25%;
-  background: $color-d2;
+  background: #935028;
   transform: rotate(45deg);
 }
 
@@ -100,7 +83,7 @@ body {
   width: 500px;
   height: 500px;
   border-radius: 25%;
-  background: $color-d3;
+  background: #7f4523;
   transform: rotate(45deg);
 }
 
@@ -120,7 +103,7 @@ body {
   width: 30px;
   height: 5px;
   border-radius: 5px 5px 5px 5px;
-  background: $color-d8;
+  background: #1b0f07;
   animation: 35s fly linear infinite;
 }
 
@@ -130,7 +113,7 @@ body {
   width: 4px;
   height: 10px;
   border-radius: 5px 5px 5px 5px;
-  background: $color-d8;
+  background: #1b0f07;
   transform: rotate(-45deg);
 }
 
@@ -140,15 +123,8 @@ body {
   left: 5px;
   width: 1px;
   height: 1px;
-  background: $yellow-1;
-  box-shadow:
-    22px 0 0 0 $yellow-1,
-    21px 0 0 0 $yellow-1,
-    20px 0 0 0 $yellow-1,
-    16px 0 0 0 $yellow-1,
-    12px 0 0 0 $yellow-1,
-    8px 0 0 0 $yellow-1,
-    4px 0 0 0 $yellow-1;
+  background: #ffc;
+  box-shadow: 22px 0 0 0 #ffc, 21px 0 0 0 #ffc, 20px 0 0 0 #ffc, 16px 0 0 0 #ffc, 12px 0 0 0 #ffc, 8px 0 0 0 #ffc, 4px 0 0 0 #ffc;
 }
 
 .tree {
@@ -164,7 +140,7 @@ body {
   width: 6px;
   height: 25px;
   margin: 0 30px 0 0;
-  background: $color-d8;
+  background: #1b0f07;
 }
 
 .tree div:before {
@@ -173,7 +149,7 @@ body {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: $color-d8;
+  background: #1b0f07;
 }
 
 .tower {
@@ -184,7 +160,7 @@ body {
   margin: 0 -350px 0 0;
   width: 12px;
   height: 320px;
-  background: $color-d7;
+  background: #2f190d;
 }
 
 .tower:before {
@@ -195,7 +171,7 @@ body {
   height: 70px;
   margin: -10px 0 0 -29px;
   border-radius: 50%;
-  background: $color-d7;
+  background: #2f190d;
 }
 
 .tower:after {
@@ -205,7 +181,7 @@ body {
   width: 4px;
   height: 150px;
   margin: -150px 0 0 4px;
-  background: $color-d7;
+  background: #2f190d;
 }
 
 .house {
@@ -221,7 +197,7 @@ body {
   width: 125px;
   height: 250px;
   border-radius: 5px 5px 0 0;
-  background: $color-d5;
+  background: #572f18;
 }
 
 .house div:nth-child(1):before {
@@ -229,60 +205,9 @@ body {
   left: 20px;
   width: 5px;
   height: 5px;
-  background: $black;
+  background: rgba(0, 0, 0, 0.2);
   animation: .5s light infinite alternate;
-  box-shadow:
-    50px 220px 0 6px $yellow-1,
-    30px 220px 0 6px $yellow-1,
-    80px 180px 0 0 $yellow-1,
-    60px 180px 0 0 $black,
-    40px 180px 0 0 $yellow-1,
-    20px 180px 0 0 $black,
-    0 180px 0 0 $black,
-    80px 160px 0 0 $black,
-    60px 160px 0 0 $black,
-    40px 160px 0 0 $black,
-    20px 160px 0 0 $black,
-    0 160px 0 0 $yellow-1,
-    80px 140px 0 0 $black,
-    60px 140px 0 0 $black,
-    40px 140px 0 0 $yellow-1,
-    20px 140px 0 0 $black,
-    0 140px 0 0 $yellow-1,
-    80px 120px 0 0 $yellow-1,
-    60px 120px 0 0 $yellow-1,
-    40px 120px 0 0 $black,
-    20px 120px 0 0 $yellow-1,
-    0 120px 0 0 $black,
-    80px 100px 0 0 $black,
-    60px 100px 0 0 $yellow-1,
-    40px 100px 0 0 $black,
-    20px 100px 0 0 $yellow-1,
-    0 100px 0 0 $black,
-    80px 80px 0 0 $yellow-1,
-    60px 80px 0 0 $yellow-1,
-    40px 80px 0 0 $black,
-    20px 80px 0 0 $black,
-    0 80px 0 0 $black,
-    80px 60px 0 0 $black,
-    60px 60px 0 0 $black,
-    40px 60px 0 0 $black,
-    20px 60px 0 0 $yellow-1,
-    0 60px 0 0 $yellow-1,
-    80px 40px 0 0 $black,
-    60px 40px 0 0 $black,
-    40px 40px 0 0 $black,
-    20px 40px 0 0 $black,
-    0 40px 0 0 $yellow-1,
-    80px 20px 0 0 $yellow-1,
-    60px 20px 0 0 $black,
-    40px 20px 0 0 $black,
-    20px 20px 0 0 $yellow-1,
-    0 20px 0 0 $yellow-1,
-    80px 0 0 0 $black,
-    60px 0 0 0 $yellow-1,
-    40px 0 0 0 $yellow-1,
-    20px 0 0 0 $black;
+  box-shadow: 50px 220px 0 6px #ffc, 30px 220px 0 6px #ffc, 80px 180px 0 0 #ffc, 60px 180px 0 0 rgba(0, 0, 0, 0.2), 40px 180px 0 0 #ffc, 20px 180px 0 0 rgba(0, 0, 0, 0.2), 0 180px 0 0 rgba(0, 0, 0, 0.2), 80px 160px 0 0 rgba(0, 0, 0, 0.2), 60px 160px 0 0 rgba(0, 0, 0, 0.2), 40px 160px 0 0 rgba(0, 0, 0, 0.2), 20px 160px 0 0 rgba(0, 0, 0, 0.2), 0 160px 0 0 #ffc, 80px 140px 0 0 rgba(0, 0, 0, 0.2), 60px 140px 0 0 rgba(0, 0, 0, 0.2), 40px 140px 0 0 #ffc, 20px 140px 0 0 rgba(0, 0, 0, 0.2), 0 140px 0 0 #ffc, 80px 120px 0 0 #ffc, 60px 120px 0 0 #ffc, 40px 120px 0 0 rgba(0, 0, 0, 0.2), 20px 120px 0 0 #ffc, 0 120px 0 0 rgba(0, 0, 0, 0.2), 80px 100px 0 0 rgba(0, 0, 0, 0.2), 60px 100px 0 0 #ffc, 40px 100px 0 0 rgba(0, 0, 0, 0.2), 20px 100px 0 0 #ffc, 0 100px 0 0 rgba(0, 0, 0, 0.2), 80px 80px 0 0 #ffc, 60px 80px 0 0 #ffc, 40px 80px 0 0 rgba(0, 0, 0, 0.2), 20px 80px 0 0 rgba(0, 0, 0, 0.2), 0 80px 0 0 rgba(0, 0, 0, 0.2), 80px 60px 0 0 rgba(0, 0, 0, 0.2), 60px 60px 0 0 rgba(0, 0, 0, 0.2), 40px 60px 0 0 rgba(0, 0, 0, 0.2), 20px 60px 0 0 #ffc, 0 60px 0 0 #ffc, 80px 40px 0 0 rgba(0, 0, 0, 0.2), 60px 40px 0 0 rgba(0, 0, 0, 0.2), 40px 40px 0 0 rgba(0, 0, 0, 0.2), 20px 40px 0 0 rgba(0, 0, 0, 0.2), 0 40px 0 0 #ffc, 80px 20px 0 0 #ffc, 60px 20px 0 0 rgba(0, 0, 0, 0.2), 40px 20px 0 0 rgba(0, 0, 0, 0.2), 20px 20px 0 0 #ffc, 0 20px 0 0 #ffc, 80px 0 0 0 rgba(0, 0, 0, 0.2), 60px 0 0 0 #ffc, 40px 0 0 0 #ffc, 20px 0 0 0 rgba(0, 0, 0, 0.2);
 }
 
 .house div:nth-child(1):after {
@@ -291,8 +216,8 @@ body {
   width: 8px;
   height: 40px;
   border-radius: 4px 4px 0 0;
-  background: $color-d5;
-  box-shadow: 20px 20px 0 0 $color-d5;
+  background: #572f18;
+  box-shadow: 20px 20px 0 0 #572f18;
 }
 
 .house div:nth-child(2) {
@@ -304,7 +229,7 @@ body {
   height: 165px;
   margin: 0 50px 0 25px;
   border-radius: 5px 5px 0 0;
-  background: $color-d6;
+  background: #432412;
 }
 
 .house div:nth-child(2):before {
@@ -312,45 +237,8 @@ body {
   left: 20px;
   width: 5px;
   height: 5px;
-  background: $yellow-1;
-  box-shadow:
-    60px 135px 0 6px $yellow-1,
-    40px 135px 0 6px $yellow-1,
-    100px 100px 0 0 $black,
-    80px 100px 0 0 $black,
-    60px 100px 0 0 $black,
-    40px 100px 0 0 $black,
-    20px 100px 0 0 $black,
-    0 100px 0 0 $yellow-1,
-    100px 80px 0 0 $yellow-1,
-    80px 80px 0 0 $black,
-    60px 80px 0 0 $yellow-1,
-    40px 80px 0 0 $black,
-    20px 80px 0 0 $black,
-    0 80px 0 0 $black,
-    100px 60px 0 0 $black,
-    80px 60px 0 0 $yellow-1,
-    60px 60px 0 0 $black,
-    40px 60px 0 0 $black,
-    20px 60px 0 0 $yellow-1,
-    0 60px 0 0 $black,
-    100px 40px 0 0 $yellow-1,
-    80px 40px 0 0 $yellow-1,
-    60px 40px 0 0 $black,
-    40px 40px 0 0 $black,
-    20px 40px 0 0 $yellow-1,
-    0 40px 0 0 $yellow-1,
-    100px 20px 0 0 $yellow-1,
-    80px 20px 0 0 $black,
-    60px 20px 0 0 $yellow-1,
-    40px 20px 0 0 $black,
-    20px 20px 0 0 $black,
-    0 20px 0 0 $yellow-1,
-    100px 0 0 0 $black,
-    80px 0 0 0 $yellow-1,
-    60px 0 0 0 $yellow-1,
-    40px 0 0 0 $black,
-    20px 0 0 0 $black;
+  background: #ffc;
+  box-shadow: 60px 135px 0 6px #ffc, 40px 135px 0 6px #ffc, 100px 100px 0 0 rgba(0, 0, 0, 0.2), 80px 100px 0 0 rgba(0, 0, 0, 0.2), 60px 100px 0 0 rgba(0, 0, 0, 0.2), 40px 100px 0 0 rgba(0, 0, 0, 0.2), 20px 100px 0 0 rgba(0, 0, 0, 0.2), 0 100px 0 0 #ffc, 100px 80px 0 0 #ffc, 80px 80px 0 0 rgba(0, 0, 0, 0.2), 60px 80px 0 0 #ffc, 40px 80px 0 0 rgba(0, 0, 0, 0.2), 20px 80px 0 0 rgba(0, 0, 0, 0.2), 0 80px 0 0 rgba(0, 0, 0, 0.2), 100px 60px 0 0 rgba(0, 0, 0, 0.2), 80px 60px 0 0 #ffc, 60px 60px 0 0 rgba(0, 0, 0, 0.2), 40px 60px 0 0 rgba(0, 0, 0, 0.2), 20px 60px 0 0 #ffc, 0 60px 0 0 rgba(0, 0, 0, 0.2), 100px 40px 0 0 #ffc, 80px 40px 0 0 #ffc, 60px 40px 0 0 rgba(0, 0, 0, 0.2), 40px 40px 0 0 rgba(0, 0, 0, 0.2), 20px 40px 0 0 #ffc, 0 40px 0 0 #ffc, 100px 20px 0 0 #ffc, 80px 20px 0 0 rgba(0, 0, 0, 0.2), 60px 20px 0 0 #ffc, 40px 20px 0 0 rgba(0, 0, 0, 0.2), 20px 20px 0 0 rgba(0, 0, 0, 0.2), 0 20px 0 0 #ffc, 100px 0 0 0 rgba(0, 0, 0, 0.2), 80px 0 0 0 #ffc, 60px 0 0 0 #ffc, 40px 0 0 0 rgba(0, 0, 0, 0.2), 20px 0 0 0 rgba(0, 0, 0, 0.2);
 }
 
 .house div:nth-child(2):after {
@@ -359,18 +247,18 @@ body {
   width: 80px;
   height: 25px;
   border-radius: 50% 50% 0 0;
-  background: $color-d6;
+  background: #432412;
 }
 
 @keyframes fly {
   0% {
     left: -5%;
   }
-  
   100% {
     left: 105%;
   }
 }
+
 </style>
 <div class="sky">
   
