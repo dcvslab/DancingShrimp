@@ -53,7 +53,7 @@ hr {
      font-weight: 400;
      padding-left: 52px;
      padding-top: 15px;
-     padding-bottom: 15px;
+     padding-bottom: 0px;
 }
 #usercmds {
      font-size: 16px;
@@ -75,6 +75,12 @@ hr {
      padding-left: 10px;
      z-index: 9001;
 }
+ #cmdtitle a:link,
+ #cmdtitle a:visited, 
+ #cmdtitle a:hover, 
+ #cmdtitle a:active {
+  color: rgba(0,0,0,.87);
+  text-decoration: none;
 #cmddesc {
      font-size: 14px;
      color: rgba(0,0,0,.54);
@@ -104,12 +110,12 @@ hr {
 <p><font color="#000">User Commands</font></p>
 </div>
 <div id="usercmds">
-<p>test</p>
+<p><a href="#dc">dc</a></p>
 </div>
 <hr>
 <div id="border">
 <div id="cmdtitle">
-<p>dc | !dc</p>
+<p name="dc">dc | !dc</p>
 </div>
 <div id="cmddesc">
 <p>If you disconnected, this will move you back to you're spot.</p>
