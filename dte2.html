@@ -178,6 +178,9 @@ hr {
 #gray {
      background-color: #ebebeb;
 }
+#staffcommands {
+     
+}
 </style>
 <body bgcolor="#fff">
 <div id="header">
@@ -271,8 +274,11 @@ hr {
 </div>
 </div>
 <hr>
+<div id="staffcommands">
 <div id="sectionhead">
 <p><font color="#000">Staff Commands</font></p>
+</div>
+HI IM A COMMAND
 </div>
 <div id="checkboxdiv">
 <main class="container">
@@ -280,7 +286,6 @@ hr {
       <input type="checkbox" id="check-me" />
 
       <label for="check-me">
-        <span class="circle"></span>
         <span class="check"></span>
         <span class="box"></span> 
         Staff Commands
@@ -307,5 +312,17 @@ $('label').click(function() {
   $("." + el.attr("class") + ":last").remove();
 });
 </script>
+<script>
+var check = document.getElementById('check-me');
 
+check.onclick = function() {
+    var div = document.getElementById('staffcommands');
+    if (div.style.display !== 'none') {
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+};
+</script>
 </html>
