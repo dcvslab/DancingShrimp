@@ -8,9 +8,15 @@
     <!-- 2. Use an HTML Import to bring in some elements. -->
     <link rel="import" href="bower_components/paper-button/paper-button.html">
   </head>
+  <style>
+    #my-button {
+    background: green;
+    color: yellow;
+}
+  </style>
   <body>
     <!-- 3. Declare the element. Configure using its attributes. -->
-    <paper-button>Say Hello</paper-button>
+    <paper-button id="my-button">Say Hello</paper-button>
     <div id="greeting"></div>
 
     <script>
