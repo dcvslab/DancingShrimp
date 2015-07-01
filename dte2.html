@@ -1,114 +1,11 @@
 <html>
 <head>
-     <!-- Thanks http://codepen.io/liabru/pen/bNXLGy , http://codepen.io/WayneHaworth/pen/OVVwwY & https://www.google.com/design/spec/style/color.html# :D ! 64b5f6 fafafa ebebeb f9f9f9-->
+     <!-- Thanks http://codepen.io/liabru/pen/bNXLGy , http://codepen.io/Sambego/pen/zDLxe & https://www.google.com/design/spec/style/color.html# :D ! 64b5f6 fafafa ebebeb f9f9f9-->
 <title>BOT COMMANDS</title>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <style>
-#checkboxdiv {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-#checkboxdiv2 {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-}
-/* checkbox css */
-
-input[type=checkbox] {
-  display: none;
-}
-/* hide the checkbox */
-
-label,
-p {
-  padding-left: 50px;
-}
-
-#check-awesome {
-  position: relative;
-}
-/* checkbox css -------------------------- */
-/* show a cursor when we hover */
-
-label {
-  cursor: pointer;
-}
-/* style all of our span tags with position absolute and over to the left */
-
-label span {
-  display: block;
-  position: absolute;
-  left: 0;
-  transition-duration: 0.3s;
-}
-/* style our circle and position it */
-
-label .circle {
-  background: #fff;
-  left: -15px;
-  top: -15px;
-  height: 50px;
-  width: 50px;
-  z-index: -1;
-  border-radius: 50%;
-}
-/* style our box */
-
-label .box {
-  border: 2px solid #000;
-  left: 25px;
-  height: 15px;
-  width: 15px;
-  z-index: 888;
-  transition-delay: 0.2s;
-}
-/* style the check. give it a border on the bottom right only and then rotate */
-
-label .check {
-  top: -6px;
-  left: 25px;
-  width: 9px;
-  height: 18px;
-  border: 2px solid #ff9800;
-  border-top: none;
-  border-left: none;
-  -webkit-transform: rotate(180deg);
-  transition-delay: 0.3s;
-  z-index: 888;
-  opacity: 0;
-}
-/* rotate and then hide our box */
-
-input[type=checkbox]:checked ~ label .box {
-  opacity: 0;
-  -webkit-transform: rotate(180deg);
-}
-/*rotate and show our check */
-
-input[type=checkbox]:checked ~ label .check {
-  opacity: 1;
-  -webkit-transform: scale(1) rotate(45deg);
-}
-/*circle keyframes */
-
-label .circle {
-  -webkit-animation: growCircle 0.3s ease;
-}
-
-@-webkit-keyframes growCircle {
-  0%, 100% {
-    -webkit-transform: scale(0);
-  }
-  70% {
-    background: #ddd;
-    -webkit-transform: scale(1.25);
-  }
-}
-
-/*rest of page css*/
 body {
     font-family: 'RobotoDraft', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -279,69 +176,12 @@ hr {
 </div>
 </div>
 <hr>
-<div id="staffcommands">
 <div id="sectionhead">
 <p><font color="#000">Staff Commands</font></p>
 </div>
-HI IM A COMMAND
-</div>
-<div id="checkboxdiv2">
-<main class="container">
-    <div id="check-awesome" class="form-group">
-      <input type="checkbox" id="check-me" />
-
-      <label for="check-me">
-        <span class="check"></span>
-        <span class="box"></span> 
-        Staff Commands
-      </label>
-    </div>
-  </div>
-</main>
-</div>
-<div id="checkboxdiv">
-<main class="container">
-    <div id="check-awesome" class="form-group">
-      <input type="checkbox" id="check-me" />
-
-      <label for="check-me">
-        <span class="check"></span>
-        <span class="box"></span> 
-        Staff Commands
-      </label>
-    </div>
-  </div>
-</main>
 </div>
 </body>
 <script>
-     // per css-tricks restarting css animations
-// http://css-tricks.com/restart-css-animation/
-$('label').click(function() {
-  var el = $(this).children('span:first-child');
-
-  el.addClass('circle');
-
-  // clone it
-  var newone = el.clone(true);
-
-  // add the cloned version before our original
-  el.before(newone);
-
-  $("." + el.attr("class") + ":last").remove();
-});
-</script>
-<script>
-var check = document.getElementById('check-me');
-
-check.onclick = function() {
-    var div = document.getElementById('staffcommands');
-    if (div.style.display !== 'none') {
-        div.style.display = 'none';
-    }
-    else {
-        div.style.display = 'block';
-    }
-};
+     
 </script>
 </html>
