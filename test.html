@@ -5,6 +5,11 @@
     </script>
     <link rel="import" href="bower_components/paper-button/paper-button.html">
   </head>
+  <script>
+    clickMe() {
+      alert("Working")
+    }
+  </script>
   <style>
         #hello {
         background: green;
@@ -12,7 +17,7 @@
     }
   </style>
   <body>
-    <paper-button id="hello">Say Hello</paper-button>
+    <paper-button id="hello" onclick="clickMe()">Say Hello</paper-button>
     <div id="greeting"></div>
 
     <script>
