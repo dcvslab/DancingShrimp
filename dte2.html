@@ -85,11 +85,15 @@ hr {
 #staffcommands {
      
 }
-#button {
+#buttonstaff {
     background: #ff9800;
     color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 32px;
 }
-#button::shadow paper-ripple {
+#buttonstaff::shadow paper-ripple {
   color: #ff9800;
 }
 </style>
@@ -189,11 +193,11 @@ hr {
 <p><font color="#000">Staff Commands</font></p>
 </div>
 </div>
-<paper-button id="button">button</paper-button>
+<paper-button raised id="buttonstaff">SHOW STAFF COMMANDS</paper-button>
 </body>
 <script>
      document.addEventListener('WebComponentsReady', function() {
-        var button = document.querySelector('paper-button');
+        var button = document.querySelector('buttonstaff');
                button.addEventListener('click', function() {
                     alert("working!")
                });
