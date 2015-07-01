@@ -1,21 +1,31 @@
+<!DOCTYPE html>
 <html>
-<script type="application/javascript">
-	function getip(json){
-	 	document.write("My IP address is : ", json.ip);
-    }
-</script>
+  <head>
+    <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
+    </script>
 
-<script type="application/javascript" src="http://www.telize.com/jsonip?callback=getip"></script>
+    <!-- 2. Use an HTML Import to bring in some elements. -->
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+  </head>
+  <body>
+    <!-- 3. Declare the element. Configure using its attributes. -->
+    <paper-input label="Your name here"></paper-input>
+    <paper-button>Say Hello</paper-button>
+    <div id="greeting"></div>
 
-<script type="application/javascript">
-    function getgeoip(json){
-    	document.write("Geolocation information for IP address : ", json.ip);
-    	document.write("Country : ", json.country);
-    	document.write("Latitude : ", json.latitude);
-    	document.write("Longitude : ", json.longitude);
-    }
-</script>
-
-<script type="application/javascript" src="http://www.telize.com/geoip?callback=getgeoip"></script>
-
+    <script>
+      // To ensure that elements are ready on polyfilled browsers, 
+      // wait for WebComponentsReady. 
+      document.addEventListener('WebComponentsReady', function() {
+        var input = document.querySelector('paper-input');
+        var button = document.querySelector('paper-button');
+        var greeting = document.getElementById("greeting");
+        button.addEventListener('click', function() {
+          greeting.textContent = 'Hello, ' + input.value;
+        });
+      });
+    </script>
+  </body>
 </html>
