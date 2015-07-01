@@ -1,9 +1,11 @@
 <html>
 <head>
-     <!-- Thanks http://codepen.io/liabru/pen/bNXLGy , http://codepen.io/Sambego/pen/zDLxe & https://www.google.com/design/spec/style/color.html# :D ! 64b5f6 fafafa ebebeb f9f9f9-->
+     <!-- Thanks http://codepen.io/liabru/pen/bNXLGy , http://polymer-project.org , http://codepen.io/Sambego/pen/zDLxe & https://www.google.com/design/spec/style/color.html# :D ! 64b5f6 fafafa ebebeb f9f9f9-->
 <title>BOT COMMANDS</title>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"> </script>
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
 </head>
 <style>
 body {
@@ -82,6 +84,13 @@ hr {
 }
 #staffcommands {
      
+}
+#button {
+    background: #ff9800;
+    color: #000;
+}
+#button::shadow paper-ripple {
+  color: #ff9800;
 }
 </style>
 <body bgcolor="#fff">
@@ -180,6 +189,12 @@ hr {
 <p><font color="#000">Staff Commands</font></p>
 </div>
 </div>
-<paper-button>button</paper-button>
+<paper-button id="button">button</paper-button>
 </body>
+<script>
+     document.addEventListener('WebComponentsReady', function() {
+        var button = document.querySelector('paper-button');
+               button.addEventListener('click', function() {
+                    alert("working!")
+</script>
 </html>
