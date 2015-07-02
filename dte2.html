@@ -13,8 +13,8 @@
      <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
      <link rel="import" href="bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
      <link rel="import" href="bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
-     <link rel="import" href="bower_components/neon-animation-behavior.html">
-     <link rel="import" href="bower_components/neon-animation/animations/fade-in-animation.html">
+     <link rel="import" href="bower_components/neon-animation/neon-animation-behavior.html">
+     <link rel="import" href="bower_components/neon-animation/animations/scale-up-animation.html">
      <link rel="import" href="bower_components/neon-animation/animations/scale-down-animation.html">
 </head>
 <style>
@@ -271,7 +271,7 @@ hr {
 <div id="divdte"><a href="http://plug.dj/dubstep-techno-and-electro" target="_blank"><paper-button raised id="godte">go to dte</paper-button></a></div>
 <section onclick="clickHandler(event)">
 <div id="divinfo"><paper-button raised id="getinfo" data-dialog="info">get information</paper-button></div>
-<paper-dialog id="info" class="custom" entry-animation="fade-in-animation" exit-animation="scale-down-animation">
+<paper-dialog id="info" class="custom" entry-animation="scale-up-animation" exit-animation="scale-down-animation">
   <h2>INFORMATION</h2>
   <p>This is for the plug.dj community <a href=http://plug.dj/dubstep-techno-and-electro>Dubstep, Techno, and Electro</a>. To use any of these, just type into chat when the bot is running. You can click any of the commands to copy them to your keyboard (WIP).</p>
   <div class="buttons">
