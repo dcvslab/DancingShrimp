@@ -45,7 +45,6 @@ hr {
   color: #fff;
   text-decoration: none;
 }
-
 #dtebotcommands {
   font-size: 56px;
   line-height: 48px;
@@ -97,6 +96,21 @@ hr {
   color: #ff9800;
 }
 #sbutton {
+     position: fixed;
+     right: 10px;
+     bottom: 10px;
+}
+#buttonstaff2 {
+    background: #2196f3;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#buttonstaff2::shadow paper-ripple {
+  color: #ff9800;
+}
+#sbutton2 {
      position: fixed;
      right: 10px;
      bottom: 10px;
@@ -207,27 +221,29 @@ hr {
      HI
 </div>
 
-<div id="sbutton"><paper-button raised id="buttonstaff" onclick="staffClick()" onclick="toggle(obj)">toggle staff commands</paper-button></div>
-<paper-toast id="stafftoast" text="Toggled viewing staff commands." aria-hidden="true"></paper-toast>
+<div id="sbutton"><paper-button raised id="buttonstaff" onclick="staffClickHide()">hide staff commands</paper-button></div>
+<div id="sbutton2"><paper-button raised id="buttonstaff2" onclick="staffClickShow()">show staff commands</paper-button></div>
+<paper-toast id="stafftoasthide" text="Staff Commands are hidden." aria-hidden="true"></paper-toast>
+<paper-toast id="stafftoastshow" text="Staff Commands are shown." aria-hidden="true"></paper-toast>
 </body>
 <script>
-function staffClick() {
-     setTimeout(function () {staffToast()}, 5000);
-     setTimeout(function () {staffToastHide()}, 5000);
-}
-function staffToast() {
-         document.querySelector('#stafftoast').show()
+function staffClickHide() {
+     document.getElementById("commands").style.display = "none";
+     document.getElementById("sbutton").style.display = "none";
+     document.getElementById("sbutton2").style.display = "block";
+     document.querySelector('#stafftoasthide').show()
+     setInterval(function () {staffToastHide()}, 5000);
 }
 function staffToastHide() {
-         document.querySelector('#stafftoast').hide() 
+         document.querySelector('#stafftoasthide').hide() 
 }
-function toggle(obj) {
-var commands = document.getElementById(commands);
-if ( commands.style.display != 'none' ) {
-     commands.style.display = 'none';
-} else {
-     commands.style.display = '';
+function staffClickShow() {
+     document.getElementById("commands").style.display = "block";
+     document.querySelector('#stafftoastshow').show()
+     setInterval(function () {staffToastShow()}, 5000);
 }
+function staffToastShow() {
+         document.querySelector('#stafftoasthide').hide() 
 }
 </script>
 </html>
