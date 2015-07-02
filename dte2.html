@@ -192,13 +192,16 @@ hr {
 <p><font color="#000">Staff Commands</font></p>
 </div>
 </div>
-<paper-button raised id="buttonstaff">show staff commands</paper-button>
+<paper-button raised id="buttonstaff" onclick="buttonClick()">show staff commands</paper-button>
 </body>
 <script>
+function buttonClick() {
+     alert("working!")
+}
      document.addEventListener('WebComponentsReady', function() {
         var button = document.querySelector('paper-button.buttonstaff');
                button.addEventListener('click', function() {
-                    alert("working!")
+                    alert("working! 2")
                });
       });
 </script>
