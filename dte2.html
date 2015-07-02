@@ -98,9 +98,6 @@ hr {
     text-transform: uppercase;
     font-weight: 600;
 }
-#getinfo::shadow paper-ripple {
-  color: #ff9800;
-}
 #divinfo {
      position: fixed;
      right: 10px;
@@ -113,22 +110,19 @@ hr {
     text-transform: uppercase;
     font-weight: 600;
 }
-#godte::shadow paper-ripple {
-  color: #ff9800;
-}
 #divdte {
      position: fixed;
      right: 10px;
-     bottom: 30px;
+     bottom: 55px;
 }
-/* options */
+/* options for the popup*/
     paper-dialog.NOT-USING-ATM {
       border: 2px solid;
       border-color: var(--paper-green-500);
       background-color: var(--paper-light-green-50);
       color: var(--paper-green-500);
     }
-/* end options */ 
+/* end options for the popup */ 
     paper-dialog.custom {
       width: 50%;
      border: 2px solid;
@@ -238,7 +232,7 @@ hr {
      HI
      HI
 </div>
-<div id="divdte"><a href="http://plug.dj/dubstep-techno-and-electro"><paper-button raised id="godte">go to dte</paper-button></a></div>
+<div id="divdte"><a href="http://plug.dj/dubstep-techno-and-electro" target="_blank"><paper-button raised id="godte">go to dte</paper-button></a></div>
 <div id="divinfo"><paper-button raised id="getinfo" data-dialog="info">get information</paper-button></div>
 <section onclick="clickHandler(event)">
 <paper-dialog id="info" class="custom">
