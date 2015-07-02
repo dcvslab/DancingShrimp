@@ -6,6 +6,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"> </script>
     <link rel="import" href="bower_components/paper-button/paper-button.html">
+        <link rel="import" href="bower_components/paper-toast/paper-toast.html">
 </head>
 <style>
 body {
@@ -191,18 +192,27 @@ hr {
 <div id="sectionhead">
 <p><font color="#000">Staff Commands</font></p>
 </div>
+<div id="commands">
+     HI
+     HI
+     HI
+     HI
+     HI
+     HI
+     HI
 </div>
-<paper-button raised id="buttonstaff" onclick="buttonClick()">show staff commands</paper-button>
+<paper-button raised id="buttonstaff" onclick="buttonClick()">toggle staff commands</paper-button>
+<paper-toast id="stafftoast" text="Toggled viewing staff commands." aria-hidden="true"></paper-toast>
 </body>
 <script>
 function buttonClick() {
-     alert("working!")
+     document.getElementById("commands").style.display = "none";
+     document.querySelector('#stafftoast').show()
+     setInterval(function () {staffToast()}, 5000);
 }
-     document.addEventListener('WebComponentsReady', function() {
-        var button = document.querySelector('paper-button.buttonstaff');
-               button.addEventListener('click', function() {
-                    alert("working! 2")
-               });
-      });
+function staffToast() {
+         document.querySelector('#stafftoast').hide() 
+}
+
 </script>
 </html>
