@@ -16,23 +16,25 @@
 
 </head>
 <style>
-  #pageload{
+  #page{
     diplay:none;
 }
   #loading{
     display:block;
+    width: 90%;
+    margin: auto;
+    top: 50%;
 }
 </style>
-<script>
-function onLoad() {
-  document.getElementById("page").style.display = "block";
-  document.getElementById("loading").style.diplay = "none";
-}
-</script>
-
-<body onload="onLoad()" id=pageload>
+<body onload="onLoad()" id=page>
 <paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button><paper-button></paper-button>
     <div id="loading">
   <paper-progress indeterminate=""></paper-progress>
     </div>
 </body>
+<script>
+function onLoad() {
+  document.getElementById("page").style.display = "block";
+  document.getElementById("loading").style.display = "none";
+}
+</script>
