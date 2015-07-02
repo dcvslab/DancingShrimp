@@ -96,6 +96,11 @@ hr {
 #buttonstaff::shadow paper-ripple {
   color: #ff9800;
 }
+#sbutton {
+     posistion: fixed;
+     right: 10px;
+     bottom: 10px;
+}
 </style>
 <body bgcolor="#fff">
 <div id="header">
@@ -201,7 +206,8 @@ hr {
      HI
      HI
 </div>
-<paper-button raised id="buttonstaff" onclick="staffClick()">toggle staff commands</paper-button>
+
+<div id="sbutton"><paper-button raised id="buttonstaff" onclick="staffClick()">toggle staff commands</paper-button></div>
 <paper-toast id="stafftoast" text="Toggled viewing staff commands." aria-hidden="true"></paper-toast>
 </body>
 <script>
