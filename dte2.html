@@ -145,7 +145,7 @@ hr {
 <hr>
 <div id="border">
 <div id="cmdtitle">
-<p>dc | !dc</p>
+<p onclick="document.querySelector('#clickcopy').show()">dc | !dc</p>
 </div>
 <div id="cmddesc">
 <p>If you disconnected, this will move you back to you're spot.</p>
@@ -274,13 +274,13 @@ hr {
 <div id="divinfo"><paper-button raised id="getinfo" data-dialog="info">get information</paper-button></div>
 <paper-dialog id="info" class="custom" entry-animation="scale-up-animation" exit-animation="scale-down-animation">
   <h2>INFORMATION</h2>
-  <p>This is for the plug.dj community <a href=http://plug.dj/dubstep-techno-and-electro>Dubstep, Techno, and Electro</a>. To use any of these, just type into chat when the bot is running. You can click any of the commands to copy them to your keyboard (WIP).</p>
+  <p>This is for the plug.dj community <a href=http://plug.dj/dubstep-techno-and-electro>Dubstep, Techno, and Electro</a>. To use any of these, just type into chat when the bot is running. You can click any of the commands to copy them to your keyboard (NOT WORKING ATM).</p>
   <div class="buttons">
     <paper-button dialog-dismiss>DISMISS</paper-button>
   </div>
 </paper-dialog>
 </section>
-<paper-toast id="stafftoasthide" text="Staff Commands are hidden." aria-hidden="true"></paper-toast>
+<paper-toast id="clickcopy" text="The click to copy function is not working yet!." aria-hidden="true"></paper-toast>
 </body>
 <script>
     function clickHandler(e) {
