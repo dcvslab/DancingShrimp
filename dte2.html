@@ -121,6 +121,16 @@ hr {
      right: 10px;
      bottom: 10px;
 }
+    paper-dialog.colored {
+      border: 2px solid;
+      border-color: var(--paper-green-500);
+      background-color: var(--paper-light-green-50);
+      color: var(--paper-green-500);
+    }
+    paper-dialog.custom {
+      width: 50%;
+      height: 300px;
+    }
 </style>
 <body bgcolor="#fff">
 <div id="header">
@@ -229,7 +239,7 @@ hr {
 
 <section onclick="clickHandler(event)">
 <div id="sbutton"><paper-button raised id="buttonstaff" data-dialog="info">get information</paper-button></div>
-<paper-dialog id="info">
+<paper-dialog id="info" class="custom">
   <h2>INFORMATION</h2>
   <p>This is for the plug.dj community <a href=http://plug.dj/dubstep-techno-and-electro>Dubstep, Techno, and Electro</a>. To use any of these, just type into chat when the bot is running. You can click any of the commands to copy them to your keyboard (WIP).</p>
   <div class="buttons">
