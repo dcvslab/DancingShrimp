@@ -5,8 +5,6 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Polymer Components !-->
-
-<!--Paper Elements !-->     
      <script src="bower_components/webcomponentsjs/webcomponents.js"> </script>
      <script src="bower_components/web-animations-js/web-animations.min.js"></script>
      <link rel="import" href="bower_components/paper-button/paper-button.html">
@@ -18,6 +16,10 @@
      <link rel="import" href="bower_components/neon-animation/neon-animation-behavior.html">
      <link rel="import" href="bower_components/neon-animation/animations/scale-up-animation.html">
      <link rel="import" href="bower_components/neon-animation/animations/scale-down-animation.html">
+<!-- End Polymer Components !-->
+<!--ZeroClipboard !-->
+    <script src="zeroclipboard/ZeroClipboard.js"></script>
+    <script src="zeroclipboard/main.js"></script>
 </head>
 <style>
 body {
@@ -146,7 +148,7 @@ hr {
 <hr>
 <div id="border">
 <div id="cmdtitle">
-<p>dc | !dc</p>
+<p id="copy-button" data-clipboard-text="!dc">dc | !dc</p>
 </div>
 <div id="cmddesc">
 <p>If you disconnected, this will move you back to you're spot.</p>
