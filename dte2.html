@@ -221,29 +221,9 @@ hr {
      HI
 </div>
 
-<div id="sbutton"><paper-button raised id="buttonstaff" onclick="staffClickHide()">hide staff commands</paper-button></div>
-<div id="sbutton2"><paper-button raised id="buttonstaff2" onclick="staffClickShow()">show staff commands</paper-button></div>
+<div id="sbutton"><paper-button raised id="buttonstaff" onclick="getInfo()">get info</paper-button></div>
 <paper-toast id="stafftoasthide" text="Staff Commands are hidden." aria-hidden="true"></paper-toast>
-<paper-toast id="stafftoastshow" text="Staff Commands are shown." aria-hidden="true"></paper-toast>
 </body>
 <script>
-function staffClickHide() {
-     document.getElementById("commands").style.display = "none";
-     document.getElementById("buttonstaff").style.display = "none";
-     document.getElementById("buttonstaff2").style.display = "block";
-     document.querySelector('#stafftoasthide').show()
-     setInterval(function () {staffToastHide()}, 5000);
-}
-function staffToastHide() {
-         document.querySelector('#stafftoasthide').hide() 
-}
-function staffClickShow() {
-     document.getElementById("commands").style.display = "block";
-     document.querySelector('#stafftoastshow').show()
-     setInterval(function () {staffToastShow()}, 5000);
-}
-function staffToastShow() {
-         document.querySelector('#stafftoasthide').hide() 
-}
 </script>
 </html>
