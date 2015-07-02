@@ -212,11 +212,20 @@ hr {
 </body>
 <script>
 function staffClick() {
+     function toggle(obg)
      document.querySelector('#stafftoast').show()
      setInterval(function () {staffToast()}, 5000);
 }
 function staffToast() {
          document.querySelector('#stafftoast').hide() 
+}
+function toggle(obj) {
+var commands = document.getElementById(commands);
+if ( commands.style.display != 'none' ) {
+     commands.style.display = 'none';
+} else {
+     commands.style.display = '';
+}
 }
 </script>
 </html>
