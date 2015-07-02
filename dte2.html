@@ -207,16 +207,18 @@ hr {
      HI
 </div>
 
-<div id="sbutton"><paper-button raised id="buttonstaff" onclick="staffClick()">toggle staff commands</paper-button></div>
+<div id="sbutton"><paper-button raised id="buttonstaff" onclick="staffClick()" onclick="toggle(obj)">toggle staff commands</paper-button></div>
 <paper-toast id="stafftoast" text="Toggled viewing staff commands." aria-hidden="true"></paper-toast>
 </body>
 <script>
 function staffClick() {
-     function toggle(obg)
-     document.querySelector('#stafftoast').show()
-     setInterval(function () {staffToast()}, 5000);
+     setTimeout(function () {staffToast()}, 5000);
+     setTimeout(function () {staffToastHide()}, 5000);
 }
 function staffToast() {
+         document.querySelector('#stafftoast').show()
+}
+function staffToastHide() {
          document.querySelector('#stafftoast').hide() 
 }
 function toggle(obj) {
