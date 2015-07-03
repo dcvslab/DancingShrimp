@@ -12,14 +12,14 @@ body {
   font-family: 'Roboto', 'Noto', sans-serif;
   font-size: 14px;
   margin: 0;
-  padding: 24px;
+  padding: 0px;
 }
 
 section {
-  padding: 20px 0;
+  padding: 0px 0;
 }
 
 section > div {
-  padding: 14px;
+  padding: 04px;
   font-size: 16px;
 }
