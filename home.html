@@ -3,11 +3,27 @@
 <title>dcvslab</title>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-
+    
+<link rel="import" href="bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="bower_components/paper-styles/demo-pages.html">
+<link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
 
 </head>
+<style>
+  body {
+    font-family: 'RobotoDraft', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+</style>
 <body>
+  <paper-header-panel mode="waterfall">
+  <div class="paper-header">standard</div>
+  <div class="content fit">content fits 100% below the header</div>
+</paper-header-panel>
 <p>Hello World!</p>
 </body>
 </html>
