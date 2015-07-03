@@ -8,6 +8,7 @@
 <link rel="import" href="bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="bower_components/paper-styles/demo-pages.html">
 <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
 
 </head>
 <style>
@@ -19,34 +20,12 @@
     margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-  
-  paper-header-panel {
-        float: left;
-        width: 240px;
-        height: 240px;
-        margin: 12px;
-        @apply(--shadow-elevation-2dp);
-      }
-  .paper-header {
-        height: 60px;
-        font-size: 16px;
-        line-height: 60px;
-        padding: 0 10px;
-        color: white;
-        transition: height 0.2s;
-      }
-  .blue .paper-header {
-        background-color: var(--paper-light-blue-500);
-      }
 </style>
 <body>
-<paper-header-panel mode="standard" class="blue x-scope paper-header-panel-0">
-    <div class="paper-header animate has-shadow">standard</div>
-    <div class="flex style-scope paper-header-panel" id="mainContainer">
-      <div class="content"></div>
-    </div>
-  </paper-header-panel>
+<paper-header-panel>
+  <paper-toolbar>Header</paper-toolbar>
+  <div>Content goes here...</div>
 </paper-header-panel>
-<p>Hello World!</p>
+
 </body>
 </html>
