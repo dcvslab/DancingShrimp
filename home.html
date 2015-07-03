@@ -25,13 +25,17 @@
 paper-toolbar + paper-toolbar {
       margin-top: 0px;
     }
-paper-header-panel-waterfall-container {
+paper-toolbar {
   background-color: #009688;
 }
 </style>
-<paper-header-panel mode="waterfall">
-    <div class="paper-header">standard</div>
-    <div class="content fit">content fits 100% below the header</div>
+<paper-header-panel>
+  <paper-toolbar>
+    <paper-icon-button icon="menu"></paper-icon-button>
+    <span class="title">Toolbar</span>
+    <paper-icon-button icon="refresh"></paper-icon-button>
+  </paper-toolbar>
+  <div>Content goes here...</div>
 </paper-header-panel>
 <body>
 </body>
