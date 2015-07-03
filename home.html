@@ -14,6 +14,8 @@
 <link rel="import" href="bower_components/paper-icon-button/paper-icon-button">
 <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
+<link rel="import" href="bower_components/iron-pages/iron-pages.html">
+
 
 </head>
 <style>
@@ -56,5 +58,17 @@ paper-tabs {
   <paper-tab>Material Design</paper-tab>
   <paper-tab>Site Index</paper-tab>
 </paper-tabs>
+
+    <iron-pages selected="0">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </iron-pages>
 </body>
+    <script>
+      document.addEventListener('click', function(e) {
+        var pages = document.querySelector('iron-pages');
+        pages.selectNext();
+      });
+    </script>
 </html>
