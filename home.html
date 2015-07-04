@@ -52,46 +52,47 @@ paper-tabs {
 #loading {
   background-color="fff"
 }
-paper-spinner {
-  width: 58px;
-  height: 58px;
+#body {
+  display: none;
 }
---paper-spinner-layer-4-color {
-    #4caf50
-  }
+paper-spinner {
+  width: 56px;
+  height: 56px;
+}
 </style>
-<div id="loading">
+<body>
+<center><div id="loading">
   <paper-spinner active></paper-spinner>
-</div>
-<body id="body">
+</div></center>
+<div id="body">
   <paper-material elevation="5">
-  <div id="header">
-    <center>DCV'S LAB</center>
-  </div>
-</paper-material>
-<paper-material elevation="2">
-<paper-tabs selected="0" noink="">
-  <paper-tab onclick="selectZero()">About</paper-tab>
-  <paper-tab onclick="selectOne()">Projects</paper-tab>
-  <paper-tab onclick="selectTwo()">Material Design</paper-tab>
-  <paper-tab onclick="selectThree()">Site Index</paper-tab>
-</paper-tabs>
-</paper-material>
-<iron-pages selected="0">
-  <div id=pageone>
-    PAGE ONE AMIRITE
-  </div>
-  <div id=pagetwo>
-    PAGE TWO AMIRITE
-  </div>
-  <div id=pagethree>
-    PAGE THREE AMIRITE
-  </div>
-  <div id=pagefour>
-    PAGE FOUR AMIRITE
-  </div>
-</iron-pages>
-</body>
+    <div id="header">
+      <center>DCV'S LAB</center>
+    </div>
+  </paper-material>
+  <paper-material elevation="2">
+    <paper-tabs selected="0" noink="">
+      <paper-tab onclick="selectZero()">About</paper-tab>
+      <paper-tab onclick="selectOne()">Projects</paper-tab>
+      <paper-tab onclick="selectTwo()">Material Design</paper-tab>
+      <paper-tab onclick="selectThree()">Site Index</paper-tab>
+    </paper-tabs>
+  </paper-material>
+  <iron-pages selected="0">
+    <div id=pageone>
+      PAGE ONE AMIRITE
+    </div>
+    <div id=pagetwo>
+      PAGE TWO AMIRITE
+    </div>
+    <div id=pagethree>
+      PAGE THREE AMIRITE
+    </div>
+    <div id=pagefour>
+      PAGE FOUR AMIRITE
+    </div>
+  </iron-pages>
+</body></div>
 <script>
 function selectZero() {
 document.querySelector('iron-pages').select(0);
