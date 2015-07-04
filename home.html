@@ -15,6 +15,7 @@
 <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
 <link rel="import" href="bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="bower_components/paper-material/paper-material.html">
 
 
 </head>
@@ -25,6 +26,7 @@
     -webkit-text-size-adjust: 100%;
     margin: 0px;
     padding: 0px;
+    background: #fafafa;
 }
 #header {
   background-color: #009688;
@@ -47,34 +49,32 @@ paper-tabs {
 .paper-tabs-0 #selectionBar.paper-tabs {
   background-color: #ffeb3b;
 }
-#pageone {
-  background-color: red;
-}
-#pagetwo {
-  background-color: blue;
-}
-#pagethree {
-  background-color: green;
-}
-#pagefour {
-  background-color: purple;
-}
 </style>
 <body>
   <div id="header">
     <center>DCV'S LAB</center>
   </div>
+<paper-material elevation="1">
 <paper-tabs selected="0" noink="">
   <paper-tab onclick="selectZero()">About</paper-tab>
   <paper-tab onclick="selectOne()">Projects</paper-tab>
   <paper-tab onclick="selectTwo()">Material Design</paper-tab>
   <paper-tab onclick="selectThree()">Site Index</paper-tab>
 </paper-tabs>
+</paper-material>
 <iron-pages selected="0">
-  <div id=pageone></div>
-  <div id=pagetwo></div>
-  <div id=pagethree></div>
-  <div id=pagefour></div>
+  <div id=pageone>
+    
+  </div>
+  <div id=pagetwo>
+    
+  </div>
+  <div id=pagethree>
+    
+  </div>
+  <div id=pagefour>
+    
+  </div>
 </iron-pages>
 </body>
 <script>
