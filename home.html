@@ -53,21 +53,33 @@ paper-tabs {
   background-color="fff"
 }
 #body {
-  display: none;
+  display: block;
 }
 paper-spinner {
   width: 56px;
   height: 56px;
   top: 50px;
-  display: block;
+  display: none;
+}
+#pageone {
+  top: 10px;
+}
+#pagetwo {
+  top: 10px;
+}
+#pagethree {
+  top: 10px;
+}
+#pagefour {
+  top: 10px;
+}
+#pagetitle {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 52px;
+    text-decoration: underline;
 }
 </style>
-<script>
-  function loadPage() {
-  document.getElementById('body').style.display = 'block';
-  document.getElementById('loading').style.display = 'block';
-}
-</script>
 <body>
 <center><div id="loading">
   <paper-spinner active></paper-spinner>
@@ -88,16 +100,16 @@ paper-spinner {
   </paper-material>
   <iron-pages selected="0">
     <div id=pageone>
-      PAGE ONE AMIRITE
+      <div id="pagetitle">ABOUT</div>
     </div>
     <div id=pagetwo>
-      PAGE TWO AMIRITE
+      <div id="pagetitle">PROJECTS</div>
     </div>
     <div id=pagethree>
-      PAGE THREE AMIRITE
+      <div id="pagetitle">MATERIAL DESIGN</div>
     </div>
     <div id=pagefour>
-      PAGE FOUR AMIRITE
+      <div id="pagetitle">SITE INDEX</div>
     </div>
   </iron-pages>
 </body></div>
