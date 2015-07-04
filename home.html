@@ -59,6 +59,7 @@ paper-spinner {
   width: 56px;
   height: 56px;
   top: 50px;
+  display: block;
 }
 </style>
 <body>
@@ -100,6 +101,7 @@ function loadScreen() {
 }
 function loadPage() {
   document.getElementById('body').style.display = 'block';
+  document.getElementById('loading').style.display = 'block';
 }
 function selectZero() {
 document.querySelector('iron-pages').select(0);
