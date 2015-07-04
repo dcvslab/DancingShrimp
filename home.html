@@ -79,11 +79,12 @@ paper-spinner {
     font-size: 34px;
     font-weight: 400;
     line-height: 52px;
-    text-decoration: underline;
 }
 #indexsec {
   width: 25%;
   float: left;
+  top: 15px;
+  bottom: 15px;
 }
 </style>
 <style is="custom-style">
@@ -94,7 +95,7 @@ paper-spinner {
 
     /* Checked state colors. */
     --paper-radio-button-checked-color: #009688;
-    --paper-radio-button-checked-ink-color: #000;
+    --paper-radio-button-checked-ink-color: #fafafa;
   }
 </style>
 <body>
@@ -128,11 +129,30 @@ paper-spinner {
     <div id=pagefour>
       <div id="pagetitle">SITE INDEX</div>
       <center><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div></center>
-      <center><div id="indexsec">plug.dj</div><div id="indexsec">shark edm</div><div id="indexsec">random</div><div id="indexsec">scripts</div></center>
+      <center><div id="indexsec">PLUG.DJ</div><div id="indexsec">SHARK EDM</div><div id="indexsec">RANDOM</div><div id="indexsec">SCRIPTS</div></center>
     </div>
   </iron-pages>
 </body></div>
 <script>
+function plugClick() {
+  var plug = 0
+  if (var plug = 0) {
+       document.getElementById('welcomeDiv').style.display = "none";
+    var plug = 1
+  } else {
+       document.getElementById('welcomeDiv').style.display = "block";
+    var plug = 0
+  }
+}
+function sharkClick() {
+  
+}
+function randomClick() {
+  
+}
+function scriptsClick() {
+  
+}
 function selectZero() {
 document.querySelector('iron-pages').select(0);
 }
