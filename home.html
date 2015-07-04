@@ -52,11 +52,11 @@ paper-tabs {
   <div id="header">
     <center>DCV'S LAB</center>
   </div>
-<paper-tabs selected="2" noink="">
-  <paper-tab>About</paper-tab>
-  <paper-tab>Projects</paper-tab>
-  <paper-tab>Material Design</paper-tab>
-  <paper-tab>Site Index</paper-tab>
+<paper-tabs selected="0" noink="">
+  <paper-tab onclick="selectZero()">About</paper-tab>
+  <paper-tab onclick="selectOne()">Projects</paper-tab>
+  <paper-tab onclick="selectTwo()">Material Design</paper-tab>
+  <paper-tab onclick="selectThree()">Site Index</paper-tab>
 </paper-tabs>
 <iron-pages selected="0">
   <div>One</div>
@@ -66,9 +66,17 @@ paper-tabs {
 </iron-pages>
 </body>
 <script>
-      document.addEventListener('click', function(e) {
-        var pages = document.querySelector('iron-pages');
-        pages.selectNext();
-      });
+function selectZero() {
+document.querySelector('iron-pages').select(0);
+}
+function selectOne() {
+document.querySelector('iron-pages').select(1);
+}
+function selectTwo() {
+document.querySelector('iron-pages').select(2);
+}
+function selectThree() {
+document.querySelector('iron-pages').select(3);
+}
 </script>
 </html>
