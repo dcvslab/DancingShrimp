@@ -128,8 +128,9 @@ paper-spinner {
     </div>
     <div id=pagefour>
       <div id="pagetitle">SITE INDEX</div>
-      <center><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div></center>
+      <center><div id="indexsec"><paper-radio-button onclick="plugClick()"></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div></center>
       <center><div id="indexsec">PLUG.DJ</div><div id="indexsec">SHARK EDM</div><div id="indexsec">RANDOM</div><div id="indexsec">SCRIPTS</div></center>
+    <div id=plugdj>hey</div>
     </div>
   </iron-pages>
 </body></div>
@@ -137,10 +138,10 @@ paper-spinner {
 function plugClick() {
   var plug = 0
   if (var plug = 0) {
-       document.getElementById('welcomeDiv').style.display = "none";
+       document.getElementById('plugdj').style.display = "none";
     var plug = 1
   } else {
-       document.getElementById('welcomeDiv').style.display = "block";
+       document.getElementById('plugdj').style.display = "block";
     var plug = 0
   }
 }
