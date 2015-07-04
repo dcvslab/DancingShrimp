@@ -16,7 +16,7 @@
 <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
 <link rel="import" href="bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="bower_components/paper-material/paper-material.html">
-
+<link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
 
 </head>
 <style>
@@ -49,8 +49,14 @@ paper-tabs {
 .paper-tabs-0 #selectionBar.paper-tabs {
   background-color: #ffeb3b;
 }
+#loading {
+  background-color="fff"
+}
 </style>
-<body>
+<div id="loading">
+  <paper-spinner active></paper-spinner>
+</div>
+<body id="body">
   <paper-material elevation="5">
   <div id="header">
     <center>DCV'S LAB</center>
