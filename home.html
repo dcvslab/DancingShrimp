@@ -62,11 +62,17 @@ paper-spinner {
   display: block;
 }
 </style>
+<script>
+  function loadPage() {
+  document.getElementById('body').style.display = 'block';
+  document.getElementById('loading').style.display = 'block';
+}
+</script>
 <body>
-<center><div id="loading" onload="loadScreen()">
+<center><div id="loading">
   <paper-spinner active></paper-spinner>
 </div></center>
-<div id="body">
+<div id="body" onload="loadPage()">
   <paper-material elevation="5">
     <div id="header">
       <center>DCV'S LAB</center>
@@ -96,13 +102,6 @@ paper-spinner {
   </iron-pages>
 </body></div>
 <script>
-function loadScreen() {
-  setTimeout(function(){ loadPage(); }, 3000);
-}
-function loadPage() {
-  document.getElementById('body').style.display = 'block';
-  document.getElementById('loading').style.display = 'block';
-}
 function selectZero() {
 document.querySelector('iron-pages').select(0);
 }
