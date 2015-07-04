@@ -29,8 +29,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
  :host {
   display: inline-block;
   position: relative;
-  width: 56px; /* CONTAINERWIDTH */
-  height: 56px; /* CONTAINERWIDTH */
+  width: 28px; /* CONTAINERWIDTH */
+  height: 28px; /* CONTAINERWIDTH */
 }
 
 #spinnerContainer {
@@ -248,7 +248,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 .circle {
   box-sizing: border-box;
   height: 100%;
-  border-width: 3px; /* STROKEWIDTH */
+  border-width: 6px; /* STROKEWIDTH */
   border-style: solid;
   border-color: inherit;
   border-bottom-color: transparent !important;
