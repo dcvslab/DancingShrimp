@@ -47,6 +47,18 @@ paper-tabs {
 .paper-tabs-0 #selectionBar.paper-tabs {
   background-color: #ffeb3b;
 }
+#pageone {
+  background-color: red;
+}
+#pagetwo {
+  background-color: blue;
+}
+#pagethree {
+  background-color: green;
+}
+#pagefour {
+  background-color: purple;
+}
 </style>
 <body>
   <div id="header">
@@ -59,10 +71,10 @@ paper-tabs {
   <paper-tab onclick="selectThree()">Site Index</paper-tab>
 </paper-tabs>
 <iron-pages selected="0">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
+  <div id=pageone></div>
+  <div id=pagetwo></div>
+  <div id=pagethree></div>
+  <div id=pagefour></div>
 </iron-pages>
 </body>
 <script>
