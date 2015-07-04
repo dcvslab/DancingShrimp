@@ -58,10 +58,11 @@ paper-tabs {
 paper-spinner {
   width: 56px;
   height: 56px;
+  top: 50px;
 }
 </style>
 <body>
-<center><div id="loading">
+<center><div id="loading" onload="loadScreen()">
   <paper-spinner active></paper-spinner>
 </div></center>
 <div id="body">
@@ -94,6 +95,13 @@ paper-spinner {
   </iron-pages>
 </body></div>
 <script>
+function loadScreen() {
+  setTimeout(function(){ loadPage(); }, 3000);
+}
+function loadPage() {
+  document.getElementById('body').style.display = 'block';
+  document.getElementById('loading').style.display = 'none';
+}
 function selectZero() {
 document.querySelector('iron-pages').select(0);
 }
