@@ -85,6 +85,17 @@ paper-spinner {
   float: left;
 }
 </style>
+<style is="custom-style">
+  :root {
+    /* Unchecked state colors. */
+    --paper-radio-button-unchecked-color: #000;
+    --paper-radio-button-unchecked-ink-color: #fafafa;
+
+    /* Checked state colors. */
+    --paper-radio-button-checked-color: #009688;
+    --paper-radio-button-checked-ink-color: #ffeb3b;
+  }
+</style>
 <body>
 <center><div id="loading">
   <paper-spinner active></paper-spinner>
@@ -115,7 +126,7 @@ paper-spinner {
     </div>
     <div id=pagefour>
       <div id="pagetitle">SITE INDEX</div>
-      <center><div id="indexsec"><paper-toggle-button></paper-toggle-button></div><div id="indexsec"><paper-toggle-button></paper-toggle-button></div><div id="indexsec"><paper-toggle-button></paper-toggle-button></div><div id="indexsec"><paper-toggle-button></paper-toggle-button></div></center>
+      <center><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div><div id="indexsec"><paper-radio-button></paper-radio-button></div></center>
       <center><div id="indexsec">plug.dj</div><div id="indexsec">shark edm</div><div id="indexsec">random</div><div id="indexsec">scripts</div></center>
     </div>
   </iron-pages>
