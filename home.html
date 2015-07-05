@@ -30,8 +30,10 @@ body {
 }
 #header {
   width: 100%;
-  height: 10%;
+  height: 100%;
   background-color: #009688;
+  posistion: fixed;
+  z-index: -9001;
 }
 #headertext {
   position: relative;
@@ -48,3 +50,8 @@ body {
 <div id="header">
   <div id="headertext"><center>DCV'S LAB</center></div>
 </div>
+<paper-tabs selected="0">
+  <paper-tab>TAB 1</paper-tab>
+  <paper-tab>TAB 2</paper-tab>
+  <paper-tab>TAB 3</paper-tab>
+</paper-tabs>
