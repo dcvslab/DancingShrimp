@@ -28,9 +28,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
-.center {
-
-}
 #header {
   width: 100%;
   height: 100%;
@@ -48,11 +45,32 @@ body {
   letter-spacing: -5px;
 }
 </style>
+<!-- for polymer things !-->
+<style is="custom-style">
+paper-header-panel {
+  float: left;
+  width: 240px;
+  height: 240px;
+  margin: 12px;
+  @apply(--shadow-elevation-2dp);
+}
+.paper-header {
+  height: 60px;
+  font-size: 16px;
+  line-height: 60px;
+  padding: 0 10px;
+  color: white;
+  transition: height 0.2s;
+}
+.paper-header.tall {
+  height: 120px;
+}
+</style>
 <body>
 <div id="header">
   <div id="headertext"><center>DCV'S LAB</center></div>
 </div>
-<paper-header-panel>
-      <div class="paper-header" id="headertext"><center>DCV'S LAB</center></div>
-      <div>hi</div><div>hi</div><div>hi</div><div>hi</div><div>hi</div><div>hi</div><div>hi</div><div>hi</div><div>hi</div><div>hi</div><div>hi</div><div>hi</div><div>hi</div>
+<paper-header-panel mode="waterfall-tall">
+  <div class="paper-header">waterfall-tall</div>
+  <div class="content">test</div>
 </paper-header-panel>
