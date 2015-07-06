@@ -61,15 +61,22 @@ paper-tab {
 </paper-material>
 <paper-tabs selected="0" noink="true">
   <paper-tab onclick="document.querySelector('iron-pages').select(0)">HOME</paper-tab>
-  <paper-tab onclick="document.querySelector('iron-pages').select(1)">ABOUT</paper-tab>
+  <paper-tab onclick="document.querySelector('iron-pages').select(1)">LINKS</paper-tab>
   <paper-tab onclick="document.querySelector('iron-pages').select(2)">SITE INDEX</paper-tab>
-  <paper-tab onclick="document.querySelector('iron-pages').select(3)">LINKS</paper-tab>
 </paper-tabs>
 <iron-pages selected="0">
-  <div>Page 1</div>
-  <div>Page 2</div>
-  <div>Page 3</div>
-  <div>Page links</div>
+  <!-- HOME !-->
+  <div>
+    
+  </div>
+  <!-- LINKS !-->
+  <div>
+    <paper-button raised>github</paper-button> <paper-button raised>plug.dj</paper-button> <paper-button raised>contact</paper-button>
+  </div>
+  <!--SITE INDEX !-->
+  <div>
+    
+  </div>
 </iron-pages>
 <div id="content">
 </div>
