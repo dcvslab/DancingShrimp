@@ -60,9 +60,9 @@ paper-tab {
 </div>
 </paper-material>
 <paper-tabs selected="0" noink="true">
-  <paper-tab onclick="tabHome()">HOME</paper-tab>
-  <paper-tab onclick="tabAbout()">ABOUT</paper-tab>
-  <paper-tab onclick="tabIndex()">SITE INDEX</paper-tab>
+  <paper-tab onclick="document.querySelector('iron-pages').select(0)">HOME</paper-tab>
+  <paper-tab onclick="document.querySelector('iron-pages').select(1)">ABOUT</paper-tab>
+  <paper-tab onclick="document.querySelector('iron-pages').select(2)">SITE INDEX</paper-tab>
   <paper-tab onclick="document.querySelector('iron-pages').select(3)">LINKS</paper-tab>
 </paper-tabs>
 <iron-pages selected="0">
@@ -73,9 +73,3 @@ paper-tab {
 </iron-pages>
 <div id="content">
 </div>
-<script>
-  function tabHome {
-    var pages = document.querySelector('iron-pages');
-    pages.select(0);
-  }
-</script>
