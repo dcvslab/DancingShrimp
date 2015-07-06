@@ -60,15 +60,16 @@ paper-tab {
 </div>
 </paper-material>
 <paper-tabs selected="0" noink="true">
-  <paper-tab>HOME</paper-tab>
-  <paper-tab>ABOUT</paper-tab>
-  <paper-tab>SITE INDEX</paper-tab>
-  <paper-tab>LINKS</paper-tab>
+  <paper-tab onclick="tabHome()">HOME</paper-tab>
+  <paper-tab onclick="tabAbout()">ABOUT</paper-tab>
+  <paper-tab onclick="tabIndex()">SITE INDEX</paper-tab>
+  <paper-tab onclick="document.querySelector('iron-pages').select(3)">LINKS</paper-tab>
 </paper-tabs>
 <iron-pages selected="0">
   <div>Page 1</div>
   <div>Page 2</div>
   <div>Page 3</div>
+  <div>Page links</div>
 </iron-pages>
 <div id="content">
 </div>
