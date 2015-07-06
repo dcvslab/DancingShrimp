@@ -52,14 +52,22 @@ paper-tab {
   background-color: #00796b;
   color: #fff;
 }
-#buttonsection {
-  float: left;
-  width: 33%;
-  padding-top: 20px;
+#headerbreak {
+  top: 20px;
+  width: 100%;
 }
-paper-button {
+/* CSS for the links page */
+paper-button.links {
   background-color: #009688;
 }
+#headlinelinks {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 44px;
+  padding-left: 50px
+}
+
+/* End CSS for the links page */
 </style>
 <body>
 <paper-material elevation="3">
@@ -73,6 +81,7 @@ paper-button {
   <paper-tab onclick="document.querySelector('iron-pages').select(1)">LINKS</paper-tab>
   <paper-tab onclick="document.querySelector('iron-pages').select(2)">SITE INDEX</paper-tab>
 </paper-tabs>
+<div id="headerbreak"></div>
 <iron-pages selected="0">
   <!-- HOME !-->
   <div>
@@ -80,7 +89,9 @@ paper-button {
   </div>
   <!-- LINKS !-->
   <div>
-    <center><div id="buttonsection"><paper-button>github</paper-button></div> <div id="buttonsection"><paper-button>plug.dj</paper-button></div> <div id="buttonsection"><paper-button>contact</paper-button></div></center>
+    <div id="headlinelinks">GitHub</div>
+    <div id="headlinelinks">plug.dj</div>
+    <div id="headlinelinks">SoundCloud</div>
   </div>
   <!--SITE INDEX !-->
   <div>
