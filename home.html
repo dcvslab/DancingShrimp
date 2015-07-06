@@ -60,9 +60,21 @@ paper-tab {
 </div>
 </paper-material>
 <paper-tabs selected="0" noink="true">
+  <paper-tab>HOME</paper-tab>
   <paper-tab>ABOUT</paper-tab>
   <paper-tab>SITE INDEX</paper-tab>
-  <paper-tab>CRACKERS</paper-tab>
+  <paper-tab>LINKS</paper-tab>
 </paper-tabs>
+<iron-pages selected="0">
+  <div>Page 1</div>
+  <div>Page 2</div>
+  <div>Page 3</div>
+</iron-pages>
 <div id="content">
 </div>
+<script>
+  function tabHome {
+    var pages = document.querySelector('iron-pages');
+    pages.select(0);
+  }
+</script>
