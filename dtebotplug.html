@@ -70,14 +70,14 @@ hr {
 }
 #cmdtitle {
      font-size: 24px;
-     color: rgba(0,0,0,.87);
+     color: #fff;
      font-weight: 400;
      padding-left: 10px;
      z-index: 9001;
 }
 #cmddesc {
      font-size: 14px;
-     color: rgba(0,0,0,.54);
+     color: #808691;
      font-weight: 400;
      padding-left: 20px;
      padding-top: 0px;
@@ -96,7 +96,7 @@ hr {
      
 }
 #getinfo {
-    background: #2196f3;
+    background: #009CDD;
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
@@ -108,7 +108,7 @@ hr {
      bottom: 10px;
 }
 #godte {
-    background: #2196f3;
+    background: #009CDD;
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
@@ -118,6 +118,9 @@ hr {
      position: fixed;
      right: 10px;
      bottom: 55px;
+}
+#light {
+     background-color: #111317;
 }
 /* options for the popup*/
     paper-dialog.NOT-USING-ATM {
@@ -144,12 +147,14 @@ hr {
 <p><font color="#000">User Commands</font></p>
 </div>
 <hr>
+<div id="light">
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">dc | !dc</p>
 </div>
 <div id="cmddesc">
 <p>If you disconnected, this will move you back to you're spot.</p>
+</div>
 </div>
 </div>
 <hr>
