@@ -121,6 +121,11 @@ hr {
 }
 #light {
      background-color: #111317;
+     padding: 5px;
+}
+#dark {
+     background-color: #0A0A0A;
+     padding: 5px;
 }
 /* options for the popup*/
     paper-dialog.NOT-USING-ATM {
@@ -146,7 +151,6 @@ hr {
 <div id="sectionhead">
 <p><font color="#000">User Commands</font></p>
 </div>
-<hr>
 <div id="light">
 <div id="border">
 <div id="cmdtitle">
@@ -157,7 +161,7 @@ hr {
 </div>
 </div>
 </div>
-<hr>
+<div id="dark">
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">eta | !eta</p>
@@ -166,7 +170,8 @@ hr {
 <p>This will tell you the estimated time you have to wait to DJ.</p>
 </div>
 </div>
-<hr>
+</div>
+<div id="light">
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">fb | !fb</p>
@@ -175,7 +180,8 @@ hr {
 <p>This will put the DTE Facebook page into the chat.</p>
 </div>
 </div>
-<hr>
+</div>
+<div id="dark">
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">givespot | !givespot</p>
@@ -184,7 +190,8 @@ hr {
 <p>This will pffer your waitlist spot in chat to anyone that wants it.</p>
 </div>
 </div>
-<hr>
+</div>
+<div id="light">
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">help | !help</p>
@@ -193,7 +200,8 @@ hr {
 <p>This will put a link to all the bot commands in chat.</p>
 </div>
 </div>
-<hr>
+</div>
+<div id="dark">
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">help | !help</p>
@@ -202,7 +210,8 @@ hr {
 <p>This will put a link to all the bot commands in chat.</p>
 </div>
 </div>
-<hr>
+</div>
+<div id="light">
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">op | !op</p>
@@ -211,7 +220,8 @@ hr {
 <p>This will put a link to the OP list in chat.</p>
 </div>
 </div>
-<hr>
+</div>
+<div id="light">
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">ping | !ping</p>
@@ -220,7 +230,8 @@ hr {
 <p>Pong!</p>
 </div>
 </div>
-<hr>
+</div>
+<div id="light">
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">rules | !rules</p>
@@ -229,7 +240,7 @@ hr {
 <p>This will put a link to the rules in chat.</p>
 </div>
 </div>
-<hr>
+</div>
 <div id="sectionhead">
 <p><font color="#000">Staff Commands</font></p>
 </div>
@@ -243,7 +254,6 @@ hr {
 <p>Rank Needed: Bouncer</p>
 </div>
 </div>
-<hr>
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">reload | !reload</p>
@@ -253,7 +263,6 @@ hr {
 <p>Rank Needed: Bouncer</p>
 </div>
 </div>
-<hr>
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">kill | !kill</p>
@@ -263,7 +272,6 @@ hr {
 <p>Rank Needed: Manager</p>
 </div>
 </div>
-<hr>
 <div id="border">
 <div id="cmdtitle">
 <p onclick="document.querySelector('#clickcopy').show()">meh | !meh #</p>
@@ -273,7 +281,6 @@ hr {
 <p>Rank Needed: Manager</p>
 </div>
 </div>
-<hr>
 </div>
 <div id="divdte"><a href="http://plug.dj/dubstep-techno-and-electro" target="_blank"><paper-button raised id="godte">go to dte</paper-button></a></div>
 <section onclick="clickHandler(event)">
