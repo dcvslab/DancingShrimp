@@ -5,6 +5,9 @@ Fourth version, has brought many big things! Included:
   -A new AddChat done by me, which is named DAMS
   -All 4 options now toggleable
   -Slightly improved option saving/updating to localStorage
+  -If this is your first time using a newer version, there is a message which shows you that: http://i.imgur.com/Kjpdl91.png
+  -If there have been no new updates, it shows you that as well: http://i.imgur.com/zrZZFlU.png
+    NOTE: The color depends on your rank, whether you are a normal user, a subscriber, a staff in the room, a BA or an admin. This will be customizable later!
 (CURRENT VERSION)
 
 ALPHA 03:
