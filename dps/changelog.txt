@@ -1,0 +1,28 @@
+DPS CHANGELOG
+
+ALPHA 04: (CURRENT VERSION)
+Fourth version, has brought many big things! Included:
+  -A new AddChat done by me, which is named DAMS
+  -All 4 options now toggleable
+  -Slightly improved option saving/updating to localStorage
+(CURRENT VERSION)
+
+ALPHA 03:
+Third version, brought one big thing. Included:
+  -AddChat (Done by Beta Tester (github.com/matheusavellar) and Igor (plug.dj/@/igor)
+Yeah this was a lame version.
+https://github.com/dcvslab/projects/blob/master/plugdj/dps/versions/alpha/dpsalpha03.js
+
+
+ALPHA 02:
+Second version, added some things to the basics. Included:
+  -Saving option values (true/false)
+  -1 toggleable option (dps footer)
+  -menu does some things on click, like it shows a menu!
+https://github.com/dcvslab/projects/blob/master/plugdj/dps/versions/alpha/dpsalpha02.js
+
+ALPHA 01:
+First version, had the basics. Included:
+  -Untoggleable autojoin, autowoot, percent to xp and the dps footer
+  -The DPS button, which did nothing when clicked except say "Soon™"
+https://github.com/dcvslab/projects/blob/master/plugdj/dps/versions/alpha/dpsalpha01.js
