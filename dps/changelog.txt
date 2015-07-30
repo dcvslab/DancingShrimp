@@ -1,6 +1,14 @@
 DPS CHANGELOG
 
-ALPHA 04: (CURRENT VERSION)
+ALPHA 05:
+Fith version, new features and updates. Included:
+  -Styling moved to CSS
+  -New option, song stats. They look like this: http://i.imgur.com/68wyPff.png
+  -A way for me to update options
+  -dpsbeta, the continous update one.
+  -dpsbeta file name updates, go by version type, verion number, version version, version version commit, BETA
+
+ALPHA 04:
 Fourth version, has brought many big things! Included:
   -A new AddChat done by me, which is named DAMS
   -All 4 options now toggleable
@@ -8,7 +16,7 @@ Fourth version, has brought many big things! Included:
   -If this is your first time using a newer version, there is a message which shows you that: http://i.imgur.com/Kjpdl91.png
   -If there have been no new updates, it shows you that as well: http://i.imgur.com/zrZZFlU.png
     NOTE: The color depends on your rank, whether you are a normal user, a subscriber, a staff in the room, a BA or an admin. This will be customizable later!
-(CURRENT VERSION)
+https://github.com/dcvslab/projects/blob/master/plugdj/dps/versions/alpha/dpsalpha04.js
 
 ALPHA 03:
 Third version, brought one big thing. Included:
