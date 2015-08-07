@@ -1,41 +1,23 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
-    </script>
-
-    <!-- 2. Use an HTML Import to bring in some elements. -->
-    <link rel="import" href="bower_components/paper-button/paper-button.html">
-  </head>
-  <style>
-    #my-button {
-    background: green;
-    color: yellow;
-}
-  </style>
+  <title>Server Summary</title>
   <body>
-    <!-- 3. Declare the element. Configure using its attributes. -->
-    <paper-button id="my-button" elevation="1">
-      <paper-material elevation="1" class="content  style-scope paper-button x-scope paper-material-0" animated="">
-    
-      button
-    
-  </paper-material>
-  </paper-button>
-    <div id="greeting"></div>
-
-    <script>
-      // To ensure that elements are ready on polyfilled browsers, 
-      // wait for WebComponentsReady. 
-      document.addEventListener('WebComponentsReady', function() {
-        var button = document.querySelector('paper-button');
-        var greeting = document.getElementById("greeting");
-        button.addEventListener('click', function() {
-          greeting.textContent = 'Hello';
-        });
-      });
-    </script>
+    <div>
+      <center>
+      Nick's Wants:
+      <div>
+        <img src="http://cdn.free-power-point-templates.com/articles/wp-content/uploads/2012/02/business-building-image.jpg"></img>
+        A business
+      </div>
+      <div>
+      Everyone Else:
+      <img src="https://timedotcom.files.wordpress.com/2015/04/money1.jpg?quality=65&strip=color&w=1100"</img>
+      Money
+      </div>
+      <div>
+      What we know will happen:
+      <img src="http://ak-hdl.buzzfed.com/static/2015-03/12/10/enhanced/webdr04/enhanced-buzz-3183-1426171511-16.jpg"></img>
+      </center>
+      </div>
+    </div>
   </body>
 </html>
-
