@@ -1,7 +1,15 @@
-DPS CHANGELOG
+DPS CHANGELOG 
+<----------->
+
+ALPHA 06:
+Sixth version, this one took a while. Included:
+  -More styling moved to CSS
+  -Slightly changed song stats and now playing
+  -User join and user leave notificaitons: http://i.imgur.com/uHFdWvS.png
+  -Custom colors with their own menu: http://i.imgur.com/DR81j8r.png?1
 
 ALPHA 05:
-Fith version, new features and updates. Included:
+Fifth version, new features and updates. Included:
   -Styling moved to CSS
   -New option, song stats. They look like this: http://i.imgur.com/68wyPff.png
   -A way for me to update options
