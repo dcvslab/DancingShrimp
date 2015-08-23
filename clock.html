@@ -1,5 +1,20 @@
 <html>
   <head>
     <title>DCVSLAB</title>
-    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="time">0:00:00:000</span>
+  </body>
+  <script>
+    function getTime() {
+    var time = new Date()
+    document.getElementById("time").innerHTML = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + ":" time.getMilliseconds() }
+    setInterval(function(){ getTime(); }, 1);
+  </script>
 </html>
