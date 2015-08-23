@@ -10,12 +10,19 @@
   </head>
   <body>
     <center>
-      <span id="dcvslab"></span><span id="space">|</span>
+      <div>
+        <span id="dcvslab"></span><span id="space">|</span>
+      </div>
       <span id="time">0:00:00:000</span>
     </center>
   </body>
   <script>
-    function typeDcvslab() { //function fakeSpace() { test.style.color = "#fff"; setTimeout(function(){ test.style.color = "#000"; }, 500); }
+    function fakeSpace() {
+      var space = document.getElementById("space")
+      function fakeSpace() { space.style.color = "#fff"; setTimeout(function(){ space.style.color = "#000"; }, 500); }
+    }
+    setInterval(function(){ fakeSpace(); }, 1000);
+    function typeDcvslab() { 
       var sdl = document.getElementById("dcvslab");
       setTimeout(function(){ sdl.innerHTML = "d"; }, 250);setTimeout(function(){ sdl.innerHTML = "dc"; }, 500);setTimeout(function(){ sdl.innerHTML = "dcv"; }, 750); setTimeout(function(){ sdl.innerHTML = "dcv'"; }, 1000); setTimeout(function(){ sdl.innerHTML = "dcv's"; }, 1250);setTimeout(function(){ sdl.innerHTML = "dcv's "; }, 1500); setTimeout(function(){ sdl.innerHTML = "dcv's l"; }, 1750); setTimeout(function(){ sdl.innerHTML = "dcv's la"; }, 2000); setTimeout(function(){ sdl.innerHTML = "dcv's lab"; }, 2250);
     }
