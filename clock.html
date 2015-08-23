@@ -11,8 +11,8 @@
     function typeDcvslab() { 
       var sdl = document.getElementById("dcvslab");
       setTimeout(function(){ 
-      setTimeout(function(){ sdl.innerHTML = "d"; }, 250);setTimeout(function(){ sdl.innerHTML = "dc"; }, 500);setTimeout(function(){ sdl.innerHTML = "dcv"; }, 750); setTimeout(function(){ sdl.innerHTML = "dcv'"; }, 1000); setTimeout(function(){ sdl.innerHTML = "dcv's"; }, 1250);setTimeout(function(){ sdl.innerHTML = "dcv's "; }, 1500); setTimeout(function(){ sdl.innerHTML = "dcv's l"; }, 1750); setTimeout(function(){ sdl.innerHTML = "dcv's la"; }, 2000); setTimeout(function(){ sdl.innerHTML = "dcv's lab"; }, 2250);
-      }, 3000);
+      setTimeout(function(){ sdl.style.color = "#000"; }, 250);setTimeout(function(){ sdl.innerHTML = "dc"; }, 500);setTimeout(function(){ sdl.innerHTML = "dcv"; }, 750); setTimeout(function(){ sdl.innerHTML = "dcv'"; }, 1000); setTimeout(function(){ sdl.innerHTML = "dcv's"; }, 1250);setTimeout(function(){ sdl.innerHTML = "dcv's "; }, 1500); setTimeout(function(){ sdl.innerHTML = "dcv's l"; }, 1750); setTimeout(function(){ sdl.innerHTML = "dcv's la"; }, 2000); setTimeout(function(){ sdl.innerHTML = "dcv's lab"; }, 2250);
+      }, 3000);}
     function getTime() {
       var time = new Date();
         if (time.getHours().toString().length == 1) { hours = "0" + time.getHours().toString() } else { hours = time.getHours().toString() }
@@ -26,7 +26,7 @@
   <body onload="typeDcvslab()">
     <center>
       <div>
-        <span id="dcvslab"></span>
+        <span id="dcvslab" style="color: #fff">d</span>
       </div>
       <span id="time">0:00:00:000</span>
     </center>
