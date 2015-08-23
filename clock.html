@@ -13,8 +13,12 @@
   </body>
   <script>
     function getTime() {
-    var time = new Date()
-    document.getElementById("time").innerHTML = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + ":" time.getMilliseconds() }
+    var time = new Date();
+    if (time.getHours().toString().length == 1) { hours = "0" + time.getHours().toString() } else { hours = time.getHours().toString() }
+    if (time.getMinutes().toString().length == 1) { minutes = "0" + time.getMinutes().toString() } else { minutes = time.getMinutes().toString() }
+    if (time.getSeconds().toString().length == 1) { seconds = "0" + time.getSeconds().toString() } else { seconds = time.getSeconds().toString() }
+    if (time.getMilliseconds().toString().length == 1) { mseconds = "00" + time.getMilliseconds().toString().length } else { if (time.getMilliseconds().toString().length == 2) { mseconds = "0" + time.getMilliseconds().toString() } else { mseconds = time.getMilliseconds().toString() }}
+    document.getElementById("time").innerHTML =  hours + ":" + minutes + ":" + seconds + ":" + mseconds } 
     setInterval(function(){ getTime(); }, 1);
   </script>
 </html>
