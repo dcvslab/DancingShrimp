@@ -12,14 +12,14 @@
         letter-spacing: 4px;
       }
       #bg {
-      min-height: 100%;
-      min-width: 1024px;
-      width: 100%;
-      height: auto;
-      position: fixed;
-      top: -200px;
-      left: 0;
-      z-index: -10000;
+        min-height: 100%;
+        min-width: 1024px;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: -200px;
+        left: 0;
+        z-index: -10000;
       }
     </style>
     <script>
@@ -30,12 +30,10 @@
       }, 500);}
     function getTime() {
       var time = new Date();
-        if (time.getHours().toString().length == 1) { hours = "0" + time.getHours().toString() } else { hours = time.getHours().toString() }
+        if (time.getHours() >= 12) { hours = time.getHours() - 12; if (hours == 0) { hours = 12} } else { hours = time.getHours(); if (hours == 0) { hours = 12} } 
         if (time.getMinutes().toString().length == 1) { minutes = "0" + time.getMinutes().toString() } else { minutes = time.getMinutes().toString() }
-        if (time.getSeconds().toString().length == 1) { seconds = "0" + time.getSeconds().toString() } else { seconds = time.getSeconds().toString() }
-        if (time.getMilliseconds().toString().length == 1) { mseconds = "00" + time.getMilliseconds().toString().length } else { if (time.getMilliseconds().toString().length == 2) { mseconds = "0" + time.getMilliseconds().toString() } else { mseconds = time.getMilliseconds().toString() }}
-      document.getElementById("time").innerHTML =  hours + ":" + minutes + ":" + seconds + ":" + mseconds } 
-    setInterval(function(){ getTime(); }, 1);
+        document.getElementById("timeh").innerHTML =  hours; document.getElementById("timem").innerHTML = ":" + minutes } 
+    setInterval(function(){ getTime(); }, 1000);
   </script>
   </head>
   <body onload="typeDcvslab()">
@@ -44,7 +42,9 @@
       <div>
         <span id="dcvslab" style="visibility: hidden">d</span>
       </div>
-      <span id="time">0:00:00:000</span>
+      <div>
+        <span id="timeh">0</span><span id="timem">:00</span>
+      </div>
     </center>
   </body>
 </html>
