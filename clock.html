@@ -6,6 +6,21 @@
       body {
         font-family: 'Roboto', sans-serif;
       }
+      #dcvslab {
+        font-size: 70px;
+        font-weight: 300;
+        letter-spacing: 4px;
+      }
+      #bg {
+      min-height: 100%;
+      min-width: 1024px;
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: -200px;
+      left: 0;
+      z-index: -10000;
+      }
     </style>
     <script>
     function typeDcvslab() { 
@@ -24,6 +39,7 @@
   </script>
   </head>
   <body onload="typeDcvslab()">
+  <img id="bg" src="http://i.imgur.com/iAx0SnZ.jpg">
     <center>
       <div>
         <span id="dcvslab" style="color: #fff">d</span>
