@@ -19,7 +19,7 @@
   <script>
     function mAdd() {
       var mlink = document.getElementById("madd").value
-      alert(mlink)
+      if (! mlink.split("youtube.com/watch?v=")[1] || mlink.split("youtu.be/")[1])
     }
   </script>
 </html>
