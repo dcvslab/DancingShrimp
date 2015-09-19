@@ -7,8 +7,8 @@ function mAdd() {
         } else { //soundcloud
             $.get('https://api.soundcloud.com/resolve.json?url=' + mlink + '&client_id=bb52b4a0c199ecc98cd5d4e4ddf2ee14', 
               function (scdata) {
-                if (scdata.kind != "track"); { alert("This is not a valid link!")} 
-                else { }
+                if (scdata.kind != "track") { alert("This is not a valid link!")} 
+                else { alert("This is a valid link!")}
             });
 
         }
