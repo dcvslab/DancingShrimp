@@ -3,7 +3,25 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
     <link href='style.css' rel='stylesheet' type='text/css'>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-    <script src="script.js"></script>
+    <script>
+      function mAdd() {
+  var mlink = document.getElementById("madd").value
+    if (! mlink.split("youtube.com")[1]) {
+      if (! mlink.split("youtu.be")[1]) {
+        if (! mlink.split("soundcloud.com")[1]) {
+          alert("This is not a valid link!")
+        } else { //soundcloud
+            $.get('https://api.soundcloud.com/resolve.json?url=' + mlink + '&client_id=bb52b4a0c199ecc98cd5d4e4ddf2ee14', 
+              function (scdata) {
+                if (scdata.kind != "track"); { alert("This is not a valid link!")} 
+                else { }
+            });
+
+        }
+      }
+    }
+}
+    </script>
     <title>
       PLAYER
     </title>
