@@ -6,6 +6,25 @@
     <title>
       PLAYER
     </title>
+    <script>
+      function mAdd() {
+        var mlink = document.getElementById("madd").value
+        if (! mlink.split("youtube.com")[1]) {
+          if (! mlink.split("youtu.be")[1]) {
+            if (! mlink.split("soundcloud.com")[1]) {
+              alert("This is not a valid link!")
+            } else { //soundcloud
+              $.get('https://api.soundcloud.com/resolve.json?url=' + mlink + '&client_id=bb52b4a0c199ecc98cd5d4e4ddf2ee14', 
+                function (scdata) {
+                  if (scdata.kind != "track"); { alert("This is not a valid link!")} 
+                  else { }
+              });
+
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <center>
@@ -14,12 +33,7 @@
       <img src="http://i.imgur.com/N4QNsGb.png"></img>
       <br>
       <input type="text" name="link" placeholder="SC or YT Link Here" id="madd"><button onclick="mAdd()"> ADD </button>
+      <div id="mlistartist" class="mlist">SONG ARTIST</div><div id="mlistname" class="mlist">SONG NAME</div><div id="mlisttime">SONG TIME</div>
     </center> 
   </body>
-  <script>
-    function mAdd() {
-      var mlink = document.getElementById("madd").value
-      if (! mlink.split("youtube.com/watch?v=")[1] || mlink.split("youtu.be/")[1])
-    }
-  </script>
 </html>
