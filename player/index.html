@@ -9,14 +9,17 @@
   </head>
   <body>
     <center>
-      <div id="songname">Click the play button to start playing!</div>
-      <div id="songlength">-</div>
+      <div id="mname">Click the play button to start playing!</div>
+      <div id="mlength">-</div>
       <img src="http://i.imgur.com/N4QNsGb.png"></img>
       <br>
-      <input type="text" name="link" placeholder="SC or YT Link Here"><button onclick="addSong()"> ADD </button>
+      <input type="text" name="link" placeholder="SC or YT Link Here" id="madd"><button onclick="mAdd()"> ADD </button>
     </center> 
   </body>
   <script>
-    
+    function mAdd() {
+      var mlink = document.getElementById("madd").value()
+      alert(mlink)
+    }
   </script>
 </html>
