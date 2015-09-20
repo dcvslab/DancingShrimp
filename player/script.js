@@ -1,4 +1,4 @@
-function mAdd() {
+function mAdd() { //add a song
   var mlink = document.getElementById("madd").value
     if (! mlink.split("youtube.com")[1]) {
       if (! mlink.split("youtu.be")[1]) {
