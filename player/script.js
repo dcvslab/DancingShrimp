@@ -14,7 +14,9 @@ function mAdd() {
               url: "https://api.soundcloud.com/resolve.json?url=" + sclink + "&client_id=bb52b4a0c199ecc98cd5d4e4ddf2ee14", 
               dataType: "jsonp",
               success: function(data){
-               console.log(data);           
+               if (data.kind != "track") { alert("This is not a valid link!") } else {
+                 console.log(data)
+               };           
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 alert("This is not a valid link!");
