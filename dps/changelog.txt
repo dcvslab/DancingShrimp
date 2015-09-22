@@ -1,5 +1,6 @@
 DPS CHANGELOG 
 <----------->
+ALPHA 07: (FINAL DPS - PLUG IS SHUTTING DOWN)
 
 ALPHA 06:
 Sixth version, this one took a while. Included:
