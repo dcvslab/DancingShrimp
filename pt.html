@@ -3,17 +3,25 @@
     <title>
       Periodic Table
     </title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <style>
-      .element {
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+      .e {
         width: 5.55555555%;
         height: 10%;
         float: left;
-      }
-      .outline {
         outline: solid 1px #000;
       }
       #ph1 {
         width: 88.8888888%;
+        float: left;
+        height: 10%;
+        outline: solid 1px #fff;
+      }
+      #ph2 {
+        width: 55.5555555%;
         float: left;
         height: 10%;
         outline: solid 1px #fff;
@@ -26,7 +34,7 @@
   <body>
     <center>
     <div id="period1">
-      <div class="element outline">
+      <div class="e">
         <div class="ei">
           1
         </div>
@@ -40,7 +48,7 @@
         </div>
       </div>
       <div id="ph1"></div>
-      <div class="element outline">
+      <div class="e">
         <div class="ei">
           2
         </div>
@@ -53,6 +61,17 @@
           4.002602
         </div>
       </div>
+    </div>
+    <div id="period2">
+      <div class="e"></div>
+      <div class="e"></div>
+      <div id="ph2"></div>
+      <div class="e"></div>
+      <div class="e"></div>
+      <div class="e"></div>
+      <div class="e"></div>
+      <div class="e"></div>
+      <div class="e"></div>
     </div>
     </center>
   </body>
