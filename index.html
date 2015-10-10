@@ -54,12 +54,16 @@
         if (cmdv == "help" || cmdv == "reload" || cmdv == "sudo" || cmdv.indexOf("goto") > -1) {
           if (cmd.value.toLowerCase().split(" ")[0] == "goto") {
             if (cmd.value.toLowerCase() == "goto") {
-              $(cont).append("<div>usage: goto [link]</div>"); cmdAdd()
+              cmd.remove(); 
+              $(cont).append("<div>goto</div><div>usage: goto [link]</div>"); cmdAdd()
             } else {
               if (cmd.value.split(" ")[1].startsWith("http")) {
+                cmd.remove()
+                $(cont).append("<div>goto " + cmd.value.split(" ")[1] + "</div>"); cmdAdd()
                 window.open(cmd.value.split(" ")[1])
               } else {
-                $(cont).append("<div>goto: " + cmd.value.split(" ")[1] + ": invalid page, does it start with `http'?")
+                cmd.remove()
+                $(cont).append("<div>goto " + cmd.value.split(" ")[1] + "<div>goto: " + cmd.value.split(" ")[1] + ": invalid page, does it start with `http'?"); cmdAdd()
               }
             }
           }
