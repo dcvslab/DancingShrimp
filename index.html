@@ -29,8 +29,8 @@
   </head>
   <body>
     <div id="container">
-      <div>home@dcvslab.github.io: ~$</div>
-      <div><input id="cmd" class="cmd"placeholder="enter a command" onKeyPress="return submit(event)"></input></div>
+      <div>index@dcvslab.github.io: ~$</div>
+      <div><input id="cmd" class="cmd" placeholder="enter a command" onKeyPress="return submit(event)"></input></div>
     </div>
   </body>
     <script>
@@ -41,9 +41,11 @@
         if (cmd.value.toLowerCase() == "help") {
           cmd.remove(); 
           $(cont).append("<div>help</div><div>dcvslab terminal, version 1.0</div><div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>")  
+          $(cont).append("<div>index@dcvslab.github.io: ~$</div><div><input id='cmd' class='cmd' placeholder='enter a command' onKeyPress='return submit(event)></input></div>
         }
         var cmdv = cmd.value; cmd.remove()
-        $(cont).append("<div>" + cmdv + "</div><div>invalid command, type 'help' to see a list of commands")
+        $(cont).append("<div>" + cmdv + ": command not found")
+        $(cont).append("<div>index@dcvslab.github.io: ~$</div><div><input id='cmd' class='cmd' placeholder='enter a command' onKeyPress='return submit(event)></input></div>
       }
     }
     </script>
