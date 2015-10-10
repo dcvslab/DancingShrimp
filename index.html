@@ -25,6 +25,9 @@
       .cmddesc {
         padding-left: 50%;
       }
+      .14px {
+        font-size: 14px;
+      }
     </style>
   </head>
   <body onload="cmdAdd()">
@@ -40,12 +43,12 @@
       if(e && e.keyCode == 13) {
         var cmd = document.getElementById("cmd");
         var cont = document.getElementById("container");
-        cmdv = cmd.value
-        if (cmdv == "help" || cmdv == "reload") {
+        cmdv = cmd.value.toLowerCase()
+        if (cmdv == "help" || cmdv == "reload" || cmdv = "sudo") {
           if (cmd.value.toLowerCase() == "help") {
             cmd.remove(); 
             $(cont).append(
-              "<div>help</div><div>dcvslab terminal, version 1.0</div>"
+              "<div>help</div><div>dcvslab terminal, version 1.0</div><div class='14px'>commands with a star (*) next to them have extended help menus, type `help name' to see it</div>"
               +"<div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>"
               +"<div><div class='cmdname'>reload</div><div class='cmddesc'>reloads this page</div></div>"
             );  
