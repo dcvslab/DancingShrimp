@@ -42,7 +42,8 @@
           cmd.remove(); 
           $(cont).append("<div>help</div><div>dcvslab terminal, version 1.0</div><div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>")  
         }
-      
+        var cmdv = cmd.value(); cmd.remove()
+        $(cont).append("<div>" + cmdv + "</div><div>invalid command, type 'help' to see a list of commands")
       }
     }
     </script>
