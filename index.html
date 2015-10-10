@@ -23,8 +23,7 @@
         float: left;
       }
       .cmddesc {
-        float: left;
-        left: 50%;
+        padding-left: 50%;
       }
     </style>
   </head>
@@ -40,8 +39,10 @@
     function submit(e) {
       if(e && e.keyCode == 13) {
         if (cmd.value.toLowerCase() == "help") {
-          $(cont).append("<div>dcvslab terminal, version 1.0</div><div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>")  
+          cmd.remove(); 
+          $(cont).append("<div>help</div><div>dcvslab terminal, version 1.0</div><div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>")  
         }
+      
       }
     }
     </script>
