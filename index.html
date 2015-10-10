@@ -34,10 +34,10 @@
     </div>
   </body>
     <script>
-    var cmd = document.getElementById("cmd");
-    var cont = document.getElementById("container");
     function submit(e) {
       if(e && e.keyCode == 13) {
+        var cmd = document.getElementById("cmd");
+        var cont = document.getElementById("container");
         cmdv = cmd.value
         if (cmdv == "help" || cmdv == "sudo") {
           if (cmd.value.toLowerCase() == "help") {
