@@ -51,7 +51,7 @@
         var cmd = document.getElementById("cmd");
         var cont = document.getElementById("container");
         cmdv = cmd.value.toLowerCase()
-        if (cmdv == "help" || cmdv == "reload" || cmdv == "sudo" || cmdv == "goto") {
+        if (cmdv == "help" || cmdv == "reload" || cmdv == "sudo" || cmdv.indexOf("goto") > -1) {
           if (cmd.value.toLowerCase().split(" ")[0] == "goto") {
             if (cmd.value.toLowerCase() == "goto") {
               $(cont).append("<div>usage: goto [link]</div>"); cmdAdd()
