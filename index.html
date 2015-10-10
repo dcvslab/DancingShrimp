@@ -52,7 +52,7 @@
       setTimeout(function(){
       var cont = document.getElementById("container");
       $(cont).append("<div>index@dcvslab.github.io:~$</div><div><input id='cmd' class='cmd' placeholder='enter a command' onKeyPress='return submit(event)'></input></div>");
-      $(cont).animate({"scrollTop": $(cont)[0].scrollHeight}, "fast")
+      cont.scrollTop = cont.scrollHeight
       document.getElementById("cmd").click()
       }, 500)}
     function cmdAddR() {
