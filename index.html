@@ -77,7 +77,8 @@
               +"<div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>"
               +"<div><div class='cmdname'>reload</div><div class='cmddesc'>reloads this page</div></div>"
               +"<div><div class='cmdname'>sudo</div><div class='cmddesc'>shows sudo usages</div></div>"
-            );  
+            );
+            cont.scrollTop = cont.scrollHeight;
             cmdAdd()
           }
           if (cmd.value.toLowerCase() == "reload") {
