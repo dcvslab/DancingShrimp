@@ -39,16 +39,18 @@
         var cmd = document.getElementById("cmd");
         var cont = document.getElementById("container");
         cmdv = cmd.value
-        if (cmdv == "help" || cmdv == "exit" || cmdv == "reload") {
+        if (cmdv == "help" || cmdv == "reload") {
           if (cmd.value.toLowerCase() == "help") {
             cmd.remove(); 
             $(cont).append(
               "<div>help</div><div>dcvslab terminal, version 1.0</div>"
-              +"<div><div class='cmdname'>exit</div><div class='cmddesc'>exits this page</div></div>"
               +"<div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>"
               +"<div><div class='cmdname'>reload</div><div class='cmddesc'>reloads this page</div></div>"
             );  
             $(cont).append("<div>index@dcvslab.github.io: ~$</div><div><input id='cmd' class='cmd' placeholder='enter a command' onKeyPress='return submit(event)'></input></div>")
+          }
+          if (cmd.value.toLowerCase() == "reload") {
+            location.reload
           }
         } else {
         cmd.remove()
