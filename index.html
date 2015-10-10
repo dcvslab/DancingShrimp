@@ -27,14 +27,15 @@
       }
     </style>
   </head>
-  <body>
-    <div id="container" onload="cmdAdd()"></div>
+  <body onload="cmdAdd()">
+    <div id="container"></div>
   </body>
     <script>
     function cmdAdd() {
+      setTimeout(function(){
       var cont = document.getElementById("container");
       $(cont).append("<div>index@dcvslab.github.io: ~$</div><div><input id='cmd' class='cmd' placeholder='enter a command' onKeyPress='return submit(event)'></input></div>");
-    }
+    }, 500)}
     function submit(e) {
       if(e && e.keyCode == 13) {
         var cmd = document.getElementById("cmd");
