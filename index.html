@@ -38,14 +38,15 @@
     var cont = document.getElementById("container");
     function submit(e) {
       if(e && e.keyCode == 13) {
-        if (cmd == "help" || cmd == "sudo") {
+        cmdv = cmd.value
+        if (cmdv == "help" || cmdv == "sudo") {
           if (cmd.value.toLowerCase() == "help") {
             cmd.remove(); 
             $(cont).append("<div>help</div><div>dcvslab terminal, version 1.0</div><div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>")  
             $(cont).append("<div>index@dcvslab.github.io: ~$</div><div><input id='cmd' class='cmd' placeholder='enter a command' onKeyPress='return submit(event)'></input></div>")
           }
         } else {
-        var cmdv = cmd.value; cmd.remove()
+        cmd.remove()
         $(cont).append("<div>" + cmdv + "</div><div>" + cmdv + ": command not found")
         $(cont).append("<div>index@dcvslab.github.io: ~$</div><div><input id='cmd' class='cmd' placeholder='enter a command' onKeyPress='return submit(event)'></input></div>")
         }
