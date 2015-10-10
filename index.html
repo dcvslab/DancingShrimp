@@ -51,7 +51,7 @@
         var cmd = document.getElementById("cmd");
         var cont = document.getElementById("container");
         cmdv = cmd.value.toLowerCase()
-        if (cmdv == "help" || cmdv == "reload" || cmdv == "sudo" || cmdv.indexOf("goto") > -1) {
+        if (cmdv == "help" || cmdv == "reload" || cmdv == "sudo" || cmdv.indexOf("goto") > -1 || cmdv.indexOf("cd") > -1) {
           if (cmd.value.toLowerCase().split(" ")[0] == "goto") {
             if (cmd.value.toLowerCase() == "goto") {
               cmd.remove(); 
@@ -71,6 +71,8 @@
             cmd.remove(); 
             $(cont).append(
               "<div>help</div><div>dcvslab terminal, version 1.0</div>"
+              +"<div><div class='cmdname'>cd</div><div class='cmddesc'>go into my github directories</div>"
+              +"<div><div class='cmdname'>contact</div><div class='cmddesc'>ways to contact me</div>"
               +"<div><div class='cmdname'>goto</div><div class='cmddesc'>go to a website</div></div>"
               +"<div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>"
               +"<div><div class='cmdname'>reload</div><div class='cmddesc'>reloads this page</div></div>"
@@ -83,7 +85,7 @@
           }
         } else {
         cmd.remove()
-        $(cont).append("<div>" + cmdv + "</div><div>" + cmdv + ": command not found")
+        $(cont).append("<div>" + cmdv + "</div><div>" + cmdv + ": command not found, type `help' for a list of commands")
         cmdAdd()
         }
       }
