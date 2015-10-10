@@ -11,7 +11,7 @@
         background-color: #300A24;
         color: #fff;
       }
-      .cmdenter {
+      .cmd {
         background-color: #300A24;
         border: medium none;
         color: #fff;
@@ -19,17 +19,30 @@
         resize: none;
         height: inherit;
       }
+      .cmdname {
+        float: left;
+      }
+      .cmddesc {
+        float: left;
+        left: 50%;
+      }
     </style>
     <script>
-      function submit(e) {
-        if(e && e.keyCode == 13) {
-          console.log("enter")
+    var cmd = document.getElementById("cmd");
+    var cont = document.getElementById("container");
+    function submit(e) {
+      if(e && e.keyCode == 13) {
+        if (cmd.value.toLowerCase() == "help") {
+          $(cont).append("<div>dcvslab terminal, version 1.0</div><div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>)  
         }
       }
+    }
     </script>
   </head>
   <body>
-    <div>home@dcvslab.github.io: ~$</div>
-    <div><input class="cmdenter"placeholder="enter a command" onKeyPress="return submit(event)"></input></div>
+    <div id="container">
+      <div>home@dcvslab.github.io: ~$</div>
+      <div><input id="cmd" class="cmd"placeholder="enter a command" onKeyPress="return submit(event)"></input></div>
+    </div>
   </body>
 </html>
