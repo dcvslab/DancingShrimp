@@ -1,8 +1,7 @@
-<html>
-<body>
+#dcvslab
+a bunch of random projects, some are neat and some are pointless and unfinished.
 
-<a href="http://dcvslab.github.io/" target="_blank">Site</a><br>
-<a href="http://dcvslab.github.io/todo" target="_blank">Todo</a>
-Site for Shark, coming soon.
-</body>
-</html>
+###my favorites
+1. [homepage] (http://dcvslab.github.io/)
+2. [clock] (http://dcvslab.github.io/clock)
+3. [periodic table] (http://dcvslab.github.io/pt)
