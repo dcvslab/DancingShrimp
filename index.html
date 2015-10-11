@@ -69,11 +69,12 @@
     var sudoa = 0 //sudo attempts
     function password(e) {
       if (e && e.keyCode == 13) {
+      var cont = document.getElementBYId("container")
         if (sudoa == 3) {
-          $(#cont).append("<div>sudo: 3 incorrect password attempts")
+          $(cont).append("<div>sudo: 3 incorrect password attempts")
           cmdAdd()
         } else {
-          $(#cont).append("<div>Sorry, try again.")
+          $(cont).append("<div>Sorry, try again.")
           sudoAdd()
         }
       }
