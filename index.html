@@ -61,12 +61,29 @@
         var cont = document.getElementById("container");
         $(cont).append("<div>root@dcvslab.github.io:~#</div><div><input id='cmd' class='cmd' placeholder='enter a command' onKeyPress='return submit(event)'></input></div>");
     }, 500)}
+    function sudoAdd() {
+      setTimeout(function(){
+        var cont = document.getElementBYId("container")
+        $(cont).append("<div><input id='password' class='cmd' placeholder='enter the password' onKeyPress='return password(event)'></input></div>")
+      }, 500)}
+    var sudoa = 0 //sudo attempts
+    function password(e) {
+      if (e && e.keyCode == 13) {
+        if (sudoa == 3) {
+          $(#cont).append("<div>sudo: 3 incorrect password attempts")
+          cmdAdd()
+        } else {
+          $(#cont).append("<div>Sorry, try again.")
+          sudoAdd()
+        }
+      }
+    }
     function submit(e) {
       if(e && e.keyCode == 13) {
         var cmd = document.getElementById("cmd");
         var cont = document.getElementById("container");
         cmdv = cmd.value.toLowerCase()
-        if (cmdv == "contact" || cmdv == "help" || cmdv == "reload" || cmdv == "sudo" || cmdv.indexOf("goto") > -1 || cmdv.indexOf("cd") > -1) {
+        if (cmdv == "contact" || cmdv == "help" || cmdv == "reload" || cmdv.indexOf("sudo") > -1 || cmdv.indexOf("goto") > -1 || cmdv.indexOf("cd") > -1) {
           if (cmd.value.toLowerCase() == "contact") {
             cmd.remove(); 
             $(cont).append(
@@ -99,12 +116,16 @@
               +"<div><div class='cmdname'>goto</div><div class='cmddesc'>go to a website</div></div>"
               +"<div><div class='cmdname'>help</div><div class='cmddesc'>shows this menu</div></div>"
               +"<div><div class='cmdname'>reload</div><div class='cmddesc'>reloads this page</div></div>"
-              +"<div><div class='cmdname'>sudo</div><div class='cmddesc'>shows sudo usages</div></div>"
+              +"<div><div class='cmdname'>sudo</div><div class='cmddesc'>run sudo commands</div></div>"
             );
             cmdAdd()
           }
           if (cmd.value.toLowerCase() == "reload") {
             location.reload()
+          }
+          if (cmd.value.indexOf("sudo") > -1) {
+            $(cont).append("<div>[sudo] password for dcvslab.github.io:")
+            sudoAdd()
           }
         } else {
         cmd.remove()
