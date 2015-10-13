@@ -74,8 +74,11 @@
 	return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     function bG() {
-    	document.getElementById("background").setAttribute('style', 'background: url("http://d35y9swri9q567.cloudfront.net/background/' + rN(1, 572) + '.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
+    	var bg = rN(1, 572)
+    	document.getElementById("background").setAttribute('style', 'background: url("http://d35y9swri9q567.cloudfront.net/background/' + bg + '.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
     }
     bG()
+    document.getElementById("n").addEventListener("click", function() {bG()})
+    document.getElementById("m").addEventListener("click", function() { window.open("http://d35y9swri9q567.cloudfront.net/background/" + bg + ".jpg")})
   </script>
 </html>
