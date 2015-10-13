@@ -29,22 +29,22 @@
       .db {
         font-weight: 700;
       }
-	    #content {
-		    z-index: 800;
-	    }
-	    #background_layer {
-		    z-index: -1;
-		    opacity: 0.3;
-		    position: absolute;
-		    width: 100%;
-		    height: 100%;
-		    top: 0;
-		    left: 0;
-	    }
+      #content {
+	z-index: 800;
+      }
+      #background {
+	z-index: -1;
+	opacity: 0.3;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+      }
     </style>
   </head>
   <body>
-  <img id="bg" src="">
+  <div id="content">
     <center>
       <div id="timed">
         <span id="timeh">0</span><span id="timem">:00</span>
@@ -53,6 +53,8 @@
         <span id="d" class="dnb">MON </span><span id="n" class="db">1</span><span id="m" class="dnb"> JAN</span>
       </div>
     </center>
+  </div>
+  <div id="background"></div>
   </body>
   <script>
     var mc = 0
@@ -69,10 +71,10 @@
     } 
     getDT(); setInterval(function(){ getDT(); }, 1000);
     function rN(min, max) {
-		  return Math.floor(Math.random() * (max - min + 1)) + min;
-	  }
-	  function bG() {
-	    document.getElementById("background_layer").setAttribute('style', 'background: url("http://d35y9swri9q567.cloudfront.net/background/' + rN(1, 572) + '.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
-	  }
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    function bG() {
+    	document.getElementById("background_layer").setAttribute('style', 'background: url("http://d35y9swri9q567.cloudfront.net/background/' + rN(1, 572) + '.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
+    }
   </script>
 </html>
