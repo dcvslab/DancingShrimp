@@ -67,7 +67,7 @@
         if (d == 0) { d = " SUN" } else { if (d == 1) { d = " MON" } else { if (d == 2) { d = " TUE" } else { if (d == 3) { d = " WED" } else { if (d == 4) { d = " THURS" } else { if (d == 5) { d = " FRI" } else { d = " SAT" }}}}}}
         if (m == 0) { m = "JAN " } else { if (m == 1) { m = "FEB " } else { if (m == 2) { m = "MAR " } else { if (m == 3) { m = "APR " } else { if (m == 4) { m = "MAY " } else { if (m == 5) { m = "JUNE " } else { if (m == 6) { m = "JULY " } else { if (m == 7) { m = "AUG " } else { if (m == 8) { m = "SEPT " } else { if (m == 9) { m = "OCT" } else { if (m == 10) { m = "NOV " } else { m = "DEC " }}}}}}}}}}} 
         document.getElementById("d").innerHTML = d + " "; document.getElementById("n").innerHTML = n; document.getElementById("m").innerHTML = " " + m;
-        mc = mc + 1; if (mc == 10000) {mc = 0; bG()}
+        mc = mc + 1; if (mc == 900) {mc = 0; bG()}
     } 
     getDT(); setInterval(function(){ getDT(); }, 1000);
     function rN(min, max) {
