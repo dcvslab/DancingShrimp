@@ -28,6 +28,9 @@
       #timem {
         font-weight: 200;
       }
+      #timems {
+      	font-weight: 200;
+      }
       #date {
         color: #fff;
         font-size: 20px;
@@ -65,13 +68,19 @@
       .cp {
       	cursor: pointer;
       }
+      .din {
+      	display: none;
+      }
+      .dib {
+      	display: block;
+      }
     </style>
   </head>
   <body>
   <div id="content">
     <center>
       <div id="timed">
-        <span id="timeh">0</span><span id="timem">:00</span>
+        <span id="timeh" class="cp">0</span><span id="timem">:00</span><span id="timems" class="din">:00</span>
       </div>
       <div id="date">
         <span id="d" class="dnb">MON </span><span id="n" class="db cp">1</span><span id="m" class="dnb cp"> JAN</span>
@@ -105,11 +114,19 @@
     function rN(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    function bG() {
-    	window.bg = rN(1, 572)
+    function bG(num) {
+    	if (! num) { window.bg = rN(1, 572) } else { window.bg = num }
     	document.getElementById("background").setAttribute('style', 'background: url("http://d35y9swri9q567.cloudfront.net/background/' + window.bg + '.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
     }
     bG()
+    window.sttf = "false"
+    var dd = document.getElementById("date"); var twtf = document.getElementById("twtf"); var th = document.getElementById("timeh"); var tm = document.getElementById("timem"); var tms = document.getElementById("timems")
+    function sT() {
+    	if (window.sttf == "false") {
+    		dd.style.display = "none"; twtf.style.display = "none";	
+    		th.innerHTML = "0"; tm.innerHTML = ":00"; tms.innerHTML = ":00"; tms.className = "dib"
+    	}
+    }
     var tw = document.getElementById("tw"); var tf = document.getElementById("tf")
     document.getElementById("n").addEventListener("click", function() {bG()})
     document.getElementById("m").addEventListener("click", function() { window.open("http://d35y9swri9q567.cloudfront.net/background/" + window.bg + ".jpg")})
