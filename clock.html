@@ -14,6 +14,7 @@
       body {
         font-family: 'Roboto', sans-serif;
         background-color: #000;
+        margin: 0px;
       }
       #timed {
         font-size: 112px;
@@ -49,8 +50,17 @@
 	top: 0;
 	left: 0;
       }
-      #ytl {
-      	margin-top: 50px;
+      #12-24 {
+      	position: absolute;
+      	bottom: 10px;
+      	width: 100%;
+      	text-align: center;
+      }
+      .b {
+      	font-weight: 700;
+      }
+      .n {
+      	font-weight: 400;
       }
     </style>
   </head>
@@ -64,6 +74,9 @@
         <span id="d" class="dnb">MON </span><span id="n" class="db">1</span><span id="m" class="dnb"> JAN</span>
       </div>
     </center>
+    <div id="12-24">
+    	<span id="12" class="b">12H </span>-<span id="24" class="n"> 24H</span>
+    </div>
   </div>
   <div id="background"></div>
   </body>
@@ -71,6 +84,7 @@
     var mc = 0
     function getDT() {
       var time = new Date();
+      	
         if (time.getHours() >= 12) { hours = time.getHours() - 12; if (hours == 0) { hours = 12} } else { hours = time.getHours(); if (hours == 0) { hours = 12} } 
         if (time.getMinutes().toString().length == 1) { minutes = "0" + time.getMinutes().toString() } else { minutes = time.getMinutes().toString() }
         document.getElementById("timeh").innerHTML =  hours; document.getElementById("timem").innerHTML = ":" + minutes
