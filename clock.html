@@ -116,7 +116,11 @@
     }
     function bG(num) {
     	if (! num) { window.bg = rN(1, 572) } else { window.bg = num }
+    	$("#background").animate({ opacity: 0 })
+    	document.getElementById("background").style.display = "none"
     	document.getElementById("background").setAttribute('style', 'background: url("http://d35y9swri9q567.cloudfront.net/background/' + window.bg + '.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
+    	document.getElementById("background").style.display = "block"
+    	$("#background").animate({ opacity: .3 })
     }
     bG()
     window.sttf = "false"
