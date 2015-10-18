@@ -115,13 +115,13 @@
 	return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     function bG(num) {
-    	if (! num) { window.bg = rN(1, 200) } else { window.bg = num }
+    	if (! num) { window.bg = rN(1, 401) } else { window.bg = num }
     	$("#background").animate({ opacity: 0 })
     	document.getElementById("background").style.display = "none"
 	setTimeout(function(){ 
     		document.getElementById("background").setAttribute('style', 'background: url("http://dcvslab.github.io/backgrounds/' + window.bg + '.jpeg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
 		setTimeout(function(){document.getElementById("background").style.display = "block"}, 400);
-		setTimeout(function(){ $("#background").animate({ opacity: .3 })}, 500);
+		setTimeout(function(){ $("#background").animate({ opacity: .3 })}, 00);
 	}, 300);
     }
     bG()
