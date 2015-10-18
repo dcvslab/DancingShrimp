@@ -118,9 +118,11 @@
     	if (! num) { window.bg = rN(1, 200) } else { window.bg = num }
     	$("#background").animate({ opacity: 0 })
     	document.getElementById("background").style.display = "none"
-    	document.getElementById("background").setAttribute('style', 'background: url("http://dcvslab.github.io/backgrounds/' + window.bg + '.jpeg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
-    	document.getElementById("background").style.display = "block"
-    	$("#background").animate({ opacity: .3 })
+	setTimeout(function(){ 
+    		document.getElementById("background").setAttribute('style', 'background: url("http://dcvslab.github.io/backgrounds/' + window.bg + '.jpeg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
+		setTimeout(function(){document.getElementById("background").style.display = "block"}, 400);
+		setTimeout(function(){ $("#background").animate({ opacity: .3 })}, 00);
+	}, 300);
     }
     bG()
     window.sttf = "false"
