@@ -1,4 +1,6 @@
 #dcvslab.github.io/backgrounds
-Backgrounds used on Google's Chromecast are `#1 - #699 (excluding #233, I messed up saving them ;~;)` and were found [here] (https://github.com/dconnolly/chromecast-backgrounds)
+#### #1 - #699 
+`excluding 233 (messed up saving)`
+found on [dconnolly's github](https://github.com/dconnolly/chromecast-backgrounds)
 
-If you would like to use these, feel free! Just give credit to the people involved (that includes me).
+if you would like to use these, feel free! just give credit to the people involved (that includes me).
