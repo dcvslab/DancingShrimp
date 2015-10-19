@@ -115,10 +115,11 @@
 	return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     function bG(num) {
-    	if (! num) { window.bg = rN(1, 699) } else { window.bg = num }
+    	if (! num) { window.bg = rN(1, 747) } else { window.bg = num }
     	$("#background").animate({ opacity: 0 })
-	setTimeout(function(){ 
-    		document.getElementById("background").setAttribute('style', 'background: url("http://dcvslab.github.io/backgrounds/' + window.bg + '.jpeg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
+	setTimeout(function(){
+		if (window.bg > 699) { window.bg = window.bg + ".jpg" } else { window.bg = window.bg + ".jpeg" }
+    		document.getElementById("background").setAttribute('style', 'background: url("http://dcvslab.github.io/backgrounds/' + window.bg + ") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
 	}, 300);
 	setTimeout(function(){ 
 		$("#background").animate({ opacity: .3 })
