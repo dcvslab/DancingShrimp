@@ -1,6 +1,6 @@
 #dcvslab.github.io/backgrounds
 #### #1 - #699 (.jpeg)
-`excluding #233 & #616 (messed up saving)`
+`excluding #233 and #616 (messed up saving)`
 found on [dconnolly's github](https://github.com/dconnolly/chromecast-backgrounds)
 
 #### #700 - #747 (.jpg) 
