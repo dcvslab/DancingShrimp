@@ -181,6 +181,7 @@
             var image = gup.getImageUrl();
             document.getElementById("signupin").style.display = "none";
             document.getElementById("loggedin").style.display = "block";
+            dcvCheckAuth()
         }
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
@@ -200,7 +201,6 @@
               document.getElementById("ytaa").open()
             }
         }
-        dcvCheckAuth()
         var playlist = function(accessToken) {
             this.accessToken = accessToken;
             this.gapi = gapi;
