@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>music</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="606761269242-vi71295hqn5uu9fmkfina926lpb6ih9s.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    </head>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            margin: 0px;
+            color: #fff;
+        }
+        a {
+            color: #fff;
+        }
+        #content {
+	        z-index: 800;
+	        margin: 5px;
+        }
+        #background {
+	        z-index: -1;
+	        opacity: 0.3;
+	        position: fixed;
+	        width: 100%;
+	        height: 100%;
+	        top: 0;
+	        left: 0;
+        }
+        a:link {
+            color: #fff;
+            text-decoration: underline
+        }
+        a:visited {
+            color: #fff;
+            text-decoration: underline
+        }
+        a:hover {
+            color: #fff;
+            text-decoration: underline
+        }
+        a:active {
+            color: #fff;
+            text-decoration: underline
+        } 
+        .head {
+            font-size: 56px;
+            line-height: 100px;
+            padding-top: 5%;
+        }
+        .logreq {
+            font-size: 24px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #loggedin {
+            display: none;
+        }
+        .thf {
+            font-size: 34px;
+        }
+        #nav {
+            background-color: rgba(0,0,0,.3);
+            width: 100%;
+            height: inherit;
+        }
+        .b {
+            color: #000;
+        }
+    </style>
+    <body>
+        <div id="content">
+            <center>
+                <div id="signupin">
+                    <div class="head">dcvslab/music</div>
+                    <div class="logreq">please sign in with google to start using music</div>
+                    <div class="g-signin2" data-onsuccess="signIn" data-theme="light"></div>
+                </div>
+            </center>
+            <div id="loggedin">
+                <center>
+                    <div id="nav">
+                        <span class="thf">dcvslab/music</span>
+                    </div>
+                    <div id="pln">
+                        <span>playlist names will show here</span><br>
+                    </div>
+                </center>
+            </div>
+		    <div id="background"></div>	
+	    </div>
+    </body>
+    <script>
+        function rN(min, max) {
+	        return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function bG(num) {
+    	    if (! num) { window.bg = rN(1, 747) } else { window.bg = num }
+    	    $("#background").animate({ opacity: 0 })
+	        setTimeout(function(){
+		        if (window.bg > 699) { window.bg = window.bg + ".jpg" } else { window.bg = window.bg + ".jpeg" }
+    		    document.getElementById("background").setAttribute('style', 'background: url("http://dcvslab.github.io/backgrounds/' + window.bg + '") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
+	        }, 300);
+	        setTimeout(function(){ 
+		        $("#background").animate({ opacity: .3 })
+	        }, 600);
+        }
+        bG()
+        var apik = "AIzaSyAT6PzxM3dJSHfaUzNn1qYuSWCAlSCL"
+        var authk = "606761269242-vi71295hqn5uu9fmkfina926lpb6ih9s.apps.googleusercontent.com"
+        function init() {
+            gapi.client.setApiKey(apik);
+        }
+        var OAUTH2_CLIENT_ID = authk;
+        var OAUTH2_SCOPES = [
+            'https://www.googleapis.com/auth/youtube'
+        ];
+        googleApiClientReady = function() {
+            gapi.auth.init(function() {
+                window.setTimeout(checkAuth, 1);
+            });
+        }
+        function checkAuth() {
+            gapi.auth.authorize({
+                client_id: OAUTH2_CLIENT_ID,
+                scope: OAUTH2_SCOPES,
+                immediate: true
+            }, handleAuthResult);
+        }
+        function handleAuthResult(authResult) {
+            if (authResult && !authResult.error) {
+                playlist("AIzaSyAT6PzxM3dJSHfaUzNn1qYuSWCAlSCL_GI");
+                get5Playlists()
+                loadAPIClientInterfaces()
+            } else {
+                
+                gapi.auth.authorize({
+                    client_id: OAUTH2_CLIENT_ID,
+                    scope: OAUTH2_SCOPES,
+                    immediate: false
+                    }, handleAuthResult);
+            }
+        }
+        function loadAPIClientInterfaces() {
+            gapi.client.load('youtube', 'v3', function() {
+                handleAPILoaded();
+            });
+        }
+        function signIn(gu) {
+            var gup = gu.getBasicProfile();
+            var name = gup.getName();
+            var image = gup.getImageUrl();
+            document.getElementById("signupin").style.display = "none";
+            document.getElementById("loggedin").style.display = "block";
+        }
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut()
+        }
+        function dcvcheckAuth() {
+            gapi.auth.authorize({
+                client_id: OAUTH2_CLIENT_ID,
+                scope: OAUTH2_SCOPES,
+                immediate: true
+            }, dcvAuthResult);
+        }
+        function dcvAuthResult(authResult) {
+            if (authResult && !authResult.error) {
+                console.log("auth success")
+            } else {
+              alert("please allow us to auth your yt account")
+            }
+        }
+        var playlist = function(accessToken) {
+            this.accessToken = accessToken;
+            this.gapi = gapi;
+            this.authenticated = true;
+            setTimeout(function() {
+                this.gapi.client.request({
+                    path: '/youtube/v3/playlists',
+                    params: {
+                        part: 'snippet',
+                        mine: true
+                },
+                callback: function(response) {
+                    window.pl = response
+                }
+                })
+            }, 1000)
+        }
+        function get5Playlists() {
+            $("#ytauth").remove(); $("#pln").append("<div id='loading'>loading...</div>")
+            setTimeout(function() {
+                var plitems = pl.items
+                var plil = plitems.length;
+                for (var i = 0; i < plil; i++) {
+                    $("#loading").remove()
+                    $("#pln").append("<div>" + plitems[i].snippet.title + "</div>")
+                }
+            }, 5000)
+        }
+    </script>
+</html>
