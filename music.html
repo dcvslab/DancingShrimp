@@ -96,7 +96,7 @@
                 <div id="signupin">
                     <div class="head">dcvslab/music</div>
                     <div class="logreq">please sign in with google to start using music</div>
-                    <div class="g-signin2" data-onsuccess="signIn" data-theme="light"></div>
+                    <div class="g-signin2" data-onsuccess="signIn" data-theme="light" onclick="bG()"></div>
                 </div>
             </center>
             <div id="loggedin">
@@ -181,7 +181,7 @@
             var image = gup.getImageUrl();
             document.getElementById("signupin").style.display = "none";
             document.getElementById("loggedin").style.display = "block";
-            googleApiClientReady()
+            dcvCheckAuth()
         }
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
@@ -201,7 +201,6 @@
               document.getElementById("ytaa").open()
             }
         }
-        dcvCheckAuth()
         function playList(accessToken) {
             this.accessToken = accessToken;
             this.gapi = gapi;
