@@ -158,8 +158,6 @@
         }
         function handleAuthResult(authResult) {
             if (authResult && !authResult.error) {
-                playList("AIzaSyAT6PzxM3dJSHfaUzNn1qYuSWCAlSCL_GI");
-                getPlaylists()
                 loadAPIClientInterfaces()
             } else {
             	document.getElementById("ytaa").close()
@@ -196,7 +194,8 @@
         }
         function dcvAuthResult(authResult) {
             if (authResult && !authResult.error) {
-                console.log("auth success")
+                playList("AIzaSyAT6PzxM3dJSHfaUzNn1qYuSWCAlSCL_GI");
+                getPlaylists()
             } else {
               document.getElementById("ytaa").open()
             }
