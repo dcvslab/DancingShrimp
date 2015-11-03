@@ -159,7 +159,7 @@
         function handleAuthResult(authResult) {
             if (authResult && !authResult.error) {
                 playList("AIzaSyAT6PzxM3dJSHfaUzNn1qYuSWCAlSCL_GI");
-                get5Playlists()
+                getPlaylists()
                 loadAPIClientInterfaces()
             } else {
             	document.getElementById("ytaa").close()
@@ -211,7 +211,8 @@
                     path: '/youtube/v3/playlists',
                     params: {
                         part: 'snippet',
-                        mine: true
+                        mine: true,
+                        maxResults: 50
                 },
                 callback: function(response) {
                     window.pl = response
@@ -219,14 +220,14 @@
                 })
             }, 1000)
         }
-        function get5Playlists() {
+        function getPlaylists() {
  	    $("#pln").append("<div id='loading'>loading...</div>")
             setTimeout(function() {
                 var plitems = pl.items
                 var plil = plitems.length;
                 for (var i = 0; i < plil; i++) {
                     $("#loading").remove()
-                    $("#pln").append("<div>" + plitems[i].snippet.title + "</div>")
+                    $("#pln").append("<div id='" + plitems[i].items.id + ">" + plitems[i].snippet.title + "</div>")
                 }
             }, 5000)
         }
