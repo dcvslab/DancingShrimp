@@ -115,7 +115,7 @@
   		<h2>YouTube Account Access</h2>
   		<p class="p10">Hey! We need access to your YouTube account to view your playlists so you can use the site. Please click the ALLOW button below, thanks!</p>
   		<div class="buttons">
-    			<paper-button dialog-dismiss>DISMISS</paper-button><paper-button id="accept" onclick="googleApiClientReady()">ACCEPT</paper-button>
+    			<paper-button dialog-dismiss>DISMISS</paper-button><paper-button id="accept" onclick="checkAuth()">ACCEPT</paper-button>
   		</div>
   	</paper-dialog>
     </body>
@@ -150,6 +150,7 @@
             });
         }
         function checkAuth() {
+            document.getElementById("ytaa").close()
             gapi.auth.authorize({
                 client_id: OAUTH2_CLIENT_ID,
                 scope: OAUTH2_SCOPES,
@@ -162,7 +163,6 @@
                 get5Playlists()
                 loadAPIClientInterfaces()
             } else {
-                
                 gapi.auth.authorize({
                     client_id: OAUTH2_CLIENT_ID,
                     scope: OAUTH2_SCOPES,
@@ -188,6 +188,7 @@
             auth2.signOut()
         }
         function dcvCheckAuth() {
+            
             gapi.auth.authorize({
                 client_id: OAUTH2_CLIENT_ID,
                 scope: OAUTH2_SCOPES,
