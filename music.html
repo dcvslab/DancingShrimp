@@ -181,6 +181,7 @@
             var image = gup.getImageUrl();
             document.getElementById("signupin").style.display = "none";
             document.getElementById("loggedin").style.display = "block";
+            googleApiClientReady()
         }
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
@@ -219,7 +220,7 @@
             }, 1000)
         }
         function get5Playlists() {
-            $("#ytauth").remove(); $("#pln").append("<div id='loading'>loading...</div>")
+ 	    $("#pln").append("<div id='loading'>loading...</div>")
             setTimeout(function() {
                 var plitems = pl.items
                 var plil = plitems.length;
