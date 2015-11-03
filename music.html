@@ -105,11 +105,11 @@
             </div>
 	<div id="background"></div>	
 	</div>
-	<paper-dialog id="info" class="custom" entry-animation="scale-up-animation" exit-animation="scale-down-animation">
+	<paper-dialog id="ytaa">
   		<h2>YouTube Account Access</h2>
   		<p>Hey! We need access to your YouTube account to view your playlists so you can use the site. Please click the ALLOW button below, thanks!</p>
   		<div class="buttons">
-    			<paper-button dialog-dismiss>DISMISS</paper-button>
+    			<paper-button dialog-dismiss>DISMISS</paper-button><paper-button id="accept">ACCEPT</paper-button>
   		</div>
   	</paper-dialog>
     </body>
@@ -191,7 +191,7 @@
             if (authResult && !authResult.error) {
                 console.log("auth success")
             } else {
-              alert("please allow us to auth your yt account")
+              document.getElementById("ytaa").open()
             }
         }
         var playlist = function(accessToken) {
