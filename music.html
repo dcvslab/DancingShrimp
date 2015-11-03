@@ -157,12 +157,12 @@
             }, handleAuthResult);
         }
         function handleAuthResult(authResult) {
-            document.getElementById("ytaa").close()
             if (authResult && !authResult.error) {
-                playlist("AIzaSyAT6PzxM3dJSHfaUzNn1qYuSWCAlSCL_GI");
+                playList("AIzaSyAT6PzxM3dJSHfaUzNn1qYuSWCAlSCL_GI");
                 get5Playlists()
                 loadAPIClientInterfaces()
             } else {
+            	document.getElementById("ytaa").close()
                 gapi.auth.authorize({
                     client_id: OAUTH2_CLIENT_ID,
                     scope: OAUTH2_SCOPES,
@@ -201,7 +201,7 @@
             }
         }
         dcvCheckAuth()
-        var playlist = function(accessToken) {
+        function playList(accessToken) {
             this.accessToken = accessToken;
             this.gapi = gapi;
             this.authenticated = true;
