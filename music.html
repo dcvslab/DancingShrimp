@@ -86,6 +86,9 @@
         paper-dialog.custom {
      	     background-color: #fff;
 	}
+	.p10 {
+	     padding-top: 10px;
+	}
     </style>
     <body>
         <div id="content">
@@ -110,9 +113,9 @@
 	</div>
 	<paper-dialog id="ytaa" class="custom">
   		<h2>YouTube Account Access</h2>
-  		<p>Hey! We need access to your YouTube account to view your playlists so you can use the site. Please click the ALLOW button below, thanks!</p>
+  		<p class="p10">Hey! We need access to your YouTube account to view your playlists so you can use the site. Please click the ALLOW button below, thanks!</p>
   		<div class="buttons">
-    			<paper-button dialog-dismiss>DISMISS</paper-button><paper-button id="accept">ACCEPT</paper-button>
+    			<paper-button dialog-dismiss>DISMISS</paper-button><paper-button id="accept" onclick="googleApiClientReady()">ACCEPT</paper-button>
   		</div>
   	</paper-dialog>
     </body>
@@ -197,6 +200,7 @@
               document.getElementById("ytaa").open()
             }
         }
+        dcvCheckAuth()
         var playlist = function(accessToken) {
             this.accessToken = accessToken;
             this.gapi = gapi;
