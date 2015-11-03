@@ -150,7 +150,6 @@
             });
         }
         function checkAuth() {
-            document.getElementById("ytaa").close()
             gapi.auth.authorize({
                 client_id: OAUTH2_CLIENT_ID,
                 scope: OAUTH2_SCOPES,
@@ -158,6 +157,7 @@
             }, handleAuthResult);
         }
         function handleAuthResult(authResult) {
+            document.getElementById("ytaa").close()
             if (authResult && !authResult.error) {
                 playlist("AIzaSyAT6PzxM3dJSHfaUzNn1qYuSWCAlSCL_GI");
                 get5Playlists()
@@ -181,14 +181,12 @@
             var image = gup.getImageUrl();
             document.getElementById("signupin").style.display = "none";
             document.getElementById("loggedin").style.display = "block";
-            dcvCheckAuth()
         }
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut()
         }
         function dcvCheckAuth() {
-            
             gapi.auth.authorize({
                 client_id: OAUTH2_CLIENT_ID,
                 scope: OAUTH2_SCOPES,
@@ -202,6 +200,7 @@
               document.getElementById("ytaa").open()
             }
         }
+        dcvCheckAuth()
         var playlist = function(accessToken) {
             this.accessToken = accessToken;
             this.gapi = gapi;
