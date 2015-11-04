@@ -220,8 +220,8 @@
                 })
             }, 1000)
         }
-        function alertId() {
-        	alert(this.id)
+        function alertId(id) {
+        	alert(id)
         }
         function getPlaylists() {
  	    $("#pln").append("<div id='loading'>loading...</div>")
@@ -230,7 +230,7 @@
                 var plil = plitems.length;
                 for (var i = 0; i < plil; i++) {
                     $("#loading").remove()
-                    $("#pln").append("<div onclick='alertId()' id='" + plitems[i].id + "'>" + plitems[i].snippet.title + "</div>")
+                    $("#pln").append("<div onclick='alertId(this.id)' id='" + plitems[i].id + "'>" + plitems[i].snippet.title + "</div>")
                 }
             }, 5000)
         }
