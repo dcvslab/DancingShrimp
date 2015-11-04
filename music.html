@@ -211,7 +211,7 @@
                     params: {
                         part: 'snippet',
                         mine: true,
-                        maxResults: 50
+                        maxResults: 50,
                         pagetoken: pagetoken
                 },
                 callback: function(response) {
@@ -220,6 +220,9 @@
                 })
             }, 1000)
         }
+        function alertId() {
+        	alert(this.id)
+        }
         function getPlaylists() {
  	    $("#pln").append("<div id='loading'>loading...</div>")
             setTimeout(function() {
@@ -227,7 +230,7 @@
                 var plil = plitems.length;
                 for (var i = 0; i < plil; i++) {
                     $("#loading").remove()
-                    $("#pln").append("<div id='" + plitems[i].id + "'>" + plitems[i].snippet.title + "</div>")
+                    $("#pln").append("<div onclick='alertId()' id='" + plitems[i].id + "'>" + plitems[i].snippet.title + "</div>")
                 }
             }, 5000)
         }
