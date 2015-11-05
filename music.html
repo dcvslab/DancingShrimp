@@ -194,14 +194,14 @@
         }
         function dcvAuthResult(authResult) {
             if (authResult && !authResult.error) {
-                playList("AIzaSyAT6PzxM3dJSHfaUzNn1qYuSWCAlSCL_GI");
+                playList(apik);
                 getPlaylists()
             } else {
               document.getElementById("ytaa").open()
             }
         }
-        var pagetoken = ""
-        function playList(accessToken) {
+        function playList(accessToken, pagetoken, playlistid) {
+            if (! pagetoken) { pagetoken = "" }; if (! playlistid) { playlistid = "" } 
             this.accessToken = accessToken;
             this.gapi = gapi;
             this.authenticated = true;
@@ -212,7 +212,8 @@
                         part: 'snippet',
                         mine: true,
                         maxResults: 50,
-                        pagetoken: pagetoken
+                        pagetoken: pagetoken,
+                        playlistId: playlistid
                 },
                 callback: function(response) {
                     window.pl = response
@@ -221,7 +222,8 @@
             }, 1000)
         }
         function alertId(id) {
-        	alert(id)
+        	playList(apik, "", id)
+        	setTimeout(function() { console.log(window.pl) }, 5000)
         }
         function getPlaylists() {
  	    $("#pln").append("<div id='loading'>loading...</div>")
