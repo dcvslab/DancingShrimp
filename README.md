@@ -3,6 +3,7 @@ a bunch of random projects, some are neat and some are pointless and unfinished.
 
 ###current
 1. [music] (http://dcvslab.github.io/music)
+2. [totem.fm] (https://github.com/williamtdr/totem-web)
 
 ###my favorites
 1. [homepage] (http://dcvslab.github.io/)
