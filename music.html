@@ -11,14 +11,14 @@
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="https://apis.google.com/js/client.js?onload=init"></script>
         <!-- Polymer Components !-->
-     	<script src="/bower_components/webcomponentsjs/webcomponents.js"> </script>
-     	<script src="/bower_components/web-animations-js/web-animations.min.js"></script>
-     	<link rel="import" href="/bower_components/paper-button/paper-button.html">
-     	<link rel="import" href="/bower_components/paper-toast/paper-toast.html">
-     	<link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
-     	<link rel="import" href="/bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
-     	<link rel="import" href="/bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
-     	<!-- End Polymer Components !-->
+     	  <script src="/bower_components/webcomponentsjs/webcomponents.js"> </script>
+     	  <script src="/bower_components/web-animations-js/web-animations.min.js"></script>
+     	  <link rel="import" href="/bower_components/paper-button/paper-button.html">
+     	  <link rel="import" href="/bower_components/paper-toast/paper-toast.html">
+     	  <link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
+     	  <link rel="import" href="/bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
+     	  <link rel="import" href="/bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
+     	  <!-- End Polymer Components !-->
     </head>
     <style>
         body {
@@ -58,7 +58,7 @@
         a:active {
             color: #fff;
             text-decoration: underline
-        } 
+        }
         .head {
             font-size: 56px;
             line-height: 100px;
@@ -109,7 +109,7 @@
                     	</div>
                 </center>
             </div>
-	<div id="background"></div>	
+	<div id="background"></div>
 	</div>
 	<paper-dialog id="ytaa" class="custom">
   		<h2>YouTube Account Access</h2>
@@ -130,7 +130,7 @@
 		        if (window.bg > 699) { window.bg = window.bg + ".jpg" } else { window.bg = window.bg + ".jpeg" }
     		    document.getElementById("background").setAttribute('style', 'background: url("http://dcvslab.github.io/backgrounds/' + window.bg + '") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;');
 	        }, 300);
-	        setTimeout(function(){ 
+	        setTimeout(function(){
 		        $("#background").animate({ opacity: .3 })
 	        }, 600);
         }
@@ -201,7 +201,7 @@
             }
         }
         function playList(accessToken, pagetoken, playlistid) {
-            if (! pagetoken) { pagetoken = "" }; if (! playlistid) { playlistid = "" } 
+            if (! pagetoken) { pagetoken = "" }; if (! playlistid) { playlistid = "" }
             this.accessToken = accessToken;
             this.gapi = gapi;
             this.authenticated = true;
