@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>music</title>
+        <link rel="stylesheet" href="music.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="606761269242-vi71295hqn5uu9fmkfina926lpb6ih9s.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://apis.google.com/js/client.js?onload=init"></script>
+        <!-- Polymer Components !-->
+     	  <script src="/bower_components/webcomponentsjs/webcomponents.js"> </script>
+     	  <script src="/bower_components/web-animations-js/web-animations.min.js"></script>
+     	  <link rel="import" href="/bower_components/paper-button/paper-button.html">
+     	  <link rel="import" href="/bower_components/paper-toast/paper-toast.html">
+     	  <link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
+     	  <link rel="import" href="/bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
+     	  <link rel="import" href="/bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
+     	  <!-- End Polymer Components !-->
+    </head>
+    <body>
+        <div id="content">
+            <center>
+                <div id="signupin">
+                    <div class="head">dcvslab/music</div>
+                    <div class="logreq">please sign in with google to start using music</div>
+                    <div class="g-signin2" data-onsuccess="signIn" data-theme="light" onclick="bG()"></div>
+                </div>
+            </center>
+            <div id="loggedin">
+                <center>
+                    	<div id="nav">
+                        	<span class="thf">dcvslab/music</span>
+                    	</div>
+                    	<div id="pln">
+                        	<span>playlist names will show here</span><br>
+                    	</div>
+                </center>
+            </div>
+	<div id="background"></div>
+	</div>
+	<paper-dialog id="ytaa" class="custom">
+  		<h2>YouTube Account Access</h2>
+  		<p class="p10">Hey! We need access to your YouTube account to view your playlists so you can use the site. Please click the ALLOW button below, thanks!</p>
+  		<div class="buttons">
+    			<paper-button dialog-dismiss>DISMISS</paper-button><paper-button id="accept" onclick="handleAuthResult()">ACCEPT</paper-button>
+  		</div>
+  	</paper-dialog>
+    </body>
+    <script>
+    $.ajax({
+      url: "music.js",
+      dataType: "script"
+    });
+    </script>
+</html>
