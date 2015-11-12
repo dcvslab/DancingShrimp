@@ -2,7 +2,6 @@
   <head>
     <title>CLOCK</title>
     <link rel="stylesheet" type="text/css" href="clock.css">
-    <script src="clock.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Polymer Components !-->
@@ -30,5 +29,9 @@
   <div id="background"></div>
   </body>
   <script>
+    $.ajax({
+      url: "clock.js",
+      dataType: "script"
+    });
   </script>
 </html>

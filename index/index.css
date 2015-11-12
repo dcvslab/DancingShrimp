@@ -1,0 +1,36 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #300A24;
+  color: #fff;
+}
+a:link {
+  color: #fff;
+}
+a:visited {
+  color: #fff;
+}
+a:hover {
+  color: #fff;
+}
+a:active {
+  color: #fff;
+}
+.cmd {
+  background-color: #300A24;
+  border: medium none;
+  color: #fff;
+  width: 100%;
+  resize: none;
+  height: inherit;
+  outline: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+.cmdname {
+  float: left;
+}
+.cmddesc {
+  padding-left: 50%;
+}
+.14px {
+  font-size: 14px;
+}
