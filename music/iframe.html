@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iframe</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://apis.google.com/js/client.js?onload=init"></script>
+        <script src="../bower_components/webcomponentsjs/webcomponents.js"> </script>
+        <script src="../bower_components/web-animations-js/web-animations.min.js"></script>
+        <link rel="import" href="../bower_components/paper-button/paper-button.html">
+    </head>
+    <style>
+        body {
+          font-family: 'Roboto', sans-serif;
+          background-color: #303030;
+          margin: 0px;
+          color: #FFF;
+        }
+        #controls {
+          width: 100%;
+          height: 46px;
+        }
+        #playcontrols {
+          width: 100%;
+          height: 46px;
+        }
+        #currenttime {
+          width: 7%;
+          text-align: center;
+          float: left;
+          margin: 10px 0px;
+        }
+        #totaltime {
+          width: 7%;
+          text-align: center;
+          float: left;
+          margin: 10px 0px;
+        }
+        #timebar {
+          width: 85%;
+          float: left;
+          background-color: #212121;
+          height: 5px;
+          margin: 18px 0px;
+        }
+        #timebarbar {
+          height: 5px;
+          background-color: #9575CD;
+          float: left;
+          width: 100%;
+          transition: width 500ms;
+        }
+        .w2 {
+          color: rgba(255,255,255,54)
+        }
+        #input {
+          text-align: center;
+          background-color: #424242;
+          border: none;
+          width: 50%;
+        }
+    </style>
+    <body>
+      <center>
+        <div id="player"></div>
+        <div id="controls">
+          <div id="playcontrols"></div>
+          <div id="currenttime">0:00</div>
+          <div id="timebar">
+            <div id="timebarbar"></div>
+          </div>
+          <div id="totaltime">0:00</div>
+        </div>
+        <input class="w2" id="input" placeholder="YOUTUBE LINK"></input>
+        <br>
+        <paper-button onclick="dcvPlay()">PLAY</paper-button>
+      </center>
+    </body>
+    <script>
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          playerVars: { 'autoplay': 0, 'controls': 1, 'volume': 0 },
+          videoId: 'Nhm87YivsWM'
+        });
+      }
+      function dcvTime() {
+        var minutes = Math.floor(player.getCurrentTime().toString().split(".")[0] / 60);
+        var seconds = player.getCurrentTime().toString().split(".")[0] - minutes * 60;
+        if (seconds.toString().length == 1) { secondss = "0" + seconds } else { secondss = seconds}
+        document.getElementById("currenttime").innerHTML = minutes.toString() + ":" + secondss.toString();
+
+        var songlength = Math.round(player.getDuration())
+        var songm = songlength / 60; var songm = songm.toString().split(".")[0]
+        var songs = songlength - songm * 60;
+        if ( songs.toString().length == 1 ) { songs = "0" + songs }
+        document.getElementById("totaltime").innerHTML = songm.toString() + ":" + songs.toString()
+
+        var elapsedt = minutes * 60; elapsedt = elapsedt + seconds
+        var elapsedp = elapsedt / songlength
+        document.getElementById("timebarbar").style.width = elapsedp * 100 + "%"
+
+        if (player.getPlayerState() == 0) {
+          document.getElementById("timebarbar").style.width = "100%";
+        }
+      }
+      setInterval(function() { dcvTime() }, 100)
+
+      function dcvPlay() {
+        var link = document.getElementById("input").value.toString();
+        if (link.indexOf("youtube.com/") > -1) {
+          var link = link.split("=")[1]; var link = link.split("&")[0].toString();
+          console.log(link)
+          player.loadVideoById(link, 0, "default");
+        } else {
+          if (link.indexOf("youtu.be/") > -1) {
+            console.log(link)
+            var link = link.split("youtu.be/")[1].toString();
+            console.log(link)
+            player.loadVideoById(link, 0, "default");
+          } else {
+            console.log("invalid link")
+          }
+        }
+      }
+    </script>
+
+</html>
