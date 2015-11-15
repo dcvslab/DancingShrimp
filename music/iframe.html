@@ -10,6 +10,9 @@
         <script src="https://apis.google.com/js/client.js?onload=init"></script>
         <script src="../bower_components/webcomponentsjs/webcomponents.js"> </script>
         <script src="../bower_components/web-animations-js/web-animations.min.js"></script>
+        <link rel="import" href="/bower_components/neon-animation/neon-animations.html">
+     	<link rel="import" href="/bower_components/neon-animation/neon-animation-behavior.html">
+        <link rel="import" href="/bower_components/paper-button/paper-button.html">
         <link rel="import" href="../bower_components/paper-button/paper-button.html">
     </head>
     <style>
@@ -58,13 +61,13 @@
         }
         #input {
           text-align: center;
-          background-color: #424242;
+          background-color: #512DA8;
           border: none;
           width: 50%;
         }
         .button {
           margin-top: 15px;
-          background-color: #424242;
+          background-color: #512DA8;
         }
         .r {
           color: #F44336;
@@ -82,8 +85,9 @@
           <div id="totaltime">0:00</div>
         </div>
         <input class="w2" id="input" placeholder="YOUTUBE LINK"></input>
-        <div id="linkresponse"></div>
-        <paper-button class="button" onclick="dcvPlay()">PLAY</paper-button>
+	<br>
+        <paper-button raised class="button" onclick="dcvPlay()">PLAY</paper-button>
+        <paper-toast id="ptinvalid" text="Invalid YouTube link, try again!" aria-hidden="true"></paper-toast>
       </center>
     </body>
     <script>
@@ -125,7 +129,6 @@
 
       function dcvPlay() {
         var link = document.getElementById("input").value.toString();
-        var lr = document.getElementById("linkresponse")
         if (link.indexOf("youtube.com/") > -1) {
           var link = link.split("=")[1]; var link = link.split("&")[0].toString();
           lr.innerHTML = "";
@@ -135,10 +138,9 @@
             var link = link.split("youtu.be/")[1].toString();
             player.loadVideoById(link, 0, "default");
           } else {
-            lr.className = "r"; lr.innerHTML = "INVALID LINK"
+            document.querySelector('#clickcopy').show()
           }
         }
       }
     </script>
-
 </html>
