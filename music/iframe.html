@@ -96,6 +96,7 @@
         #spacer {
        	  width: 7%;
        	  float: left;
+       	  height: 1px;
         }
         .shown {
        	  display: block;
@@ -180,10 +181,10 @@
       }
       
       function dcvTogglePlayback() {
-      	if (player.getPlayerState() == 0) {
+      	if (player.getPlayerState() == 1) {
       	  player.pauseVideo(); document.getElementById("playbtn").className = "shown"; document.getElementById("pausebtn").className = "hidden" 
       	} else {
-      	  player.pauseVideo(); document.getElementById("playbtn").className = "hidden"; document.getElementById("pausebtn").className = "show" 
+      	  player.playVideo(); document.getElementById("playbtn").className = "hidden"; document.getElementById("pausebtn").className = "show" 
       	}
       }
     </script>
