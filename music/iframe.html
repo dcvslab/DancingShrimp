@@ -22,6 +22,20 @@
           margin: 0px;
           color: #FFF;
         }
+        ::-webkit-input-placeholder {
+          color:    #fff;
+	}
+	:-moz-placeholder { 
+          color:    #fff;
+          opacity:  1;
+	}
+	::-moz-placeholder { 
+   	  color:    #fff;
+   	  opacity:  1;
+	}
+	:-ms-input-placeholder { 
+   	  color:    #fff;
+	}
         #controls {
           width: 100%;
           height: 46px;
@@ -138,7 +152,7 @@
             var link = link.split("youtu.be/")[1].toString();
             player.loadVideoById(link, 0, "default");
           } else {
-            document.querySelector('#clickcopy').show()
+            document.querySelector('#ptinvalid').show()
           }
         }
       }
