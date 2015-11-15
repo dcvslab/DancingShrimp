@@ -95,6 +95,13 @@
         }
         #spacer {
        	  width: 7%;
+       	  float: left;
+        }
+        .shown {
+       	  display: block;
+        }
+        .hidden {
+          display: none;
         }
     </style>
     <body>
@@ -107,10 +114,12 @@
           </div>
           <div id="totaltime">0:00</div>
         </div>
+      </center>
         <div id="playcontrols">
-          <div id="spacer"></div><img src="http://imgur.com/zBjdKt6.png">
+          <div id="spacer"></div><img id="playbtn" onclick="dcvTogglePlayback()" class="shown" src="http://imgur.com/zBjdKt6.png"><img id="pausebtn" onclick="dcvTogglePlayback()" class="hidden" src="http://i.imgur.com/JI3izWz.png">
         </div>
-        <paper-material id="inputelevation" elevation="1">
+      <center>
+          <paper-material id="inputelevation" elevation="1">
           <input class="w2" id="input" placeholder="YOUTUBE LINK"></input>
         </paper-material>
 	<br>
@@ -168,6 +177,14 @@
             document.querySelector('#ptinvalid').show()
           }
         }
+      }
+      
+      function dcvTogglePlayback() {
+      	if (player.getPlayerState() == 0) {
+      	  player.pauseVideo(); document.getElementById("playbtn").className = "shown"; document.getElementById("pausebtn").className = "hidden" 
+      	} else {
+      	  player.pauseVideo(); document.getElementById("playbtn").className = "hidden"; document.getElementById("pausebtn").className = "show" 
+      	}
       }
     </script>
 </html>
