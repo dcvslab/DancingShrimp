@@ -154,7 +154,6 @@
         var link = document.getElementById("input").value.toString();
         if (link.indexOf("youtube.com/") > -1) {
           var link = link.split("=")[1]; var link = link.split("&")[0].toString();
-          lr.innerHTML = "";
           player.loadVideoById(link, 0, "default");
         } else {
           if (link.indexOf("youtu.be/") > -1) {
