@@ -78,8 +78,11 @@
           text-align: center;
           background-color: #512DA8;
           border: none;
-          width: 50%;
+          width: 100%;
           padding: 5px;
+        }
+        #inputelevation {
+          width: 50%;
         }
         .button {
           margin-top: 15px;
@@ -96,15 +99,14 @@
       <center>
         <div id="player"></div>
         <div id="controls">
-          <div id="playcontrols"></div>
           <div id="currenttime">0:00</div>
           <div id="timebar">
             <div id="timebarbar"></div>
           </div>
           <div id="totaltime">0:00</div>
         </div>
-        <paper-material elevation="1">
-          <input elevation="2" class="w2" id="input" placeholder="YOUTUBE LINK"></input>
+        <paper-material id="inputelevation" elevation="1">
+          <input class="w2" id="input" placeholder="YOUTUBE LINK"></input>
         </paper-material>
 	<br>
         <paper-button id="linksubmit" raised class="button" onclick="dcvPlay()">PLAY</paper-button>
