@@ -85,7 +85,6 @@
           width: 50%;
         }
         .button {
-          margin-top: 15px;
           background-color: #512DA8;
         }
         .r {
@@ -94,16 +93,22 @@
         #ptinvalid {
           background-color: #B71C1C;
         }
+        #spacer {
+       	  width: 7%;
+        }
     </style>
     <body>
       <center>
         <div id="player"></div>
-        <div id="controls">
+        <div id="time">
           <div id="currenttime">0:00</div>
           <div id="timebar">
             <div id="timebarbar"></div>
           </div>
           <div id="totaltime">0:00</div>
+        </div>
+        <div id="controls">
+          <div id="spacer"></div><img src="http://imgur.com/zBjdKt6.png">
         </div>
         <paper-material id="inputelevation" elevation="1">
           <input class="w2" id="input" placeholder="YOUTUBE LINK"></input>
