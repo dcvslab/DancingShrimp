@@ -52,7 +52,7 @@ function loadAPIClientInterfaces() {
     });
 }
 function signIn(gu) {
-    var gup = gu.getBasicProfile();
+    window.gup = gu.getBasicProfile();
     var name = gup.getName();
     var image = gup.getImageUrl();
     document.getElementById("signupin").style.display = "none";
