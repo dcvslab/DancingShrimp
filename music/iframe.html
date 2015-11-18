@@ -4,14 +4,14 @@
         <title>iframe</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="https://apis.google.com/js/client.js?onload=init"></script>
         <script src="../bower_components/webcomponentsjs/webcomponents.js"> </script>
         <script src="../bower_components/web-animations-js/web-animations.min.js"></script>
         <link rel="import" href="/bower_components/neon-animation/neon-animations.html">
-     	<link rel="import" href="/bower_components/neon-animation/neon-animation-behavior.html">
+     	  <link rel="import" href="/bower_components/neon-animation/neon-animation-behavior.html">
         <link rel="import" href="/bower_components/paper-button/paper-button.html">
         <link rel="import" href="../bower_components/paper-toast/paper-toast.html">
         <link rel="import" href="../bower_components/paper-material/paper-material.html">
@@ -25,18 +25,18 @@
         }
         ::-webkit-input-placeholder {
           color:    rgba(255,255,255,.54);
-	}
-	:-moz-placeholder { 
+	      }
+	      :-moz-placeholder {
           color:    rgba(255,255,255,.54);
           opacity:  1;
-	}
-	::-moz-placeholder { 
-   	  color:    rgba(255,255,255,.54);
-   	  opacity:  1;
-	}
-	:-ms-input-placeholder { 
-   	  color:    rgba(255,255,255,.54);
-	}
+	      }
+	      ::-moz-placeholder {
+   	       color:    rgba(255,255,255,.54);
+   	       opacity:  1;
+	      }
+	      :-ms-input-placeholder {
+   	      color:    rgba(255,255,255,.54);
+	      }
         #controls {
           width: 100%;
           height: 46px;
@@ -168,8 +168,12 @@
       function dcvPlay() {
         var link = document.getElementById("input").value.toString();
         if (link.indexOf("youtube.com/") > -1) {
-          var link = link.split("=")[1]; var link = link.split("&")[0].toString();
-          player.loadVideoById(link, 0, "default");
+          if (link.indexOf("youtube.com/playlist") > -1) {
+              
+          } else {
+            var link = link.split("=")[1]; var link = link.split("&")[0].toString();
+            player.loadVideoById(link, 0, "default");
+          }
         } else {
           if (link.indexOf("youtu.be/") > -1) {
             var link = link.split("youtu.be/")[1].toString();
@@ -179,12 +183,12 @@
           }
         }
       }
-      
+
       function dcvTogglePlayback() {
       	if (player.getPlayerState() == 1) {
-      	  player.pauseVideo(); document.getElementById("playbtn").className = "shown"; document.getElementById("pausebtn").className = "hidden" 
+      	  player.pauseVideo(); document.getElementById("playbtn").className = "shown"; document.getElementById("pausebtn").className = "hidden"
       	} else {
-      	  player.playVideo(); document.getElementById("playbtn").className = "hidden"; document.getElementById("pausebtn").className = "show" 
+      	  player.playVideo(); document.getElementById("playbtn").className = "hidden"; document.getElementById("pausebtn").className = "show"
       	}
       }
     </script>
