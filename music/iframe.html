@@ -140,7 +140,7 @@
           height: '390',
           width: '640',
           playerVars: { 'autoplay': 0, 'controls': 1, 'volume': 0 },
-          videoId: 'Nhm87YivsWM'
+          videoId: 'nj9PD9c5YmA'
         });
       }
       function dcvTime() {
@@ -162,6 +162,11 @@
         if (player.getPlayerState() == 0) {
           document.getElementById("timebarbar").style.width = "100%";
         }
+        if (player.getPlayerState() == 1) {
+          document.getElementById("playbtn").className = "hidden"; document.getElementById("pausebtn").className = "show"
+      	} else {
+      	  document.getElementById("playbtn").className = "shown"; document.getElementById("pausebtn").className = "hidden"
+      	}
       }
       setInterval(function() { dcvTime() }, 100)
 
@@ -169,7 +174,7 @@
         var link = document.getElementById("input").value.toString();
         if (link.indexOf("youtube.com/") > -1) {
           if (link.indexOf("youtube.com/playlist") > -1) {
-              
+
           } else {
             var link = link.split("=")[1]; var link = link.split("&")[0].toString();
             player.loadVideoById(link, 0, "default");
