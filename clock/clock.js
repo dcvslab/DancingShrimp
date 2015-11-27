@@ -1,5 +1,12 @@
 var mc = 0
-window.twtft = "tw"
+function gltS() { //get last time setting
+  if (! localStorage.getItem("dcvclock")) {
+    localStorage.setItem("dcvclock", "tw");
+    window.twtft = "tw"
+  } else {
+    window.twtft = localStorage.getItem("dcvclock")
+  }
+}
 function getDT() {
   var time = new Date();
     if (window.twtft == "tw") {
@@ -36,5 +43,5 @@ var dd = document.getElementById("date"); var twtf = document.getElementById("tw
 var tw = document.getElementById("tw"); var tf = document.getElementById("tf")
 document.getElementById("n").addEventListener("click", function() {bG()})
 document.getElementById("m").addEventListener("click", function() { window.open("http://dcvslab.github.io/backgrounds/" + window.bg)})
-tw.addEventListener("click", function () { window.twtft = "tw"; tf.className = "n cp"; tw.className = "b cp"; getDT()})
-tf.addEventListener("click", function () { window.twtft = "tf"; tw.className = "n cp"; tf.className = "b cp"; getDT()})
+tw.addEventListener("click", function () { localStorage.setItem("dcvclock", "tw"); gltS(); tf.className = "n cp"; tw.className = "b cp"; getDT()})
+tf.addEventListener("click", function () { localStorage.setItem("dcvclock", "tf"); gltS(); tw.className = "n cp"; tf.className = "b cp"; getDT()})
