@@ -4,7 +4,7 @@ function gltS() { //get last time setting
     localStorage.setItem("dcvclock", "tw");
     window.twtft = "tw"
   } else {
-    window.twtft = localStorage.getItem("dcvclock")
+    window.twtft = localStorage.getItem("dcvclock");
   }
 }
 function getDT() {
