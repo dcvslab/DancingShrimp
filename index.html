@@ -1,5 +1,19 @@
 <html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>
+      ~$ dcvslab
+    </title>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
+    <link href="index/index.css" rel='stylesheet' type='text/css'>
+  </head>
+  <body onload="cmdAdd()">
+    <div id="container"></div>
+  </body>
   <script>
-    window.location.assign("http://dcvslab.github.io/index")
+    $.ajax({
+      url: "index/index.js",
+      dataType: "script"
+    });
   </script>
 </html>
