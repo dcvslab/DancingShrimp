@@ -7,7 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
     <link href="index/index.css" rel='stylesheet' type='text/css'>
   </head>
-  <body onload="cmdAdd()">
+  <body>
     <div id="container"></div>
   </body>
   <script>
@@ -15,5 +15,6 @@
       url: "index/index.js",
       dataType: "script"
     });
+    setTimeout(function() { cmdAdd(); }, 100)
   </script>
 </html>
