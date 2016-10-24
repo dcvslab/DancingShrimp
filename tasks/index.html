@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script>
+    	<link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		</script>
+		<title>Tasks</title>
+	</head>
+	<body>
+		<input type="text" id="inputtask" class="it" placeholder="Insert Task">
+		<br>
+		<button onclick="add()" text="Add Task"></button>
+		<div id="tasks">
+		<p>Tasks will appear under here!</p>
+		</div>
+	</body>
+	<script>
+    $.ajax({
+      url: "tasks.js",
+      dataType: "script"
+    });
+  	</script>
+</html>
