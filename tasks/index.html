@@ -18,8 +18,9 @@
 	function add() { //add tasks
 		var text = document.getElementById("inputtask").value
 		if (! text) { } else {
+			text1 = text + "<br>"
 			var span = document.createElement("span")
-			span.innerHTML = text
+			span.innerHTML = text1
 			document.getElementById("tasks").appendChild(span)
 		}	
 	}
