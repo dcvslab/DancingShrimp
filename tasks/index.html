@@ -26,10 +26,11 @@
 	function add() { //add tasks
 		var text = document.getElementById("inputtask").value
 		if (! text) { } else {
-			var ocatt = document.createAttribute("onclick")
-			ocatt.value = "crossOut(this)"
 			text1 = text + "<br>"
 			var span = document.createElement("span")
+			var ocatt = document.createAttribute("onclick")
+			ocatt.value = "crossOut(this)"
+			span.setAttributeNode(ocatt)
 			span.innerHTML = text1
 			document.getElementById("tasks").appendChild(span)
 			document.getElementById("inputtask").value = ""
