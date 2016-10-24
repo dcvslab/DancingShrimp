@@ -19,7 +19,7 @@
 		var text = document.getElementById("inputtask").value
 		if (! text) { } else {
 			var span = document.createElement("span")
-			var node = document.CreateTextNode(text)
+			span.innerHTML = text
 			node.appendChild(span)
 			document.getElementById("tasks").appendChild(node)
 		}	
