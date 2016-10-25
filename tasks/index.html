@@ -9,15 +9,20 @@
 			.crossout {
 				text-decoration: line-through;
 			}
+			.100 {
+				width: 100%
+			}
 		</style>
 	</head>
 	<body>
-		<input type="text" id="inputtask" class="it" placeholder="Insert Task">
+		<input type="text" id="inputtask" class="100" placeholder="Insert Task">
 		<br>
-		<button onclick="add()">Add Task</button>
+		<button onclick="add()" class="100">Add Task</button>
 		<br>
-		<div id="tasks">
-		</div>
+		<center>
+			<div id="tasks">
+			</div>
+		</center>
 	</body>
 	<script>
 	function crossOut(elem) {
@@ -36,5 +41,15 @@
 			document.getElementById("inputtask").value = ""
 		}	
 	}
+	function s() {
+		document.getElementById("inputtask")
+    		.addEventListener("keyup", function(event) {
+    			event.preventDefault();
+    			if (event.keyCode == 13) {
+        			add();
+    			}
+		})
+	}
+	s()
   	</script>
 </html>
