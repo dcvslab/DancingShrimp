@@ -114,3 +114,7 @@ $("#pln").append("<div id='loading'>loading...</div>")
         }
     }, 5000)
 }
+function playPlaylist() {
+  $("#test").append("<iframe width='1' height='1' src='https://www.youtube.com/watch?v=Qx-dAGiQyUo&list=PLNRtKrae45gK4NT9dm3FtxOeuMaizZXsM&autoplay=1' frameborder='0'></iframe>")
+}
+
