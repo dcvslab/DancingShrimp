@@ -6,6 +6,8 @@ body {
 }
 .material-icons.md-48 { 
   font-size: 48px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #content {
   z-index: 800;
@@ -31,4 +33,23 @@ body {
 #titleicons {
   width: 50%;
   text-align: right;
+  margin-left: 50%
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 48px;
+    background-color: black;
+    color: white;
+    font-size: 14px
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -24px;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
