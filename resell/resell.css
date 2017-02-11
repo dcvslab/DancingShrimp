@@ -35,3 +35,9 @@ body {
   text-align: right;
   margin-left: 50%
 }
+#title a {
+  color: white;
+}
+#title a:hover {
+  font-size: 56px;
+}
