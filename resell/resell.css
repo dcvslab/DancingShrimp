@@ -4,6 +4,9 @@ body {
   margin: 8px;
   color: #fff;
 }
+.material-icons.md-48 { 
+  font-size: 48px;
+}
 #content {
   z-index: 800;
 }
