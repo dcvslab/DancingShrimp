@@ -35,21 +35,3 @@ body {
   text-align: right;
   margin-left: 50%
 }
-.tttext {
-    visibility: hidden;
-    width: 48px;
-    background-color: black;
-    color: white;
-    font-size: 14px
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    left: 50%;
-    margin-left: -24px;
-}
-#eBay:hover .eBay {
-    visibility: visible;
-}
