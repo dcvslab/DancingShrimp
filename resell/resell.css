@@ -22,4 +22,10 @@ body {
     font-size: 48px;
     line-height: 48px;
     font-weight: 700;
+    float: left;
+    width: 50%;
+}
+#titleicons {
+  width: 50%;
+  text-align: right;
 }
