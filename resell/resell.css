@@ -38,6 +38,19 @@ body {
 #title a {
   color: white;
 }
-#title a:hover {
-  font-size: 56px;
+.left {
+  float: left;
+  width: 50%;
 }
+.right {
+  float: right;
+  width: 50%;
+}
+.CP9652
+  background-color: black
+  color: red
+.CP9652 a {
+  color: red;
+}
+  
+
