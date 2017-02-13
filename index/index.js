@@ -22,9 +22,11 @@ function password(e) {
   var cont = document.getElementById("container")
     if (sudoa == 3) {
       $(cont).append("<div>sudo: 3 incorrect password attempts")
+      sudoa = 0;
       cmdAdd()
     } else {
       $(cont).append("<div>Sorry, try again.")
+      sudoa = sudoa + 1;
       sudoAdd()
     }
   }
@@ -73,6 +75,9 @@ function submit(e) {
       }
       if (cmd.value.toLowerCase() == "reload") {
         location.reload()
+      }
+      if (cmd.value.toLowerCase() == "resell") {
+        window.open("http://dcvslab.github.io/resell")
       }
       if (cmd.value.indexOf("sudo") > -1) {
         $(cont).append("<div>[sudo] password for dcvslab.github.io:")
