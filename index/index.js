@@ -36,7 +36,7 @@ function submit(e) {
     var cmd = document.getElementById("cmd");
     var cont = document.getElementById("container");
     cmdv = cmd.value.toLowerCase()
-    if (cmdv == "contact" || cmdv == "help" || cmdv == "reload" || cmdv.indexOf("sudo") > -1 || cmdv.indexOf("goto") > -1 || cmdv.indexOf("cd") > -1) {
+    if (cmdv == "resell" || cmdv == "contact" || cmdv == "help" || cmdv == "reload" || cmdv.indexOf("sudo") > -1 || cmdv.indexOf("goto") > -1 || cmdv.indexOf("cd") > -1) {
       if (cmd.value.toLowerCase() == "contact") {
         cmd.remove();
         $(cont).append(
