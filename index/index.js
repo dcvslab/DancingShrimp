@@ -16,17 +16,15 @@ function sudoAdd() {
     var cont = document.getElementById("container")
     $(cont).append("<div><input id='password' class='cmd' placeholder='enter the password' onKeyPress='return password(event)'></input></div>")
   }, 500)}
-var sudoa = 1 //sudo attempts
+var sudoa = 0 //sudo attempts
 function password(e) {
   if (e && e.keyCode == 13) {
   var cont = document.getElementById("container")
     if (sudoa == 3) {
       $(cont).append("<div>sudo: 3 incorrect password attempts")
-      sudoa = 1;
       cmdAdd()
     } else {
       $(cont).append("<div>Sorry, try again.")
-      sudoa = sudoa + 1;
       sudoAdd()
     }
   }
@@ -36,7 +34,7 @@ function submit(e) {
     var cmd = document.getElementById("cmd");
     var cont = document.getElementById("container");
     cmdv = cmd.value.toLowerCase()
-    if (cmdv == "resell" || cmdv == "contact" || cmdv == "help" || cmdv == "reload" || cmdv.indexOf("sudo") > -1 || cmdv.indexOf("goto") > -1 || cmdv.indexOf("cd") > -1) {
+    if (cmdv == "contact" || cmdv == "help" || cmdv == "reload" || cmdv.indexOf("sudo") > -1 || cmdv.indexOf("goto") > -1 || cmdv.indexOf("cd") > -1) {
       if (cmd.value.toLowerCase() == "contact") {
         cmd.remove();
         $(cont).append(
@@ -75,9 +73,6 @@ function submit(e) {
       }
       if (cmd.value.toLowerCase() == "reload") {
         location.reload()
-      }
-      if (cmd.value.toLowerCase() == "resell") {
-        window.open("http://dcvslab.github.io/resell")
       }
       if (cmd.value.indexOf("sudo") > -1) {
         $(cont).append("<div>[sudo] password for dcvslab.github.io:")
