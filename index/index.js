@@ -22,7 +22,7 @@ function password(e) {
   var cont = document.getElementById("container")
     if (sudoa == 3) {
       $(cont).append("<div>sudo: 3 incorrect password attempts")
-      sudoa = 0;
+      sudoa = 1;
       cmdAdd()
     } else {
       $(cont).append("<div>Sorry, try again.")
