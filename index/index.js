@@ -16,7 +16,7 @@ function sudoAdd() {
     var cont = document.getElementById("container")
     $(cont).append("<div><input id='password' class='cmd' placeholder='enter the password' onKeyPress='return password(event)'></input></div>")
   }, 500)}
-var sudoa = 0 //sudo attempts
+var sudoa = 1 //sudo attempts
 function password(e) {
   if (e && e.keyCode == 13) {
   var cont = document.getElementById("container")
