@@ -54,6 +54,10 @@
         </div>
       </div>
     </div>
-    <div id="background" style="background: url('http://dcvslab.github.io/backgrounds/shoes/' + Math.floor(Math.random() * 2) + 1  + '.jpg') no-repeat;background-position-y: center;"</div>
+    <div id="background"></div>
    </body>
+   <script>
+     var sn = Math.floor(Math.random() * 2) + 1
+     document.getElementById("background").setAttribute("style", "background: url('http://dcvslab.github.io/backgrounds/shoes/" + sn + ".jpg') no-repeat;background-position-y: center;");
+  </script>
 </html>
