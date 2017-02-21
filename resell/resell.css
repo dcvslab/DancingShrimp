@@ -17,6 +17,10 @@ body {
   margin-bottom: 0px;
   margin-top: 0px;
 }
+.pmbottom36 {
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+}
 #background {
   z-index: -1;
   opacity: 0.3;
