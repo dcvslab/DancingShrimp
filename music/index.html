@@ -2,7 +2,12 @@
   <body>
     <img src="http://dcvslab.github.io/music/mp3/01/album.jpg">
     <audio controls>
-      <source src="http://dcvslab.github.io/music/mp3/01/01.mp3" type="audio/mpeg">
+      <source id = "audio" src="http://dcvslab.github.io/music/mp3/01/01.mp3" type="audio/mpeg">
     </audio>
-  </body>
+  </body> 
+  <script>
+    audio = document.getElementById("audio")
+    audio.onloadedmetadata = function() {
+    alert(audio.duration);
+    };
 </html>
