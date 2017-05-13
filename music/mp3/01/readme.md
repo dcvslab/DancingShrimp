@@ -14,5 +14,5 @@
 
 ##### Album Art
 
-![alt text](https://github.com/dcvslab/dcvslab.github.io/music/mp3/01/album.jpg "Rejovich")
+![alt text](https://dcvslab.github.io/music/mp3/01/album.jpg "Rejovich")
 
