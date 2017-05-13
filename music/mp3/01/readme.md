@@ -1,8 +1,8 @@
 # Rejovich by Rejjie Snow
 
-#### Released in 2013 | 5 Songs
+### Released in 2013 | 5 Songs
 
-**Tracklist**
+##### Tracklist
 
 | Track   | Title                | Length   |
 |:-------:|:--------------------:|:--------:|
@@ -12,6 +12,7 @@
 | 04      | 1992                 | 2:46     |
 | 05      | Olga - 1984          | 4:46     |
 
-**Album Art**
+##### Album Art
+
 ![alt text](https://github.com/dcvslab/dcvslab.github.io/music/mp3/01/album.jpg "Rejovich")
 
