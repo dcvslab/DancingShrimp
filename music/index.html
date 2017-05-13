@@ -4,13 +4,17 @@
   </head>
   <body>
     <img src="http://dcvslab.github.io/music/mp3/01/album.jpg">
-    <audio controls>
-      <source id = "audio" src="http://dcvslab.github.io/music/mp3/01/01.mp3" type="audio/mpeg">
+    <audio controls id="audio">
+      <source src="http://dcvslab.github.io/music/mp3/01/01.mp3" type="audio/mpeg">
     </audio>
   </body> 
   <script>
-   $(window).load(function(){
-    var audio = $('#audio')[0];
-    setTimeout(function(){alert(audio.duration);},20);});
+   var audio = document.getElementById("audio")
+   function time() {
+     var dorig = audio.duration
+     var d = math.Ceil(dorig);
+     setTimeout(function(){ alert("Hello"); }, d);
+   $(window).load(function(){time()}
+    
   </script>
 </html>
