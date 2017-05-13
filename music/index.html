@@ -24,10 +24,10 @@
    function next() {
      var nsorig = audio.innerHTML.split("/")[6].split(".")[0];
       if (nsorig.split(".")[0].split("")[0] == 0) { 
-        var nsparse = parseInt(nsorig);
-        var nsnum = nsparse + 1;
-        var nsnums = nsnum.toString();
-        var ns = "0" + nsnums;
+        var nsparse = parseInt(nsorig); console.log("nsparse")
+        var nsnum = nsparse + 1; console.log("nsnum")
+        var nsnums = nsnum.toString(); console.log("nsnum")
+        ns = "0" + nsnums; console.log(ns) 
       } else { //soon come
       }
      $("#audio").remove();
