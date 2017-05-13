@@ -31,7 +31,8 @@
       } else { //soon come
       }
      $("#audio").remove();
-     $("#audiocontainer").append("<audio controls autoplay id='audio'><source src='http://dcvslab.github.io/music/mp3/01/" + ns + ".mp3' type='audio/mpeg'></audio>");
+	
+     setTimeout(function() { $("#audiocontainer").append("<audio controls autoplay id='audio'><source src='http://dcvslab.github.io/music/mp3/01/" + ns + ".mp3' type='audio/mpeg'></audio>");},1000)
 	 time();
     }
 
