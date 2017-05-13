@@ -9,8 +9,8 @@
     </audio>
   </body> 
   <script>
-    audio = document.getElementById("audio")
-    audio.onloadedmetadata = function() {
-    alert(audio.duration);
-    };
+   $(window).load(function(){
+    var audio = $('#audio')[0];
+    setTimeout(function(){alert(audio.duration);},20);});
+  </script>
 </html>
