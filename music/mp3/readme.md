@@ -1,5 +1,5 @@
 # ALBUMS
 
-Number | Artist | Album
-:----: | :----: | :---:
-01     | Rejjie Snow | Rejovich
+Number | Artist | Album | Uploaded
+:----: | :----: | :---: | :---:
+01     | Rejjie Snow | Rejovich | MAY 13 2017
