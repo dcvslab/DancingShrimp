@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+  <body style="background-color: #bcbabf">
+    <center>
+      <img onclick="skip()" src="http://dcvslab.github.io/music/mp3/03/album.jpg">
+      <p id="track">## - NAME</p>
+      <div id="audiocontainer">
+        <audio autoplay id="audio">
+          <source src="http://dcvslab.github.io/music/mp3/03/01.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </center>
+  </body>
+  <script>
+    audio = document.getElementById("audio");
+    var tracks = ["01 Too High To Riot", "02 Methylone", "03 Dopamine ft. Cozz", "04 Housewives", "05 Miles and Miles", "06 Live For", "07 Clouds Never Get Old", "08 Matches ft. The Hics", "09 Night Job ft. J. Cole", "10 Ricochet ft. The Hics", "11 Penthouse", "12 Black Owned Business"]    document.getElementById("track").innerHTML = tracks[0];
+    function checkTrack(url) {
+      var http = new XMLHttpRequest();
+      http.open('HEAD', url, false);
+      http.send();
+      if (http.status != 404) {
+        console.log("not 404");
+      } else {
+        tracklink = "http://dcvslab.github.io/music/mp3/03/01.mp3";
+        document.getElementById("track").innerHTML = tracks[0];
+      }
+    }
+    function time() {
+      var dorig = audio.duration;
+      var dround = Math.ceil(dorig);
+	    var dstring = dround.toString();
+	    var dseconds = dstring + "500";
+	    d = parseInt(dseconds);
+	    nt = setTimeout(function(){ next(); }, d);
+    }
+    function next() {
+      var audio = document.getElementById("audio");
+      nsorig = audio.innerHTML.split("/")[6].split(".")[0];
+      nsparse = parseInt(nsorig);
+      nsnum = nsparse + 1;
+      nsnums = nsnum.toString();
+      if (nsnums.length > 1) 
+        { ns = nsnums; } 
+      else { ns = "0" + nsnums; 
+      }
+      document.getElementById("track").innerHTML = tracks[nsnum - 1];
+      tracklink = "http://dcvslab.github.io/music/mp3/03/" + ns + ".mp3";
+      checkTrack(tracklink);
+      $("#audio").remove();
+      setTimeout(function() { $("#audiocontainer").append("<audio autoplay id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000);
+	    setTimeout(function(){ time();}, 1500);
+      }
+	  function skip() {
+      clearTimeout(nt);
+		  next();
+    }
+	  setTimeout(function(){ time();}, 1000);
+  </script>
+</html>
