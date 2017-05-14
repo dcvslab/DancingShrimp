@@ -1,7 +1,3 @@
-```css
-    background-color: #dcc0bd;
-```
-
 # The Divine Feminine by Mac Miller
 
 ### Released in 2016 | 10 Songs
