@@ -1,3 +1,5 @@
 # dcvslab.github.io/music
 
-I upload music. You play the music. It's that simple.
+### List of all music in the "mp3" folder.
+
+### Full albums uploaded, skip a song by clicking the album art.
