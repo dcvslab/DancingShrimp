@@ -15,7 +15,8 @@
   </body>
   <script>
     audio = document.getElementById("audio");
-    var tracks = ["01 Too High To Riot", "02 Methylone", "03 Dopamine ft. Cozz", "04 Housewives", "05 Miles and Miles", "06 Live For", "07 Clouds Never Get Old", "08 Matches ft. The Hics", "09 Night Job ft. J. Cole", "10 Ricochet ft. The Hics", "11 Penthouse", "12 Black Owned Business"]    document.getElementById("track").innerHTML = tracks[0];
+    var tracks = ["01 Too High To Riot", "02 Methylone", "03 Dopamine ft. Cozz", "04 Housewives", "05 Miles and Miles", "06 Live For", "07 Clouds Never Get Old", "08 Matches ft. The Hics", "09 Night Job ft. J. Cole", "10 Ricochet ft. The Hics", "11 Penthouse", "12 Black Owned Business"];
+    document.getElementById("track").innerHTML = tracks[0];
     function checkTrack(url) {
       var http = new XMLHttpRequest();
       http.open('HEAD', url, false);
