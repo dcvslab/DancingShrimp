@@ -18,4 +18,6 @@ Track | Title | Length
 11 | Penthouse | 4:00
 12 | Black Owned Business | 2:38
 
+#### Album Art
+
 ![alt text](https://dcvslab.github.io/music/mp3/03/album.jpg "Too High To Riot")
