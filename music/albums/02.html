@@ -42,13 +42,12 @@
     function next() {
 	    var audio = document.getElementById("audio");
       nsorig = audio.innerHTML.split("/")[6].split(".")[0];
-      if (nsorig.split(".")[0].split("")[0] == 0) {
         nsparse = parseInt(nsorig);
         nsnum = nsparse + 1;
         nsnums = nsnum.toString();
-        ns = "0" + nsnums; document.getElementById("track").innerHTML = tracks[nsnum - 1];
-      } else { ns = "10";
-      }
+	if (nsnums.length == 2) { ns = nsnums; } else {
+        ns = "0" + nsnums; }
+      document.getElementById("track").innerHTML = tracks[nsnum - 1];
       tracklink = "http://dcvslab.github.io/music/mp3/02/" + ns + ".mp3";
       checkTrack(tracklink);
       $("#audio").remove();
