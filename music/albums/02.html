@@ -3,6 +3,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <style>
       background-color: #ddc1bd
+    </style>
   </head>
   <body>
     <center>
@@ -16,8 +17,8 @@
     </center>
   </body>
   <script>
-    audio = document.getElementById("audio")
-    var tracks = ["01	Congratulations ft. Bilal", "02 Dang! ft Anderson .Paak", "03 Stay", "04 Skin", "05 Cinderella ft. Ty Dolla $ign", "06 Planet God Damn", "07 Soulmate", "08 We ft. CeeLo Green",	"09 My Favorite Part ft. Ariana Grande", "10 God Is Fair, Sexy Nasty ft. Kendrick Lamar"]
+    audio = document.getElementById("audio");
+    var tracks = ["01 Congratulations ft. Bilal", "02 Dang! ft Anderson .Paak", "03 Stay", "04 Skin", "05 Cinderella ft. Ty Dolla $ign", "06 Planet God Damn", "07 Soulmate", "08 We ft. CeeLo Green", "09 My Favorite Part ft. Ariana Grande", "10 God Is Fair, Sexy Nasty ft. Kendrick Lamar"];
     document.getElementById("track").innerHTML = tracks[0];
     function checkTrack(url) {
       var http = new XMLHttpRequest();
@@ -31,7 +32,7 @@
       }
     }
     function time() {
-      var dorig = audio.duration
+      var dorig = audio.duration;
       var dround = Math.ceil(dorig);
 	    var dstring = dround.toString();
 	    var dseconds = dstring + "500";
@@ -46,12 +47,12 @@
         nsnum = nsparse + 1;
         nsnums = nsnum.toString();
         ns = "0" + nsnums; document.getElementById("track").innerHTML = tracks[nsnum - 1];
-      } else { ns = "10"
+      } else { ns = "10";
       }
-      tracklink = "http://dcvslab.github.io/music/mp3/02/" + ns + ".mp3"
-      checkTrack(tracklink)
+      tracklink = "http://dcvslab.github.io/music/mp3/02/" + ns + ".mp3";
+      checkTrack(tracklink);
       $("#audio").remove();
-      setTimeout(function() { $("#audiocontainer").append("<audio autoplay id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000)
+      setTimeout(function() { $("#audiocontainer").append("<audio autoplay id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000);
 	    setTimeout(function(){ time();}, 1500);
       }
 	  function skip() {
