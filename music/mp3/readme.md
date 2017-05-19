@@ -1,8 +1,6 @@
 # ALBUMS
 
-**Number: Which folder the .mp3 files are in.** 
-
-Artist | Album | Number
+Artist | Album | Folder
 :----: | :---: | :---:
 Bas | Too High To Riot | 03
 GoldLink | The God Complex | 04
