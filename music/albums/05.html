@@ -22,7 +22,7 @@
   <script>
     audio = document.getElementById("audio")
     var tracks = ["01 ", "02 ", "03	", "04 ", "05	","06 ", "07 ", "08 ", "09 ","10 ", "11 ","12 ", "13 "];
-    document.getElementById("track").innerHTML = tracks[0]; d = 100
+    document.getElementById("track").innerHTML = tracks[0]; d = 100; nsorig = "01"
     function checkTrack(url) {
       var http = new XMLHttpRequest();
       http.open('HEAD', url, false);
@@ -43,14 +43,12 @@
       d = parseInt(dseconds);
     }
     function next() {
-      var audio = document.getElementById("audio");
-      nsorig = audio.innerHTML.split("/")[6].split(".")[0];
       nsparse = parseInt(nsorig);
       nsnum = nsparse + 1;
       nsnums = nsnum.toString();
       if (nsnums.length > 1) 
-        { ns = nsnums; } 
-      else { ns = "0" + nsnums; 
+        { ns = nsnums; nsorig = ns} 
+      else { ns = "0" + nsnums; nsorig = ns
       }
       document.getElementById("track").innerHTML = tracks[nsnum - 1];
       tracklink = "http://dcvslab.github.io/music/mp3/05/" + ns + ".mp3"
