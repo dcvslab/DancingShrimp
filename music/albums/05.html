@@ -13,7 +13,7 @@
       <img onclick="skip()" src="http://dcvslab.github.io/music/mp3/05/album.jpg">
       <p id="track">## - NAME</p>
       <div id="audiocontainer">
-        <audio onplay= "time()" controls autoplay id="audio">
+        <audio autoplay id="audio">
           <source src="http://dcvslab.github.io/music/mp3/05/01.mp3" type="audio/mpeg">
         </audio>
       </div>
@@ -21,7 +21,7 @@
   </body>
   <script>
     audio = document.getElementById("audio")
-    var tracks = ["01 ", "02 ", "03	", "04 ", "05	","06 ", "07 ", "08 ", "09 ","10 ", "11 ","12 ", "13 "];
+    var tracks = ["01 INTRO", "02 UNBORN", "03	FASHION WEEK", "04 AFRICAN DRAGON", "05	PURPLE TUESDAY ft. Joey Bada$$ & Jesse Boykins III","06 ME & MY PIANO", "07 SUNNY CALIFORNIA", "08 HOPE", "09 MAMA AFRICA","10 GET IT ft. Joyce Wrice", "11 MILK MAN","12 PINK FLOWER ft. Dana Williams & Julian Bell", "13 ACID TRIP"];
     document.getElementById("track").innerHTML = tracks[0]; nsorig = "01"
     function checkTrack(url) {
       var http = new XMLHttpRequest();
@@ -34,14 +34,6 @@
         document.getElementById("track").innerHTML = tracks[0]; nsorig = "01"
       }
     }
-    function time() {
-      audio = document.getElementById("audio")
-      dorig = audio.duration
-      dround = Math.ceil(dorig);
-      dstring = dround.toString();
-      dseconds = dstring + "500";
-      d = parseInt(dseconds);
-    }
     function next() {
       nsparse = parseInt(nsorig);
       nsnum = nsparse + 1;
@@ -53,15 +45,13 @@
       document.getElementById("track").innerHTML = tracks[nsnum - 1];
       tracklink = "http://dcvslab.github.io/music/mp3/05/" + ns + ".mp3"
       checkTrack(tracklink)
-      $("#audio").remove();
-      setTimeout(function() { $("#audiocontainer").append("<audio autoplay controls id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000)
-      setTimeout(function(){ time();}, 1000);
+      setTimeout(function() { $("#audiocontainer").append("<audio autoplay id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000)
     }
     function skip() {
       next();
     }
     function advance() {
-      if (audio.ended == true) { next(); }
+      if (audio.ended == true) { next(); $("#audio").remove(); }
     }
     setInterval(function() { advance(); }, 1000);
   </script>
