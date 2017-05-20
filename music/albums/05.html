@@ -63,8 +63,8 @@
     }
     dn = d
     function advance() {
-      dn = dn - 1000
       if (dn < 1000) { next() }
+      dn = dn - 1000
     }
     setInterval(function() { advance();}, 1000);
     setTimeout(function(){ time();}, 500);
