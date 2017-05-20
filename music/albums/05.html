@@ -13,7 +13,7 @@
       <img onclick="skip()" src="http://dcvslab.github.io/music/mp3/05/album.jpg">
       <p id="track">## - NAME</p>
       <div id="audiocontainer">
-        <audio controls autoplay id="audio">
+        <audio onplay= "time()" controls autoplay id="audio">
           <source src="http://dcvslab.github.io/music/mp3/05/01.mp3" type="audio/mpeg">
         </audio>
       </div>
@@ -61,6 +61,9 @@
     function skip() {
       next();
     }
-    setTimeout(function(){ time();}, 500);
+    function advance() {
+      if (audio.ended == true) { next(); }
+    }
+    setInterval(function() { advance(); }, 1000);
   </script>
 </html>
