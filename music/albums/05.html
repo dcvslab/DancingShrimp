@@ -57,7 +57,7 @@
       checkTrack(tracklink)
       d = dn
       $("#audio").remove();
-      setTimeout(function() { $("#audiocontainer").append("<audio autoplay id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000)
+      setTimeout(function() { $("#audiocontainer").append("<audio autoplay controls id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000)
       setTimeout(function(){ time();}, 1000);
     }
     function skip() {
@@ -70,6 +70,5 @@
     }
     setInterval(function() { advance();}, 1000);
     setTimeout(function(){ time();}, 500);
-    setTimeout(function(){ audio.play();}, 1000);
   </script>
 </html>
