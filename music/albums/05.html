@@ -61,15 +61,6 @@
     function skip() {
       next();
     }
-    dn = d
-    function advance() {
-      if (dn < 1000) { next() };
-      dn = dn - 1000
-    }
-    function advanceStart() {
-      setInterval(function() { advance();}, 1000)
-    }
-    setTimeout(function() { advanceStart(); }, 1000);
     setTimeout(function(){ time();}, 500);
   </script>
 </html>
