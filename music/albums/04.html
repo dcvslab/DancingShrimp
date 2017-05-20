@@ -21,7 +21,7 @@
   </body>
   <script>
     audio = document.getElementById("audio")
-    var tracks = ["01	Loveleen", "02	Snow - My Rap Song", "03	USSR", "04	1992", "05	Olga - 1984"]
+    var tracks = ["01 Ay Ay", "02 Planet Paradise", "03	Bedtime Story", "04 Divine ft. Kali Uchis", "05	Hip Hop Interlude","06 Fuck Being Polite", "07 How It's Done", "08 CNTRL", "09 When I die", "10 Sober Thoughts", "11 Ay Ay - Flow-Fi Remix"];
     document.getElementById("track").innerHTML = tracks[0];
     function checkTrack(url) {
       var http = new XMLHttpRequest();
@@ -35,33 +35,40 @@
       }
     }
     function time() {
-      var dorig = audio.duration
-      var dround = Math.ceil(dorig);
-	    var dstring = dround.toString();
-	    var dseconds = dstring + "500";
-	    d = parseInt(dseconds);
-	    nt = setTimeout(function(){ next(); }, d);
+      audio = document.getElementById("audio")
+      dorig = audio.duration
+      dround = Math.ceil(dorig);
+      dstring = dround.toString();
+      dseconds = dstring + "500";
+      d = parseInt(dseconds);
     }
     function next() {
-	    var audio = document.getElementById("audio");
+      var audio = document.getElementById("audio");
       nsorig = audio.innerHTML.split("/")[6].split(".")[0];
-      if (nsorig.split(".")[0].split("")[0] == 0) {
-        nsparse = parseInt(nsorig);
-        nsnum = nsparse + 1;
-        nsnums = nsnum.toString();
-        ns = "0" + nsnums; document.getElementById("track").innerHTML = tracks[nsnum - 1];
-      } else { //soon come
+      nsparse = parseInt(nsorig);
+      nsnum = nsparse + 1;
+      nsnums = nsnum.toString();
+      if (nsnums.length > 1) 
+        { ns = nsnums; } 
+      else { ns = "0" + nsnums; 
       }
+      document.getElementById("track").innerHTML = tracks[nsnum - 1];
       tracklink = "http://dcvslab.github.io/music/mp3/04/" + ns + ".mp3"
       checkTrack(tracklink)
+      d = dn
       $("#audio").remove();
       setTimeout(function() { $("#audiocontainer").append("<audio autoplay id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000)
-	    setTimeout(function(){ time();}, 1500);
-      }
-	  function skip() {
-      clearTimeout(nt);
-		  next();
+      setTimeout(function(){ time();}, 1000);
     }
-	  setTimeout(function(){ time();}, 1000);
+    function skip() {
+      next();
+    }
+    dn = d
+    function advance() {
+      dn = dn - 1000
+      if (dn < 1000) { next() }
+    }
+    setInterval(function() { advance();}, 1000);
+    setTimeout(function(){ time();}, 1000);
   </script>
 </html>
