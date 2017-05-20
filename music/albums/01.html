@@ -21,47 +21,38 @@
   </body>
   <script>
     audio = document.getElementById("audio")
-    var tracks = ["01	Loveleen", "02	Snow - My Rap Song", "03	USSR", "04	1992", "05	Olga - 1984"]
+    var tracks = ["01 Loveleen", "02 Snow - My Rap Song", "03 USSR", "04 1992", "05 Olga - 1984"]
     document.getElementById("track").innerHTML = tracks[0];
     function checkTrack(url) {
       var http = new XMLHttpRequest();
       http.open('HEAD', url, false);
       http.send();
       if (http.status != 404) {
-        console.log("not 404");
+        //nothing
       } else {
         tracklink = "http://dcvslab.github.io/music/mp3/01/01.mp3";
-        document.getElementById("track").innerHTML = tracks[0];
+        document.getElementById("track").innerHTML = tracks[0]; nsorig = "01"
       }
-    }
-    function time() {
-      var dorig = audio.duration
-      var dround = Math.ceil(dorig);
-	    var dstring = dround.toString();
-	    var dseconds = dstring + "500";
-	    d = parseInt(dseconds);
-	    nt = setTimeout(function(){ next(); }, d);
     }
     function next() {
-	    var audio = document.getElementById("audio");
-      nsorig = audio.innerHTML.split("/")[6].split(".")[0];
-      if (nsorig.split(".")[0].split("")[0] == 0) {
-        nsparse = parseInt(nsorig);
-        nsnum = nsparse + 1;
-        nsnums = nsnum.toString();
-        ns = "0" + nsnums; document.getElementById("track").innerHTML = tracks[nsnum - 1];
-      } else { //soon come
+      nsparse = parseInt(nsorig);
+      nsnum = nsparse + 1;
+      nsnums = nsnum.toString();
+      if (nsnums.length > 1) 
+        { ns = nsnums; nsorig = ns} 
+      else { ns = "0" + nsnums; nsorig = ns
       }
+      document.getElementById("track").innerHTML = tracks[nsnum - 1];
       tracklink = "http://dcvslab.github.io/music/mp3/01/" + ns + ".mp3"
       checkTrack(tracklink)
-      $("#audio").remove();
       setTimeout(function() { $("#audiocontainer").append("<audio autoplay id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000)
-	    setTimeout(function(){ time();}, 1500);
-      }
-	  function skip() {
-      clearTimeout(nt);
-		  next();
     }
-	  setTimeout(function(){ time();}, 1000);
+    function skip() {
+      next(); $("#audio").remove();
+     }
+    function advance() {
+      if (audio.ended == true) { next(); $("#audio").remove(); }
+    }
+    setInterval(function() { advance(); }, 1000);
   </script>
 </html>
