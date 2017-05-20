@@ -31,7 +31,7 @@
         console.log("not 404");
       } else {
         tracklink = "http://dcvslab.github.io/music/mp3/05/01.mp3";
-        document.getElementById("track").innerHTML = tracks[0];
+        document.getElementById("track").innerHTML = tracks[0]; nsorig = "01"
       }
     }
     function time() {
@@ -63,10 +63,13 @@
     }
     dn = d
     function advance() {
-      if (dn < 1000) { next() }
+      if (dn < 1000) { next() };
       dn = dn - 1000
     }
-    setInterval(function() { advance();}, 1000);
+    function advanceStart() {
+      setInterval(function() { advance();}, 1000)
+    }
+    setTimeout(function() { advanceStart(); }, 1000);
     setTimeout(function(){ time();}, 500);
   </script>
 </html>
