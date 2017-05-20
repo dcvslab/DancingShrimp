@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      };
+    </style>
+  </head>
+  <body>
+    <center>
+      <img onclick="skip()" src="http://dcvslab.github.io/music/mp3/04/album.jpg">
+      <p id="track">## - NAME</p>
+      <div id="audiocontainer">
+        <audio autoplay id="audio">
+          <source src="http://dcvslab.github.io/music/mp3/05/01.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </center>
+  </body>
+  <script>
+    audio = document.getElementById("audio")
+    var tracks = ["01 ", "02 ", "03	", "04 ", "05	","06 ", "07 ", "08 ", "09 ","10 ", "11 ","12 ", "13 "];
+    document.getElementById("track").innerHTML = tracks[0];
+    function checkTrack(url) {
+      var http = new XMLHttpRequest();
+      http.open('HEAD', url, false);
+      http.send();
+      if (http.status != 404) {
+        console.log("not 404");
+      } else {
+        tracklink = "http://dcvslab.github.io/music/mp3/05/01.mp3";
+        document.getElementById("track").innerHTML = tracks[0];
+      }
+    }
+    function time() {
+      audio = document.getElementById("audio")
+      dorig = audio.duration
+      dround = Math.ceil(dorig);
+      dstring = dround.toString();
+      dseconds = dstring + "500";
+      d = parseInt(dseconds);
+    }
+    function next() {
+      var audio = document.getElementById("audio");
+      nsorig = audio.innerHTML.split("/")[6].split(".")[0];
+      nsparse = parseInt(nsorig);
+      nsnum = nsparse + 1;
+      nsnums = nsnum.toString();
+      if (nsnums.length > 1) 
+        { ns = nsnums; } 
+      else { ns = "0" + nsnums; 
+      }
+      document.getElementById("track").innerHTML = tracks[nsnum - 1];
+      tracklink = "http://dcvslab.github.io/music/mp3/05/" + ns + ".mp3"
+      checkTrack(tracklink)
+      d = dn
+      $("#audio").remove();
+      setTimeout(function() { $("#audiocontainer").append("<audio autoplay id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000)
+      setTimeout(function(){ time();}, 1000);
+    }
+    function skip() {
+      next();
+    }
+    dn = d
+    function advance() {
+      dn = dn - 1000
+      if (dn < 1000) { next() }
+    }
+    setInterval(function() { advance();}, 1000);
+    setTimeout(function(){ time();}, 1000);
+  </script>
+</html>
