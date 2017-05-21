@@ -1,8 +1,8 @@
 # music/mp3
 
-### ALBUM LIST
+### album list
 
-Artist | Album | Folder
+artist | album | folder
 :----: | :---: | :---:
 Bas | Too High To Riot | 03
 Chance The Rapper | Acid Rap | 06
