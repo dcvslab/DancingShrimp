@@ -1,4 +1,4 @@
-# ALBUMS
+# music/mp3
 
 Artist | Album | Folder
 :----: | :---: | :---:
