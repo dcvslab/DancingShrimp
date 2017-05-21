@@ -51,7 +51,7 @@
       next(); $("#audio").remove();
      }
     function advance() {
-      if (audio.ended == true) { next(); $("#audio").remove(); }
+      if (document.getElementById("audio").ended == true) { next(); $("#audio").remove(); }
     }
     setInterval(function() { advance(); }, 1000);
   </script>
