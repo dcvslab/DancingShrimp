@@ -2,6 +2,8 @@
     
 ### list of all albums [here](https://github.com/dcvslab/dcvslab.github.io/blob/master/music/mp3/readme.md)
 
-##### if you want to skip a song, click the album art
+#### Usage
 
-##### album automatically loops when finished
+- ##### if you want to skip a song, click the album art
+
+- ##### album automatically loops when finished- 
