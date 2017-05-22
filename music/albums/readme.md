@@ -1,7 +1,7 @@
 # music/albums
 
-### - all the .html pages for listening are here
-### - all follow a general formula which can be seen below
+- ### all the .html pages for listening are here
+- ### all follow a general formula which can be seen below
 
 ### html
 ```html
