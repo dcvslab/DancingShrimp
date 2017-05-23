@@ -1,4 +1,4 @@
-# dcvslab.github.io/music
+# [dcvslab.github.io/music](http://dcvslab.github.io/music)
     
 - ### list of all albums [here](https://github.com/dcvslab/dcvslab.github.io/blob/master/music/mp3/readme.md)
 
