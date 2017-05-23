@@ -11,7 +11,7 @@
   <body style="background-color: #473a31;">
     <center>
       <img onclick="skip()" src="http://dcvslab.github.io/music/mp3/07/album.jpg">
-      <p id="track">## - NAME</p>
+      <p style="color: #fff" id="track">## - NAME</p>
       <div id="audiocontainer">
         <audio autoplay id="audio">
           <source src="http://dcvslab.github.io/music/mp3/07/01.mp3" type="audio/mpeg">
@@ -51,7 +51,11 @@
       next(); $("#audio").remove();
      }
     function advance() {
-        if (document.getElementById("audio").ended == true) { next(); $("#audio").remove(); }
+      if (document.getElementById("audio").ended == true) { 
+        next(); $("#audio").remove(); 
+	    } else { 
+        if (document.getElementById("audio").ended !== "undefined") { }
+      } 
     }
     setInterval(function() { advance(); }, 1000);
   </script>
