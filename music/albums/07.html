@@ -11,7 +11,7 @@
   <body style="background-color: #473a31;">
     <center>
       <img onclick="skip()" src="http://dcvslab.github.io/music/mp3/07/album.jpg">
-      <p style="color: #fff" id="track">## - NAME</p>
+      <p onclick="playTrack()" style="color: #fff" id="track">## - NAME</p>
       <div id="audiocontainer">
         <audio autoplay id="audio">
           <source src="http://dcvslab.github.io/music/mp3/07/01.mp3" type="audio/mpeg">
@@ -57,6 +57,20 @@
         if (document.getElementById("audio").ended !== "undefined") { }
       } 
     }
+    function playTrack() {
+      tnum = prompt("enter a track number or 'random' for a random one:");
+      if (parseInt(tnum) <= 14) {
+        nsorig = tnum - 1; skip();
+      } else {
+        if (tnum == "random") {
+          nsorig = Math.floor(Math.random() * 14); skip() 
+        } else {
+          alert("choose track number 1-14 / spell random right")
+        }
+      }
+    }
+	    
+	    
     setInterval(function() { advance(); }, 1000);
   </script>
 </html>
