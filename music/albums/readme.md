@@ -29,9 +29,9 @@
   #### js
   
   ```javascript
-  audio = document.getElementById("audio")
-    var tracks = ["01","02","03","04","05"]
-    document.getElementById("track").innerHTML = tracks[0]; nsorig = "01";
+    audio = document.getElementById("audio")
+    var tracks = ["00"];
+    document.getElementById("track").innerHTML = tracks[0]; nsorig = "01"
     function checkTrack(url) {
       var http = new XMLHttpRequest();
       http.open('HEAD', url, false);
@@ -39,7 +39,7 @@
       if (http.status != 404) {
         //nothing
       } else {
-        tracklink = "http://dcvslab.github.io/music/mp3/00/01.mp3";
+        tracklink = "http://dcvslab.github.io/music/mp3/" + anum + "/01.mp3";
         document.getElementById("track").innerHTML = tracks[0]; nsorig = "01"
       }
     }
@@ -52,7 +52,7 @@
       else { ns = "0" + nsnums; nsorig = ns
       }
       document.getElementById("track").innerHTML = tracks[nsnum - 1];
-      tracklink = "http://dcvslab.github.io/music/mp3/00/" + ns + ".mp3"
+      tracklink = "http://dcvslab.github.io/music/mp3/" + anum + "/" + ns + ".mp3"
       checkTrack(tracklink)
       setTimeout(function() { $("#audiocontainer").append("<audio autoplay id='audio'><source src='" + tracklink + "' type='audio/mpeg'></audio>"); },1000)
     }
@@ -60,7 +60,22 @@
       next(); $("#audio").remove();
      }
     function advance() {
-      if (document.getElementById("audio").ended == true) { next(); $("#audio").remove(); }
+      if (document.getElementById("audio").ended == true) { 
+        next(); $("#audio").remove(); 
+	    } else { 
+        if (document.getElementById("audio").ended !== "undefined") { }
+      } 
     }
-    setInterval(function() { advance(); }, 1000);
-  ```
+    function playTrack() {
+      tnum = prompt("enter a track number or 'random' for a random one:");
+      if (parseInt(tnum) <= ttnum) {
+        nsorig = tnum - 1; skip();
+      } else {
+        if (tnum == "random") {
+          nsorig = Math.floor(Math.random() * ttnum); skip() 
+        } else {
+          alert("choose track number 1-" + ttnum + " / spell random right")
+        }
+      }
+    }   
+    setInterval(function() { advance(); }, 1000);  ```
