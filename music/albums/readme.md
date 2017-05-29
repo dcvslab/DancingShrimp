@@ -5,6 +5,7 @@
 
 #### html
  ```html
+<html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -14,18 +15,27 @@
       };
     </style>
   </head>
-  <body>
+  <body style="background-color: #ffffff;">
     <center>
-      <img onclick="skip()" src="http://dcvslab.github.io/music/mp3/00/album.jpg">
-      <p id="track">## - name</p>
+      <img onclick="skip()" src="http://dcvslab.github.io/music/mp3/##/album.jpg">
+      <p onclick="playTrack()" style="color: #fff" id="track">## - NAME</p>
       <div id="audiocontainer">
         <audio autoplay id="audio">
-          <source src="http://dcvslab.github.io/music/mp3/00/01.mp3" type="audio/mpeg">
+          <source src="http://dcvslab.github.io/music/mp3/##/01.mp3" type="audio/mpeg">
         </audio>
       </div>
     </center>
   </body>
-  ```
+  <script>
+    anum = "07";
+    ttnum = "14";
+    tracks = ["01","02","03","04","05"];
+    $.ajax({
+      url: "http://dcvslab.github.io/music/albums/music.js",
+      dataType: "script"
+    });    
+  </script>
+</html>  ```
   #### js
   
   ```javascript
@@ -78,4 +88,4 @@
         }
       }
     }   
-    setInterval(function() { advance(); }, 1000);  ```
+    setInterval(function() { advance(); }, 1000);  
