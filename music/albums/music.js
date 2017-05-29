@@ -1,5 +1,4 @@
     audio = document.getElementById("audio")
-    var tracks = ["00"];
     document.getElementById("track").innerHTML = tracks[0]; nsorig = "01"
     function checkTrack(url) {
       var http = new XMLHttpRequest();
