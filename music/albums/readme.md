@@ -35,8 +35,10 @@
       dataType: "script"
     });    
   </script>
-</html>  ```
-  #### js
+</html>  
+```
+
+ #### js
   
   ```javascript
     audio = document.getElementById("audio")
