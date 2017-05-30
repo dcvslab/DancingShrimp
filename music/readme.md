@@ -4,4 +4,5 @@
 
 - ### usage:
     - ##### if you want to skip a song, click the album art
+    - ##### if you want to play a certain or random track, click the song title
     - ##### album automatically loops when finished
