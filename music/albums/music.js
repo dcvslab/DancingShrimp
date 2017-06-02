@@ -35,15 +35,18 @@
       } 
     }
     function playTrack() {
-      tnum = prompt("enter a track number or 'random' for a random one:");
+      tnum = prompt("enter... \n'track' for list of tracks \ntrack number (1-" + ttnum + ") to play track \n'random' for a random track");
       if (parseInt(tnum) <= ttnum) {
         nsorig = tnum - 1; skip();
       } else {
         if (tnum == "random") {
           nsorig = Math.floor(Math.random() * ttnum); skip() 
         } else {
-          alert("choose track number 1-" + ttnum + " / spell random right")
+	  if (tnum == "track") {
+	    alert(tracks);
+	  } else {
+            alert("invalid input")
         }
       }
-    }   
+    }}   
     setInterval(function() { advance(); }, 1000);
