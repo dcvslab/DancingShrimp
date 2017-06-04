@@ -1,4 +1,4 @@
-# I Don't Like Shit, I Don't Go Outside by Earl Sweatshirt
+# I Don't Like Shit, I Don't Go Outside by Earl Sweatshirt 
 
 ### Released in 2015 | 10 Songs
 
