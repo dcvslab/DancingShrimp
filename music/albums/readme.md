@@ -27,8 +27,8 @@
     </center>
   </body>
   <script>
-    anum = "07";
-    ttnum = "14";
+    anum = "##";
+    ttnum = "##";
     tracks = ["01","02","03","04","05"];
     $.ajax({
       url: "http://dcvslab.github.io/music/albums/music.js",
