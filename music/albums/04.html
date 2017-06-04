@@ -11,7 +11,7 @@
  <body style="background-color: #e0dda6;">
    <center>
      <img onclick="skip()" src="http://dcvslab.github.io/music/mp3/04/album.jpg">
-     <p onclick="playTrack()" style="color: #00" id="track">## - NAME</p>
+     <p onclick="playTrack()" style="color: #fff" id="track">## - NAME</p>
      <div id="audiocontainer">
        <audio autoplay id="audio">
          <source src="http://dcvslab.github.io/music/mp3/04/01.mp3" type="audio/mpeg">
@@ -20,8 +20,8 @@
    </center>
  </body>
  <script>
-   anum = "##";
-   ttnum = "##";
+   anum = "04";
+   ttnum = "11";
    tracks = ["01 Ay Ay", "02 Planet Paradise", "03	Bedtime Story", "04 Divine ft. Kali Uchis", "05	Hip Hop Interlude","06 Fuck Being Polite", "07 How It's Done", "08 CNTRL", "09 When I die", "10 Sober Thoughts", "11 Ay Ay - Flow-Fi Remix"];
    $.ajax({
      url: "http://dcvslab.github.io/music/albums/music.js",
