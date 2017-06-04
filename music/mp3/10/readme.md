@@ -1,7 +1,5 @@
 # 90059 by Jay Rock
 
-# Rejovich by Rejjie Snow 
-
 ### Released in 2013 | 5 Songs
 
 ##### Tracklist
