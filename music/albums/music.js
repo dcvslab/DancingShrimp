@@ -35,15 +35,17 @@
       } 
     }
     function playTrack() {
-      tnum = prompt("enter... \n'track' for list of tracks \ntrack number (1-" + ttnum + ") to play track \n'random' for a random track");
+      tnum = prompt("enter... \n'tracks' for list of tracks \ntrack number (1-" + ttnum + ") to play track \n'random' for a random track");
       if (parseInt(tnum) <= ttnum) {
         nsorig = tnum - 1; skip();
       } else {
         if (tnum == "random") {
           nsorig = Math.floor(Math.random() * ttnum); skip() 
         } else {
-	  if (tnum == "track") {
-	    alert(tracks);
+	  if (tnum == "tracks") {
+	    tracksstr = tracks.toString()
+ 	    tracksrpl = tracksstr.replace(/,/g,"\n")
+	    alert(tracksrpl);
 	  } else {
             alert("invalid input")
         }
