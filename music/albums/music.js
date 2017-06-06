@@ -34,9 +34,10 @@
           next(); $("#audio").remove();
 	} else {
 	  //nothing rn
+	}
       } else { 
         if (document.getElementById("audio").ended !== "undefined") { }
-      }} 
+      }
     }
     function playTrack() {
       tnum = prompt("enter... \n'tracks' for list of tracks \ntrack number (1-" + ttnum + ") to play track \n'random' for a random track");
