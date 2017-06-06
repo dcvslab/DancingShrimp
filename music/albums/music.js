@@ -1,3 +1,4 @@
+    shuffle = "off"
     audio = document.getElementById("audio")
     document.getElementById("track").innerHTML = tracks[0]; nsorig = "01"
     function checkTrack(url) {
@@ -28,11 +29,14 @@
       next(); $("#audio").remove();
      }
     function advance() {
-      if (document.getElementById("audio").ended == true) { 
-        next(); $("#audio").remove(); 
-	    } else { 
+      if (document.getElementById("audio").ended == true) {
+        if (shuffle == "off") {
+          next(); $("#audio").remove();
+	} else {
+	  //nothing rn
+      } else { 
         if (document.getElementById("audio").ended !== "undefined") { }
-      } 
+      }} 
     }
     function playTrack() {
       tnum = prompt("enter... \n'tracks' for list of tracks \ntrack number (1-" + ttnum + ") to play track \n'random' for a random track");
@@ -47,8 +51,11 @@
  	    tracksrpl = tracksstr.replace(/,/g,"\n")
 	    alert(tracksrpl);
 	  } else {
-            alert("invalid input")
+ 	    if (tnum == "shuffle") {
+	      if (shuffle == "off") { shuffle = "on" } else { shuffle = "off" };
+	    } else {
+              alert("invalid input")
         }
       }
-    }}   
+    }}}   
     setInterval(function() { advance(); }, 1000);
