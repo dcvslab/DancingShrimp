@@ -11,6 +11,9 @@
   background-color: #ebede2;
   font-family: "Yeezy";
 }
+#ejordan {
+  background-color: #e95814;
+}
 .mt {
   align-items: center;
   display: flex;
@@ -47,4 +50,25 @@
   font-size: 27px;
   font-weight: 500;
 }
+#ejt {
+  margin: 10px 0px 0px 0px;
+  font-size: 50px;
+  font-weight: 700;
+}
+#jcs {
+  margin: 0px 0px 10px 0px;
+  font-size: 27px;
+  font-weight: 700;
+}
+#js {
+  margin: 20px 0px 10px 0px;
+  font-size: 27px;
+  font-weight: 700;
+}
+.jslist {
+  margin: 0px 0px 0px 0px;
+  font-size: 27px;
+  font-weight: 500;
+}
+  
   
