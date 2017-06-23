@@ -4,6 +4,10 @@
   height: 100%;
   align-items: center;
 }
+.mbox {
+  width: 25%;
+  height: 25%;
+  
 #one {
   background-color: #2196F3; 
 }
@@ -12,7 +16,7 @@
   font-family: "Yeezy";
 }
 #ejordan {
-  background-color: #e95814;
+  background-color: #b01317;
   color: white;
 }
 .mt {
