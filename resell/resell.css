@@ -14,3 +14,13 @@ paper-header-panel {
   color: black;
   transition: height 0.2s;
 }
+#content {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+.dbox {
+  flex: 1 1 auto;
+  color: white;
+  float: left;
+}
