@@ -4,6 +4,9 @@
   height: 100%;
   align-items: center;
 }
+.mbc {
+  width: 100%
+}
 .mbox {
   width: 50%;
   font-size: 27px;
