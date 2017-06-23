@@ -23,4 +23,5 @@ paper-header-panel {
   flex: 1 1 auto;
   color: white;
   float: left;
+  width: 25%;
 }
