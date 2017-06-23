@@ -9,6 +9,8 @@
   align-items: center;
   display: flex;
   height: 100%;
+  flex-flow: column;
+  justify-content: center;
 }
 #mtd {
   margin: 0px;
