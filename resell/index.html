@@ -12,8 +12,25 @@
      <script src="/bower_components/web-animations-js/web-animations.min.js"></script>
      <link rel="import" href="/bower_components/paper-styles/paper-styles.html">
      <link rel="import" href="/bower_components/paper-styles/demo-pages.html">
-     <link rel="import" href="/bower_components/paper-header-panel.html">
+     <link rel="import" href="/bower_components/paper-header-panel/paper-header-panel.html">
 <!-- End Polymer Components !-->
+    <style>
+      paper-header-panel {
+        float: left;
+        width: 240px;
+        height: 240px;
+        margin: 12px;
+        @apply(--shadow-elevation-2dp);
+      }
+      .paper-header {
+        height: 60px;
+        font-size: 16px;
+        line-height: 60px;
+        padding: 0 10px;
+        color: white;
+        transition: height 0.2s;
+      }
+    </style>
   </head>
   <body>
     <paper-header-panel>
