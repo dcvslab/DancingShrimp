@@ -11,7 +11,7 @@
   background-color: #ebede2;
   font-family: "Yeezy";
 }
-#mt {
+.mt {
   align-items: center;
   display: flex;
   height: 100%;
@@ -27,3 +27,19 @@
 #arrow {
   padding-bottom: 10px;
 }
+#eyt {
+  margin: 10px 0px 0px 0px
+  font-size: 50px;
+  font-weight: 700;
+}
+.ystock {
+  margin: 10px 0px 10px 0px;
+  font-size: 27px;
+  font-weight: 700;
+}
+.yslist {
+  margin: 0px 0px 0px 0px;
+  font-size: 27px;
+  font-weight: 500;
+}
+  
