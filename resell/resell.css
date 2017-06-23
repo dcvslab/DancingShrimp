@@ -1,9 +1,14 @@
-#content {
+.flexfull {
   display: flex;
   flex-flow: column;
-  height: 100%;
-  background-color: #2196F3; 
+  height: 100%; 
   align-items: center;
+}
+#enter {
+  background-color: #2196f3; 
+}
+#eyeezy {
+  background-color: #ebede2;
 }
 #mt {
   align-items: center;
