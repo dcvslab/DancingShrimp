@@ -5,9 +5,17 @@
   align-items: center;
 }
 .mbox {
-  width: 25%;
-  height: 25%;
+  width: 50%;
+  font-size: 27px;
 }  
+#mby {
+  background: #ebede2;
+  color: black;
+}
+#mbj {
+  background: #b01317;
+  color: white;
+}
 #one {
   background-color: #2196F3; 
 }
