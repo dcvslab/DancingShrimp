@@ -1,25 +1,22 @@
-paper-header-panel {
-  float: left;
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  @apply(--shadow-elevation-2dp);
-}
-.paper-header {
-  height: 60px;
-  background-color: white;
-  font-size: 16px;
-  line-height: 60px;
-  padding: 0 10px;
-  color: black;
-  transition: height 0.2s;
-}
 #content {
   display: flex;
   flex-flow: column;
   height: 100%;
+  background-color: 76a63f; 
+  align-items: center;
 }
-.dbox {
-  flex: 1 1 auto;
+#mt {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+#mtd {
+  margin: 0px;
+  font-size: 50px;
   color: white;
+  font-weight: 700;
 }
+#arrow {
+  padding-bottom: 10px;
+}
+    
