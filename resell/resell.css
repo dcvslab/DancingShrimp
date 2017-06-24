@@ -88,9 +88,9 @@
 }
 .material-icons {
   font-family: 'Material Icons';
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
-  font-size: 36px;  /* Preferred icon size */
+  font-size: 48px;
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -103,4 +103,6 @@
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
 }
+.material-icons.md-48 { font-size: 48px; }
+
   
