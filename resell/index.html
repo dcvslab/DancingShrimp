@@ -58,8 +58,11 @@
         </div>
       </a>
       <div id="BY9612" class="shoec">
+        <i style="color:white; padding-left: 83%" class="material-icons md-48">close</i>
         <div class="shoei ybg">
-          <img class="shoep" src="http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwbe678954/zoom/BY9612_01_standard.jpg">
+          <img onclick="hide(BY9612)" class="shoep" src="http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwbe678954/zoom/BY9612_01_standard.jpg">
+          <p class="f24">YEEZY BOOST 350 V2 - CBLACK/RED/CBLACK</p>
+          <p class="f20">SIZE 11 - SOLD</p>
         </div>
       </div>
     </div>
@@ -81,7 +84,11 @@
   </body>
   <script>
     function display(id) {
-      $("#" + id).attr("style", "visbility: visible")
+      $("#" + id).attr("style", "visibility: visible");
+    }
+    function hide(id) {
+      $("#" + id).removeAttr("style");
+      $("#" + id).attr("style", "visibility: visible");
     }
   </script>
 </html>    
