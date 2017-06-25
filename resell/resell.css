@@ -102,12 +102,22 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  flex-flow; column;
+  font-weight: 700;
 }
 .ybg {
   background-color: #ECEDE5;
 }
 .shoep {
   height: 50%
+}
+.f20 {
+  font-size: 20px;
+  margin: 0px;
+}
+.f24 {
+  font-size: 24px;
+  margin: 0px;
 }
 .material-icons {
   font-family: 'Material Icons';
