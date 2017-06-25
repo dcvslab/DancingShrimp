@@ -10,6 +10,7 @@
 .mbox {
   width: 50%;
   font-size: 27px;
+  font-weight: 700
 }  
 #mby {
   background: #E0E0E0;
@@ -18,6 +19,7 @@
 #mbj {
   background: #F44336;
   color: white;
+  font-family: "Yeezy";
 }
 #one {
   background-color: #2196F3; 
