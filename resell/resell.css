@@ -139,8 +139,12 @@
   font-feature-settings: 'liga';
 }
 .material-icons.md-48 { font-size: 48px; }
-.cursorp {
+.cp {
   cursor: pointer
+}
+.close {
+  color: white; 
+  padding-left: 83%;
 }
 
   
