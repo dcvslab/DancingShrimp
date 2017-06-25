@@ -95,6 +95,7 @@
   display: flex;
   background-color: rgba(0,0,0,.6);
   visibility: hidden;
+  flex-flow: column;
 }
 .shoei {
   width: 80%;
@@ -104,6 +105,7 @@
   display: flex;
   flex-flow; column;
   font-weight: 700;
+  flex-flow: column;
 }
 .ybg {
   background-color: #ECEDE5;
