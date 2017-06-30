@@ -4,6 +4,20 @@
   height: 100%;
   align-items: center;
 }
+.bar {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  height: 10%;
+}
+.bbtn {
+  width: 33.33333%;
+  font-size: 20px;
+  text-align: center;
+  height: 100%;
+  flex-flow: row;
+  vertical-align: middle;
+}
 .mbc {
   width: 100%
 }
