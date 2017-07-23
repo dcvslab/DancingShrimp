@@ -11,4 +11,4 @@
 
 ##### Album Art
 
-![alt text](https://dcvslab.github.io/music/mp3/14/album.jpg "Flower Boy")
+![alt text](https://dcvslab.github.io/music/mp3/12/album.jpg "Flower Boy")
