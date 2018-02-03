@@ -4,12 +4,27 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0px
+    }
+    .art {
+      height: 250px;
+      width: 250px;
+      float: left;
+    }
   <body>
-    <div id="001">
-      <img src="https://t2.genius.com/unsafe/375x0/https%3A%2F%2Fimages.genius.com%2F6eaa00964dba96a66b1118d8bd4359ac.640x645x1.jpg"></img>
+    <button onclick="$('.hiphop').show() && $('.indie').hide()>HIP-HOP</button>
+    <button onclick="$('.indie').show() && $('.hiphop').hide()>INDIE</button>
+    <div class="hiphop" id="001">
+      <img class="art" src="https://t2.genius.com/unsafe/375x0/https%3A%2F%2Fimages.genius.com%2F6eaa00964dba96a66b1118d8bd4359ac.640x645x1.jpg"></img>
     </div>
-    <div id="002">
-      <img src="https://t2.genius.com/unsafe/375x0/https%3A%2F%2Fimages.genius.com%2F2f5fed969a14ad426aa17629afc25203.1000x1000x1.jpg"></img>
+    <div class="indie" id="002">
+      <img class="art" src="https://t2.genius.com/unsafe/375x0/https%3A%2F%2Fimages.genius.com%2F2f5fed969a14ad426aa17629afc25203.1000x1000x1.jpg"></img>
+      <p>Young Men by The Walters (JAN 3)</p>
+      <br>
+      <p>Favorite Songs: <b>I Haven’t Been True</b>, City Blues, Cottage Roads</p>     
     </div>
   </body>
 </html>
