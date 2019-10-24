@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Image Gallery</h2>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<h2><a href="#cheer"><p>CHEER>/p></h2>
+<h2><a href="#drum"><p>DRUM</p></h2>
+
+<h2 id="cheer">Cheer</h2>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://jstoddard21.github.io/Pics/Hoco19-20/cheer/H1920_cheer_0235.jpg">
+      <img src="https://jstoddard21.github.io/Pics/Hoco19-20/cheer/H1920_cheer_0235.jpg" alt="Forest" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://jstoddard21.github.io/Pics/Hoco19-20/cheer/H1920_cheer_0432.jpg">
+      <img src="https://jstoddard21.github.io/Pics/Hoco19-20/cheer/H1920_cheer_0432.jpg" alt="Forest" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://jstoddard21.github.io/Pics/Hoco19-20/cheer/H1920_cheer_0273.jpg">
+      <img src="https://jstoddard21.github.io/Pics/Hoco19-20/cheer/H1920_cheer_0273.jpg" alt="Forest" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://jstoddard21.github.io/Pics/Hoco19-20/cheer/H1920_cheer_0284.jpg">
+      <img src="https://jstoddard21.github.io/Pics/Hoco19-20/cheer/H1920_cheer_0284.jpg" alt="Forest" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<p id="drum">Drum</p>
+
+<div class="clearfix"></div>
+
+</body>
+</html>
