@@ -1,4 +1,5 @@
 var mc = 0
+var window.twtft = "tf"
 function gltS() { //get last time setting
   if (! localStorage.getItem("dcvclock")) {
     localStorage.setItem("dcvclock", "tw");
